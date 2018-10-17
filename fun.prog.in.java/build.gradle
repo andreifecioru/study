@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Functional Programming In Java',
+                   'Implementation-Version': version
+    }
+}

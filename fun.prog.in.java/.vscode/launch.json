@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestFunction",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "apps.TestFunction",
+            "args": "",
+            "projectName": "fun.prog.in.java"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestTuple",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "apps.TestTuple",
+            "args": "",
+            "projectName": "fun.prog.in.java"
+        },
+        {
+            "type": "java",
+            "name": "TestApp - Main",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "apps.TestApp",
+            "args": "",
+            "projectName": "fun.prog.in.java"
+        }
+    ]
+}
