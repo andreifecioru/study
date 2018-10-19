@@ -1,8 +1,8 @@
 import model.Person
 
-import exercises.Printable
-import exercises.PrintableInstances._
-import exercises.PrintableSyntax._
+import fun.Printable
+import fun.PrintableInstances._
+import fun.PrintableSyntax._
 
 
 object PrintableApp extends App {
