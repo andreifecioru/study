@@ -1,0 +1,9 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: "environments/%{::environment}/data"
+:hierarchy:
+  - "nodes/%{::trusted.certname}"
+  - "common"
+:merge_behavior: "deeper"

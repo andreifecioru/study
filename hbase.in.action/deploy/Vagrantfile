@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+VAGRANTFILE_API_VERSION = "2"
+
+ENV["LC_ALL"] = "en_US.UTF-8"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "puppetlabs/ubuntu-16.04-64-puppet"
+  config.vm.hostname = "hbase-box"
+
+  config.vm.provider :virtualbox do |vb|
+    vb.name = "hbase-sandbox"
+    vb.memory = 8192
+    vb.cpus = 2
+  end
+
+  ip_addr = "192.168.20.10"
+
+  config.vm.network "private_network", ip: ip_addr
+  config.vm.provision :shell, path: "provision.sh",
+    args: ["--force", "--ip=#{ip_addr}"]
+
+  config.vm.provision :puppet do |puppet|
+    puppet.environment_path = "puppet/environments"
+    puppet.environment = "production"
+
+    puppet.hiera_config_path = "puppet/hiera.yaml"
+    puppet.working_directory = "/vagrant/puppet"
+
+    if ENV.key?('PUPPET_OPTS')
+      puppet.options = ENV['PUPPET_OPTS'].split(' ')
+    end
+  end
+
+  config.vm.provision :shell, path: "start_services.sh", run: "always"
+end

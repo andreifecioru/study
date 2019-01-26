@@ -1,0 +1,15 @@
+plugins {
+    id 'scala'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.apache.hadoop:hadoop-common:$hadoop_version"
+
+    implementation "org.apache.hbase:hbase-common:$hbase_version"
+    implementation "org.apache.hbase:hbase-client:$hbase_version"
+
+}
