@@ -79,7 +79,7 @@ main() {
   apt-get update > /dev/null 2>&1
 
   echo "Installing utility packages..."
-  install_packages tree htop software-properties-common
+  install_packages tree htop software-properties-common vim
 
   echo "Updating the hosts file..."
   update_hosts_file
