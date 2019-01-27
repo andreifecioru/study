@@ -1,0 +1,19 @@
+Having constructed a Job object, we specify the input and output paths. An input path
+is specified by calling the static addInputPath() method on FileInputFormat, and it
+can be a single file, a directory (in which case, the input forms all the files in that direc‐
+tory), or a file pattern. As the name suggests, addInputPath() can be called more than
+once to use input from multiple paths.
+The output path (of which there is only one) is specified by the static setOutput
+Path() method on FileOutputFormat. It specifies a directory where the output files
+from the reduce function are written. The directory shouldn’t exist before running the
+job because Hadoop will complain and not run the job. This precaution is to prevent
+data loss (it can be very annoying to accidentally overwrite the output of a long job with
+that of another).
+Next, we specify the map and reduce types to use via the setMapperClass() and
+setReducerClass() methods.
+The setOutputKeyClass() and setOutputValueClass() methods control the output
+types for the reduce function, and must match what the Reduce class produces. The map
+output types default to the same types, so they do not need to be set if the mapper
+produces the same types as the reducer (as it does in our case). However, if they are
+different, the map output types must be set using the setMapOutputKeyClass() and
+setMapOutputValueClass() methods.

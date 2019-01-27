@@ -1,2 +1,4 @@
 .gradle/
 .vagrant/
+tools/hadoop/deploy/work/
+

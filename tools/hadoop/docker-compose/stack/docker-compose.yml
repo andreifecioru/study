@@ -1,0 +1,64 @@
+version: '2.1'
+
+services:
+  zk:
+    image: zookeeper:3.4
+    container_name: zk
+    restart: always
+    hostname: zk
+    ports:
+      - 2181:2181
+
+  zknav-web:
+    image: elkozmon/zoonavigator-web:0.6.0
+    container_name: zknav-web
+    ports:
+      - 8000:8000
+    environment:
+      WEB_HTTP_PORT: 8000
+      API_HOST: zknav-api
+      API_PORT: 9000
+    depends_on:
+      - zknav-api
+    restart: always
+
+  zknav-api:
+    image: elkozmon/zoonavigator-api:0.6.0
+    container_name: zknav-api
+    environment:
+      API_HTTP_PORT: 9000
+    restart: always
+    depends_on: 
+      - zk
+    links:
+      - zk:zk
+
+  hadoop:
+    build: ./hadoop
+    hostname: hadoop-box
+    container_name: hadoop
+    volumes:
+      - /home/andrei/Work/personal/study/hadoop.def.guide/WordCount/build:/build
+    ports:
+      # HDFS
+      - 50010:50010
+      - 50020:50020 
+      - 50070:50070
+      - 50075:50075
+      - 50090:50090
+      - 8020:8020
+      - 9000:9000
+      #MAP-RED
+      - 10020:10020
+      - 19888:19888
+      #YARN
+      - 8030:8030
+      - 8031:8031
+      - 8032:8032
+      - 8033:8033
+      - 8040:8040
+      - 8042:8042
+      - 8088:8088
+      #Other
+      - 49707:49707 
+      - 2122:2122
