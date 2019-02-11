@@ -36,14 +36,10 @@ services:
   hadoop:
     build: ./hadoop
     hostname: hadoop-box
-<<<<<<< HEAD
     container_name: hadoop
     volumes:
       - /home/andrei/Work/personal/study/hadoop.def.guide/WordCount/build:/build
-=======
     mem_limit: 1g
-    container_name: hadoop
->>>>>>> fb87875... [TOOLS][HADOOP] - Pseudo-distributed Hadoop env with Docker
     ports:
       # HDFS
       - 50010:50010
@@ -67,3 +63,16 @@ services:
       #Other
       - 49707:49707 
       - 2122:2122
+
+  hbase:
+    build: ./hbase
+    hostname: hbase-box
+    container_name: hbase
+    ports:
+      - 16000:16000
+      - 16010:16010
+      - 16020:16020
+      - 16030:16030
+    links:
+      - zk:zk
+      - hadoop:hadoop

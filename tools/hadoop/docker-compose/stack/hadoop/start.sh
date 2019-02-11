@@ -34,5 +34,5 @@ if [[ $2 == "bash" ]]; then
   /bin/bash
 fi
 
+while true; do sleep 1; done
 
-sleep 31557600
