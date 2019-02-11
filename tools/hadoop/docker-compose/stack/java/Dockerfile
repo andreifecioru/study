@@ -1,7 +1,7 @@
 FROM alpine
 
 RUN apk update && apk upgrade \
-    && apk add openssh rsync curl procps supervisor vim bash ncurses bash-completion \
+    && apk add openssh rsync curl procps supervisor vim bash ncurses bash-completion jq docker coreutils su-exec \
     && rm -rf /var/cache/apk/*
 
 # SSH Key Passwordless

@@ -2,80 +2,62 @@ version: '2.1'
 
 services:
   java:
-    build: ./java
+    extends:
+      file: java/compose.yml
+      service: java
 
   zk:
-    image: zookeeper:3.4
-    container_name: zk
-    restart: always
-    hostname: zk
-    ports:
-      - 2181:2181
+    extends:
+      file: zookeeper/compose.yml
+      service: zk
 
-  zknav-web:
-    image: elkozmon/zoonavigator-web:0.6.0
-    container_name: zknav-web
-    ports:
-      - 8000:8000
-    environment:
-      WEB_HTTP_PORT: 8000
-      API_HOST: zknav-api
-      API_PORT: 9000
-    depends_on:
-      - zknav-api
-    restart: always
-
-  zknav-api:
-    image: elkozmon/zoonavigator-api:0.6.0
-    container_name: zknav-api
-    environment:
-      API_HTTP_PORT: 9000
-    restart: always
+  zk-api:
+    extends:
+      file: zookeeper/compose.yml
+      service: zk-api
     depends_on:
       - zk
     links:
       - zk:zk
 
+  zk-web:
+    extends:
+      file: zookeeper/compose.yml
+      service: zk-web
+    depends_on:
+      - zk-api
+
   hadoop:
-    build: ./hadoop
-    hostname: hadoop-box
-    container_name: hadoop
-    volumes:
-      - /home/andrei/Work/personal/study/hadoop.def.guide/WordCount/build:/build
-    mem_limit: 1g
-    ports:
-      # HDFS
-      - 50010:50010
-      - 50020:50020
-      - 50070:50070
-      - 50075:50075
-      - 50090:50090
-      - 8020:8020
-      - 9000:9000
-      #MAP-RED
-      - 10020:10020
-      - 19888:19888
-      #YARN
-      - 8030:8030
-      - 8031:8031
-      - 8032:8032
-      - 8033:8033
-      - 8040:8040
-      - 8042:8042
-      - 8088:8088
-      #Other
-      - 49707:49707
-      - 2122:2122
+    extends:
+      file: hadoop/compose.yml
+      service: hadoop
 
   hbase:
-    build: ./hbase
-    hostname: hbase-box
-    container_name: hbase
-    ports:
-      - 16000:16000
-      - 16010:16010
-      - 16020:16020
-      - 16030:16030
+    extends:
+      file: hbase/compose.yml
+      service: hbase
+    depends_on:
+      - zk
+      - hadoop
     links:
       - zk:zk
       - hadoop:hadoop
+
+  kafka:
+    extends:
+      file: kafka/compose.yml
+      service: kafka
+    depends_on:
+      - zk
+    links:
+      - zk:zk
+
+  kafka_manager:
+    extends:
+      file: kafka/compose.yml
+      service: kafka_manager
+    depends_on:
+      - zk
+      - kafka
+    links:
+      - zk:zk

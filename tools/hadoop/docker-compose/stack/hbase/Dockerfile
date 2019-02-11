@@ -19,11 +19,10 @@ RUN set -x \
 
 RUN set -x \
     && ln -s /usr/local/hbase-${HBASE_VERSION} ${HBASE_HOME} \
-    && adduser -D  -g '' -s /sbin/nologin -u 1000 docker \
     && for user in hadoop hbase; do \
          adduser -D -g '' -s /sbin/nologin ${user}; \
        done \
-    && for user in root hbase docker; do \
+    && for user in root hbase; do \
          adduser ${user} hadoop; \
        done \
     && mkdir -p \

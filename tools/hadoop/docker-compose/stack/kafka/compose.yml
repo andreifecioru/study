@@ -1,0 +1,21 @@
+version: '2.1'
+
+services:
+  kafka:
+    build: .
+    hostname: kafka-box
+    container_name: kafka
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zk:2181
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+    ports:
+      - 9092:9092
+
+  kafka_manager:
+    image: hlebalbau/kafka-manager:stable
+    container_name: kafka-manager
+    ports:
+      - 9010:9010
+    environment:
+      ZK_HOSTS: zk:2181
+    command: -Dpidfile.path=/dev/null -Dhttp.port=9010

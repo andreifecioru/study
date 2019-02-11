@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  hbase:
+    build: .
+    hostname: hbase-box
+    container_name: hbase
+    ports:
+      - 16000:16000
+      - 16010:16010
+      - 16020:16020
+      - 16030:16030
+      - 16201:16201

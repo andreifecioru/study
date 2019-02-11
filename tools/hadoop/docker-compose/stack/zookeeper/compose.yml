@@ -1,0 +1,28 @@
+version: '2.1'
+
+services:
+  zk:
+    image: zookeeper:3.4
+    container_name: zk
+    restart: always
+    hostname: zk-box
+    ports:
+      - 2181:2181
+
+  zk-api:
+    image: elkozmon/zoonavigator-api:0.6.0
+    container_name: zk-api
+    environment:
+      API_HTTP_PORT: 9000
+    restart: always
+
+  zk-web:
+    image: elkozmon/zoonavigator-web:0.6.0
+    container_name: zk-web
+    ports:
+      - 8000:8000
+    environment:
+      WEB_HTTP_PORT: 8000
+      API_HOST: zk-api
+      API_PORT: 9000
+    restart: always
