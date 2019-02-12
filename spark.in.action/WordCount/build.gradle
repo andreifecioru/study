@@ -1,0 +1,19 @@
+plugins {
+    id 'scala'
+    id "com.github.johnrengelman.shadow" version "4.0.4"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.12.8'
+
+    implementation "org.apache.spark:spark-core_2.12:$spark_version"
+    implementation "org.apache.spark:spark-sql_2.12:$spark_version"
+
+    implementation "org.apache.hbase:hbase-common:$hbase_version"
+    implementation "org.apache.hbase:hbase-client:$hbase_version"
+}
+

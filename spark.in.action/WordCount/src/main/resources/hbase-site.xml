@@ -1,0 +1,6 @@
+<configuration>
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>zk-box</value>
+    </property>
+</configuration>
