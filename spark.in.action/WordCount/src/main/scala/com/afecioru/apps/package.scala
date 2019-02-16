@@ -24,12 +24,9 @@ package object apps {
       lazy val sqlCtx: SQLContext = ss.sqlContext
     }
 
-    trait HBase {
-
+    trait HBaseSetup {
       lazy val hbaseConf: Configuration = HBaseConfiguration.create()
       lazy val connection: Connection = HBase.createConnection(hbaseConf)
-
-
     }
 
   }

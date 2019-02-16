@@ -1,10 +1,19 @@
 package com.afecioru.apps
 
-import com.afecioru.apps.Traits.SparkSetup
+import com.afecioru.apps.Traits.{HBaseSetup, SparkSetup}
+import com.afecioru.apps.dao.TextLineDao
 import com.afecioru.apps.model.TextLine
+import org.apache.hadoop.hbase.client.Result
+import org.apache.hadoop.hbase.io.ImmutableBytesWritable
+import org.apache.hadoop.hbase.mapreduce.TableInputFormat
+
+import com.afecioru.apps.dao.Converters._
 
 
-object WordCountApp extends App with SparkSetup {
+object WordCountApp extends App
+  with SparkSetup
+  with HBaseSetup {
+
   import sqlCtx.implicits._
 
   val appName = "WordCount"
@@ -21,19 +30,30 @@ object WordCountApp extends App with SparkSetup {
       |versions of Lorem Ipsum.
     """.stripMargin
 
-  val sentences = text.split('.').toSeq.map(TextLine)
+  val sentences = text.split('.').toSeq.map(TextLine(_))
 
-  val df = ss.createDataset(sentences)
-      .flatMap(_.words)
+  val textLineDao = new TextLineDao(connection)
+  sentences.foreach(textLineDao.addTextLine)
+
+  hbaseConf.set(TableInputFormat.INPUT_TABLE, TextLineDao.TABLE_NAME)
+
+  val linesDS = sc.newAPIHadoopRDD(hbaseConf, classOf[TableInputFormat], classOf[ImmutableBytesWritable], classOf[Result])
+      .map {
+        case (_, r) => result2TextLine(r)
+      }.toDS()
+
+  val result = linesDS.flatMap(_.words)
       .map(word => word -> 1)
       .withColumnRenamed("_1", "word")
       .withColumnRenamed("_2", "count")
       .groupBy($"word")
       .sum("count")
 
-  df.printSchema()
+  result.printSchema()
 
-  df.collect().foreach(println)
+  result.collect().foreach(println)
 
   ss.stop()
+  connection.close()
+  println("Done.")
 }

@@ -13,7 +13,11 @@ dependencies {
     implementation "org.apache.spark:spark-core_2.12:$spark_version"
     implementation "org.apache.spark:spark-sql_2.12:$spark_version"
 
+    implementation "org.apache.hadoop:hadoop-client:$hadoop_version"
+    
     implementation "org.apache.hbase:hbase-common:$hbase_version"
     implementation "org.apache.hbase:hbase-client:$hbase_version"
+    implementation "org.apache.hbase:hbase-server:$hbase_version"
+//    implementation "org.apache.hbase:hbase-mapreduce:$hbase_mapred_version"
 }
 

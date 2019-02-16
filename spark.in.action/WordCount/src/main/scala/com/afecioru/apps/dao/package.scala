@@ -2,13 +2,9 @@ package com.afecioru.apps
 
 import java.security.MessageDigest
 
+import com.afecioru.apps.model.TextLine
 import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.hbase.{
-  HBaseConfiguration,
-  HColumnDescriptor,
-  HTableDescriptor,
-  TableName
-}
+import org.apache.hadoop.hbase.{HBaseConfiguration, HColumnDescriptor, HTableDescriptor, TableName}
 import org.apache.hadoop.hbase.client._
 import org.apache.hadoop.hbase.util.Bytes
 
@@ -80,6 +76,17 @@ package object dao {
       }
 
       reduce(scanner, Nil).reverse
+    }
+  }
+
+
+  object Converters {
+    implicit def result2TextLine(result: Result): TextLine = {
+      import TextLineDao._
+
+      val textBytes = result.getValue(COL_FAMILY_DATA, COL_LINE)
+
+      TextLine(textBytes)
     }
   }
 
