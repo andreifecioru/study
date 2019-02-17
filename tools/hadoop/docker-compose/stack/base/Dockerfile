@@ -69,3 +69,7 @@ RUN JAVA_VERSION_MAJOR=8 && \
            /tmp/* /var/cache/apk/*
 ENV JAVA_HOME=/opt/jdk
 ENV PATH=${PATH}:${JAVA_HOME}/bin:${JAVA_HOME}/sbin
+
+RUN mkdir -p /tools
+
+COPY tools/* /tools

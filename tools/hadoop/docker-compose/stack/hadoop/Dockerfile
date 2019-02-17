@@ -1,4 +1,4 @@
-FROM stack_java
+FROM stack_base
 
 # Supervidor
 COPY conf/supervisord.conf /etc/supervisord.conf

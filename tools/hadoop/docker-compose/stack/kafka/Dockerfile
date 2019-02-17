@@ -1,4 +1,4 @@
-FROM stack_java
+FROM stack_base
 
 ENV KAFKA_VERSION 2.1.0
 ENV SCALA_VERSION 2.12

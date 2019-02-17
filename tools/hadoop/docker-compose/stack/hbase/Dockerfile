@@ -1,4 +1,4 @@
-FROM stack_java
+FROM stack_base
 
 ENV HBASE_HOME       /usr/local/hbase
 ENV HBASE_CONF_DIR   ${HBASE_HOME}/conf

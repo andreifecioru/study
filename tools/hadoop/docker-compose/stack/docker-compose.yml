@@ -1,10 +1,10 @@
 version: '2.1'
 
 services:
-  java:
+  base:
     extends:
-      file: java/compose.yml
-      service: java
+      file: base/compose.yml
+      service: base
 
   zk:
     extends:
@@ -31,6 +31,10 @@ services:
     extends:
       file: hadoop/compose.yml
       service: hadoop
+    ports:
+      - 7000:7000
+    volumes:
+      - ../../../..:/study
 
   hbase:
     extends:

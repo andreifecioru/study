@@ -1,6 +1,6 @@
 version: '2.1'
 
 services:
-  java:
+  base:
     build: .
-    container_name: java
+    container_name: base
