@@ -12,6 +12,8 @@ echo "Starting the word-count job"
 env HADOOP_OPTS="$HADDOP_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=7000" \
 hadoop jar $PROJECT_DIR/build/libs/WordCount.jar \
   com.afecioru.apps.wordcount.WordCountJob \
+  -D mapred.reduce.tasks=2 \
+  -D reducer.minWordCount=2 \
   /user/root/word_count/input/input.txt \
   /user/root/word_count/output \
 
