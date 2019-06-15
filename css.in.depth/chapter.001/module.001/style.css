@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* Set this prop here so it can be inherited. */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 30px;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  color: #2f4f4f;
+}
+
+.nav-bar {
+  /* No more bullets on the li elements. */
+  list-style: none;
+  padding: 0 12px;
+  /* This margin is collapsed with the one from .title */
+  margin-top: 16px;
+}
+
+.nav-bar > li {
+  /* Causes the li elements to be displayed side-by-side. */
+  display: inline-block;
+  margin: 8px 4px;
+}
+
+.nav-bar a {
+  padding: 4px 8px;
+  background: teal;
+  /* Remove the underline from links. */
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.nav-bar a.featured {
+  background: orange;
+}
+
+.footer {
+  background: lightgray;
+  color: #2f4f4f;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.footer a {
+  /* You can inherit any prop from the parent. */
+  color: inherit;
+}
