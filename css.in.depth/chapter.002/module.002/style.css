@@ -1,0 +1,19 @@
+:root {
+  /* Define variables for the whole page. */
+  --main-font: Helvetica, Arial, sans-serif;
+  --brand-color: #369;
+}
+
+p {
+  /* Refer to the variables defined above using var(). */
+  font-family: var(--main-font);
+  color: var(--brand-color);
+
+  /* If variable does not exist, we can specify a fallback value. */
+  background: var(--non-existing, lightgray);
+}
+
+p.other {
+  /* We can re-define variables only for the scope of this selector. */
+  --brand-color: red;
+}
