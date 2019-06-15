@@ -1,0 +1,115 @@
+/* 
+  Same as with the html tag selector 
+  (but with a higher specificity - that of a class)
+*/
+:root {
+  /* Alter the rem */
+  font-size: .875em; /* approx 14px */
+}
+
+/* For larger screens we can afford a larger base font size. */
+@media (min-width: 1000px) {
+  :root {
+    font-size: 1em;
+  }
+}
+
+/*
+  You can achieve a largely similar effect w/o media queries
+  by using vh units
+
+  :root {
+    font-size: calc(.5em + 1vw);
+  }
+*/
+
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  font-weight: bold;
+  display: inline-block;
+  margin: .5em;
+  padding: 1em;
+  background: red;
+  color: white;
+  border-radius: .5em;
+}
+
+/* This changes the local definition of 1em. */
+.box-small {
+  /* Font size relative to the inherited value. */
+  font-size: .8em;
+}
+.box-large {
+  font-size: 24px;
+}
+
+/* 
+  The shrinking text problem: 
+  nested elements using font-sizes < 1em.
+*/
+.shrinking-text {
+  background: lightgray;
+  font-size: 2em;
+}
+.shrinking-text div {
+  font-size: 0.8em;
+}
+
+/* 
+  Avoid this problem with the following fix:
+
+  .shrinking-text div div {
+    font-size: 1em;
+  }
+
+  or by specifying font sizes using rem's
+
+  .shrinking-text div {
+    font-size: 0.8rem;
+  }
+*/
+
+.panel {
+  /* Use rem's for the font size. */
+  font-size: 1rem; /* Establish a firm baseline for the font-size. */
+
+  /* Use em's for margins & padding. */
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: .5em;
+
+  /* Use px for borders & shadows. */
+  border: 1px solid grey;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .25);
+
+  background: lightgray;
+  width: 50%;
+}
+
+.panel.large {
+  /* Use a larger base font-size for the large version of the panel. */
+  font-size: 1.2rem;
+}
+
+.panel .title {
+  /* Use em's here (relative to the parent who uses rem's). */
+  font-size: 1.2em;
+  font-weight: bold;
+
+  /* Force text to be uppercase. */
+  text-transform: uppercase;
+}
+
+/* View-port relative units. */
+.square {
+  background: burlywood;
+  width: 20vmin;
+  height: 20vmin;
+  text-align: center;
+  font-weight: bold;
+  /* This will center the text vertically. */
+  line-height: 20vmin;
+}
