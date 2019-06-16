@@ -1,0 +1,82 @@
+:root {
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+  --brand-color: #0072b0;
+}
+
+/* 
+  This helps us with 3rd party components that may rely on content-box value:
+
+  .some-3rd-pt-comp {
+    box-sizing: content-box;
+  }
+*/
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: lightgray;
+}
+
+header {
+  background: var(--brand-color);
+  color: white;
+  padding: 1em 2em;
+  border-radius: .5em;
+  font-size: 1.2rem;
+}
+
+main {
+  /* Fix for IE bug. */
+  display: block;
+}
+
+.main {
+  width: 70%;
+  min-height: 15vh;
+  vertical-align: top;
+
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: .5em;
+
+  background: white;
+  float: left;
+
+}
+
+.sidebar {
+  /* Don't use magic numbers: use calc() to get it right. */
+  width: calc(30% - 1em);
+  min-height: 15vh;
+  vertical-align: top;
+
+  margin: 1em 0 0 1em;
+  padding: 1em;
+  border-radius: .5em;
+
+  background: white;
+  float: left;
+}
+
+.sidebar .widget {
+  width: 100%;
+  background: var(--brand-color);
+  color: white;
+  margin: .5em auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: .3em;
+}
+
+.sidebar a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--brand-color);
+  font-weight: bold;
+  margin-top: .5em;
+  padding: .5em;
+}
