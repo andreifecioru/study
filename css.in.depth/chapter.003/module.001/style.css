@@ -20,6 +20,14 @@ body {
   background: lightgray;
 }
 
+/* 
+  Trick to vertically space elements evenly. 
+  (a.k.a. lobotomized owl)
+*/
+body * + * {
+  margin-top: 1em;
+}
+
 header {
   background: var(--brand-color);
   color: white;
@@ -52,6 +60,7 @@ main {
 .sidebar {
   width: 30%;
   margin-left: 1em;
+  margin-top: 0; /* Fix side-effect caused by lobotomized owl. */
   min-height: 15vh;
   vertical-align: top;
 
@@ -65,7 +74,6 @@ main {
   width: 100%;
   background: var(--brand-color);
   color: white;
-  margin: .5em auto;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -73,10 +81,29 @@ main {
 }
 
 .sidebar a {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   color: var(--brand-color);
   font-weight: bold;
-  margin-top: .5em;
-  padding: .5em;
+}
+
+.square {
+  /* Center the content of the div (use CSS table layout) */
+  display: table;
+}
+
+.square > div {
+  display: table-cell;
+
+  /* Center it horizontally... */
+  text-align: center;
+  /* ... and then vertically */
+  vertical-align: middle;
+
+  width: 400px;
+  height: 400px;
+  background: red;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
 }
