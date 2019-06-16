@@ -28,37 +28,55 @@ header {
   font-size: 1.2rem;
 }
 
+/* 
+  We need a wrapper container with negative margins to
+  counteract the effect of border-spacing prop on the
+  outer-edges of the display-table element.
+*/
+.wrapper {
+  margin: 0 -1em;
+}
+
+.container {
+  /* Equal height columns: use CSS table display */
+  display: table;
+  /* This is required (table display does not automatically fill the entire horizontal space). */
+  width: 100%;  
+
+  /* Margins don't work on table-cell elements. */
+  border-spacing: 1em;
+}
+
 main {
   /* Fix for IE bug. */
   display: block;
 }
 
 .main {
+  display: table-cell;
+
   width: 70%;
   min-height: 15vh;
   vertical-align: top;
 
-  margin: 1em 0;
   padding: 1em;
   border-radius: .5em;
 
   background: white;
-  float: left;
-
 }
 
 .sidebar {
+  display: table-cell;
+
   /* Don't use magic numbers: use calc() to get it right. */
-  width: calc(30% - 1em);
+  width: 30%;
   min-height: 15vh;
   vertical-align: top;
 
-  margin: 1em 0 0 1em;
   padding: 1em;
   border-radius: .5em;
 
   background: white;
-  float: left;
 }
 
 .sidebar .widget {
