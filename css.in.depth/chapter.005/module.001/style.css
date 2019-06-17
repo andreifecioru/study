@@ -1,0 +1,164 @@
+:root {
+  box-sizing: border-box;
+
+  --bkg-grey: #709b90;
+  --bkg-brown: #5f4b44;
+  --bkg-light-brown: #cc6b5a;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--bkg-grey);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body * + * {
+  margin-top: 1.5em;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.site-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  background: var(--bkg-brown);
+
+  border-radius: .2em;
+  padding: .5em;
+}
+
+.site-nav > li {
+  margin-top: 0;
+  background: var(--bkg-light-brown);
+  border-radius: .2em;
+}
+
+/* Apply the margins, but skip the first li element.  */
+.site-nav > li + li {
+  margin-left: 1em;
+}
+
+.site-nav > .nav-right {
+  /* Left margin will fill the space, moving the element to the right. */
+  margin-left: auto; 
+}
+
+.site-nav > li > a {
+  text-decoration: none;
+  color: white;
+  /* 
+    Apply the padding to anchors 
+    (so that the entire area of the "button" becomes an active surface).
+  */
+  padding: .5em 1em;
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.tile {
+  background: white;
+  padding: 1.5em;
+}
+
+/* Adjust lobotomized owl fot the flex container. */
+.flex > * + * {
+  margin-top: 0;
+  margin-left: 1.5em;
+}
+
+.column-main {
+  flex: 2;
+}
+
+.column-sidebar {
+  flex: 1;
+
+  /* We want the side-bar to also be a flex container (nested flex-boxes). */
+  display: flex;
+  flex-direction: column;
+}
+
+.column-sidebar > .tile {
+  /* The tiles in the side-bar will grow equally with the available vertical space. */
+  flex: 1;
+}
+
+.login-form h3 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+/* Select only "text type" input controls  */
+.login-form input:not([type=checkbox]):not([type=radio]) {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  border: 1px solid black;
+  padding: .2em;
+}
+
+.login-form button {
+  border: 1px solid black;
+  background: white;
+  padding: .5em 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form label {
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: .7
+  ;
+}
+
+.cost > span {
+  margin-top: 0;
+}
+
+.cost-currency {
+  font-size: 2rem;
+}
+
+.cost-dollars {
+  font-size: 4rem;
+}
+
+.cost-cents {
+  font-size: 1.5rem;
+  align-self: flex-start;
+}
+
+.cta-button {
+  display: block;
+  padding: .5em;
+
+  text-decoration: none;
+  background: var(--bkg-light-brown);
+  color: white;
+}
