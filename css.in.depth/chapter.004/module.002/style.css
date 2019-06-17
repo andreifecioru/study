@@ -1,0 +1,74 @@
+:root {
+  box-sizing: border-box;
+  font-size: 1rem;
+  --bkg-blue: #0072b0;
+  --bkg-grey: #eee;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--bkg-grey);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body * + * { /* Lobotomized owl */
+  margin-top: 1.5em;
+}
+
+header {
+  padding: 1em 1.5em;
+  color: white;
+  background: var(--bkg-blue);
+  border-radius: .5em;
+  margin-bottom: 1.5em;
+}
+
+.main {
+  padding: 0 1.5em;
+  background: white;
+  border-radius: .5em;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto; /* Centers block-elements horizontally. */
+}
+
+.media {
+  float: left;
+  margin: 0 0 1em 1em;
+  width: calc(50% - 1em);
+  padding: 1.5em;
+  background: var(--bkg-grey);
+  border-radius: .5em;
+}
+
+/* Avoid corner catching. */
+.media:nth-child(odd) {
+  clear: left;
+}
+
+/* The clearfix: use CSS to add content rather than adding HTML content explicitly. */
+.clearfix::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+.media .media-image {
+  float: left;
+}
+
+.media-body {
+  margin-top: 0;
+  /* Setup a new BFC (Block Formatting Context) for the media-body element. */
+  overflow: auto;
+  padding-left: .5em;
+}
+
+.media-body > h4 {
+  margin-top: 0;
+}
