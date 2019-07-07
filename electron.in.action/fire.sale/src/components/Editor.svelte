@@ -3,19 +3,28 @@
   import HtmlArea from "./HtmlArea.svelte";
 
   const marked = require("marked");
-  marked.setOptions({
-    gfm: true,
-    breaks: true,
+
+  let htmlContent = "";
+  let markdownContent = "";
+
+  const { ipcRenderer } = require("electron");
+  ipcRenderer.on("open-file", (event, fileName, content) => {
+    console.log(`Loaded markdown file: ${fileName}`);
+    htmlContent = marked(content);
+    markdownContent = content;
   });
 
-  let content = "";
+  marked.setOptions({
+    gfm: true,
+    breaks: true
+  });
 
   const onMarkdownChanged = event => {
-    content = marked(event.detail.content);
-  }
+    htmlContent = marked(event.detail.content);
+  };
 </script>
 
-<MarkdownArea on:markdown-changed="{onMarkdownChanged}"/>
+<MarkdownArea on:markdown-changed={onMarkdownChanged} content="{markdownContent}"> </MarkdownArea>
 <HtmlArea>
-{@html content}
+  {@html htmlContent}
 </HtmlArea>

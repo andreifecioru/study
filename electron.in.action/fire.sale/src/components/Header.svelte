@@ -1,3 +1,13 @@
+<script>
+  const { remote } = require("electron");
+  const mainProcess = remote.require("./main.js");
+
+  const onOpenFile = event => {
+    mainProcess.loadMarkdownFile();
+  }
+</script>
+
+
 <style type="text/scss">
   header {
     grid-column: span 2;
@@ -32,9 +42,8 @@
 <header>
   <nav>
     <ul>
-
       <li class="new button">New</li>
-      <li class="load button">Load</li>
+      <li class="load button" on:click="{onOpenFile}">Load</li>
       <li class="save button">Save</li>
       <li class="revert button">Revert</li>
     </ul>

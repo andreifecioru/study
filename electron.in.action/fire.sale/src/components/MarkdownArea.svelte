@@ -1,10 +1,12 @@
 <script>
   import { createEventDispatcher } from "svelte";
 
+  export let content = "";
+
   const dispatch = createEventDispatcher();
 
   const onMarkdownChanged = event => {
-    dispatch('markdown-changed', {content: event.target.value});
+    dispatch("markdown-changed", { content: event.target.value });
   };
 </script>
 
@@ -32,5 +34,10 @@
 </style>
 
 <section class="markdown-area">
-  <textarea name="markdown-text-area" id="markdown-text-area" on:input="{onMarkdownChanged}"></textarea>
+  <textarea
+    name="markdown-text-area"
+    id="markdown-text-area"
+    on:input={onMarkdownChanged}>
+    {content}
+  </textarea>
 </section>

@@ -1,6 +1,6 @@
 import * as path from "path";
 import * as url from "url";
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, dialog } from "electron";
 
 const fs = require("fs-extra");
 
@@ -45,11 +45,11 @@ const launchApp = () => {
 
   mainWindow.once("ready-to-show", () => {
     // show dev tools in 'dev' mode
-
     if (mode === "development") {
       mainWindow.webContents.openDevTools();
-      mainWindow.maximize();
+      // mainWindow.maximize();
     }
+    
     // we're now ready to show the window
     mainWindow.show();
   });
