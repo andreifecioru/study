@@ -2,8 +2,14 @@
   const { remote } = require("electron");
   const mainProcess = remote.require("./main.js");
 
+  const currentWindow = remote.getCurrentWindow();
+
   const onOpenFile = event => {
-    mainProcess.loadMarkdownFile();
+    mainProcess.loadMarkdownFile(currentWindow);
+  }
+
+  const onNewFile = event => {
+    mainProcess.createWindow();
   }
 </script>
 
@@ -42,7 +48,7 @@
 <header>
   <nav>
     <ul>
-      <li class="new button">New</li>
+      <li class="new button" on:click="{onNewFile}">New</li>
       <li class="load button" on:click="{onOpenFile}">Load</li>
       <li class="save button">Save</li>
       <li class="revert button">Revert</li>

@@ -7,8 +7,8 @@ const fs = require("fs-extra");
 const mode = process.env.NODE_ENV;
 const noop = () => {};
 
-// keep a global reference to the main window to avoid garbage collection
-let mainWindow = null;
+// store the app's windows in a global set
+let windows = new Set();
 
 const reloadOnChange = win => {
   // reload on change only in 'dev' mode
@@ -26,8 +26,19 @@ const reloadOnChange = win => {
   return watcher;
 };
 
-const launchApp = () => {
-  mainWindow = new BrowserWindow({
+const createWindow = () => {
+  // shift the initial position of the new window
+  // relative to the focused window (if it exists)
+  let x, y;
+  const focusedWindow = BrowserWindow.getFocusedWindow();
+  if (focusedWindow) {
+    const [focusedX, focusedY] = focusedWindow.getPosition();
+    x = focusedX + 10;
+    y = focusedY + 10;
+  }
+
+  const newWindow = new BrowserWindow({
+    x, y,
     // don't show the window contents until we're ready
     show: false,
     // starting with electron 5.0 we need to enable this explicitly
@@ -35,7 +46,7 @@ const launchApp = () => {
   });
 
   // load the content
-  mainWindow.loadURL(
+  newWindow.loadURL(
     url.format({
       pathname: path.join(__dirname, "../static/index.html"),
       protocol: "file:",
@@ -43,29 +54,34 @@ const launchApp = () => {
     })
   );
 
-  mainWindow.once("ready-to-show", () => {
+  newWindow.once("ready-to-show", () => {
     // show dev tools in 'dev' mode
     if (mode === "development") {
-      mainWindow.webContents.openDevTools();
-      // mainWindow.maximize();
+      // newWindow.webContents.openDevTools();
+      // newWindow.maximize();
     }
     
     // we're now ready to show the window
-    mainWindow.show();
+    newWindow.show();
   });
 
-  const watcher = reloadOnChange(mainWindow);
+  const watcher = reloadOnChange(newWindow);
 
   // clean-up activities
-  mainWindow.on("closed", () => {
-    mainWindow = null;
+  newWindow.on("closed", () => {
+    windows.delete(newWindow);
     watcher.close();
   });
+
+  // add the window to the global set
+  windows.add(newWindow);
+
+  return newWindow;
 };
 
 // load files from local disk
-const loadMarkdownFile = () => {
-  const fileList = dialog.showOpenDialog(mainWindow, {
+const loadMarkdownFile = (targetWindow) => {
+  const fileList = dialog.showOpenDialog(targetWindow, {
     properties: ["openFile"],
     filters: [{ name: "Markdown files", extensions: ["md", "markdown"] }]
   });
@@ -81,12 +97,12 @@ const loadMarkdownFile = () => {
     .then(content =>
       // send the file path/content on a dedicated channel 
       // to the renderer process
-      mainWindow.webContents.send("open-file", fileName, content)
+      targetWindow.webContents.send("open-file", fileName, content)
     )
     .catch(error => console.error(`ERROR: ${fileName}, ${error.message}`));
 };
 
-app.on("ready", launchApp);
+app.on("ready", createWindow);
 
 app.on("window-all-closed", () => {
   // on OS-X we're not quitting when all windows are closed
@@ -95,12 +111,13 @@ app.on("window-all-closed", () => {
   }
 });
 
-app.on("activate", () => {
+app.on("activate", (event, hasVisibleWindows) => {
   // on OS-X we're relaunching on activation
-  if (mainWindow === null) {
-    launchApp();
+  if (!hasVisibleWindows) {
+    createWindow();
   }
 });
 
 // export functionality to be accessed by the renderer process
 exports.loadMarkdownFile = loadMarkdownFile;
+exports.createWindow = createWindow
