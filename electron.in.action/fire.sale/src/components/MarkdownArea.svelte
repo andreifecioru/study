@@ -37,7 +37,5 @@
   <textarea
     name="markdown-text-area"
     id="markdown-text-area"
-    on:input={onMarkdownChanged}>
-    {content}
-  </textarea>
+    on:input={onMarkdownChanged}>{content}</textarea>
 </section>

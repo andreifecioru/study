@@ -51,6 +51,7 @@
       <li class="new button" on:click="{onNewFile}">New</li>
       <li class="load button" on:click="{onOpenFile}">Load</li>
       <li class="save button">Save</li>
+      <li class="export button">Export</li>
       <li class="revert button">Revert</li>
     </ul>
   </nav>
