@@ -1,0 +1,31 @@
+{
+  "tasks": [
+    {
+      "label": "Build project",
+      "type": "shell",
+      "command": "make",
+      "options": {
+        "cwd": "${workspaceFolder}",
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Build project"
+    },
+    {
+      "label": "Clean project",
+      "command": "make",
+      "args": ["clean"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "none",
+      "detail": "Clean project",
+      "problemMatcher": []
+    }
+  ],
+
+  "version": "2.0.0"
+}
