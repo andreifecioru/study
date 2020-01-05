@@ -1,4 +1,6 @@
 .gradle/
 .vagrant/
 tools/hadoop/deploy/work/
+.DS_Store/
+
 
