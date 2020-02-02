@@ -1,21 +1,16 @@
 package ch02
 
-import java.lang.IllegalArgumentException
+sealed class Expr
 
-interface Expr
+class Sum(val left: Expr, val right: Expr) : Expr()
+class Subst(val left: Expr, val right: Expr) : Expr()
+class Mul(val left: Expr, val right: Expr): Expr()
+class Num(val value: Int) : Expr()
 
-class Num(val value: Int) : Expr
-
-class Sum(val left: Expr, val right: Expr) : Expr
-class Subst(val left: Expr, val right: Expr) : Expr
-class Mul(val left: Expr, val right: Expr): Expr
-
-fun eval(e: Expr): Int = when(e) {
-    is Num -> e.value
-    is Sum -> eval(e.left) + eval(e.right)
-    is Subst -> eval(e.left) - eval(e.right)
-    is Mul -> eval(e.left) * eval(e.right)
-
-    else -> throw IllegalArgumentException("Unsupported operation")
+fun Expr.eval(): Int = when(this) {
+    is Num -> value
+    is Sum -> left.eval() + right.eval()
+    is Subst -> left.eval() - right.eval()
+    is Mul -> left.eval() * right.eval()
 }
 

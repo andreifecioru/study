@@ -11,8 +11,9 @@ fun min(a: Int, b: Int) = if (a < b) a else b
 class Person(val firstName: String, val lastName: String) {
     private val random = Random()
 
-    // lazily computed proper.
-    val fullName: String get() = "$firstName $lastName"
+    // custom prop getter (invoked with every property access)
+    val fullName: String
+        get() = "$firstName $lastName"
 
     val age: Int get() = random.nextInt(100)
 }
@@ -31,7 +32,6 @@ fun colorName(color: Color) = when(color) {
     Color.BLUE -> "blue"
     Color.GREEN ->"green"
     Color.YELLOW -> "yellow"
-    else -> "Unknown color"
 }
 
 fun main(args: Array<String>) {
@@ -44,7 +44,7 @@ fun main(args: Array<String>) {
     val color = Color.BLUE;
     println("rgb(${colorName(color)}) = ${color.rgb()}")
 
-    println("1 - 2 + 3 = ${eval(Sum(Subst(Num(1), Num(2)), Num(3)))}")
+    println("1 - 2 + 3 = ${(Sum(Subst(Num(1), Num(2)), Num(3))).eval()}")
 
     // ranges
     for (i in 1..10 step 3) {
