@@ -1,6 +1,7 @@
 .metals/
 .bloop/
 .vscode/
+.idea/
 project/
 target/
 _AtomicTestErrors.txt
