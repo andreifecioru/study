@@ -1,6 +1,6 @@
 package fun
 
-// Type class: we want to "process" various types (producing an Int)
+// Type class: we want to "process" various types (producing a String)
 trait Printable[A] {
   def format(value: A): String
 }
@@ -54,7 +54,7 @@ object PrintableSyntax {
 
   implicit class PrintableOps[A](value: A) {
     def format(implicit printable: Printable[A]): String = {
-      printable.format(value)
+      Printable.format(value)
     }
 
     def print(implicit printable: Printable[A]): Unit = {
