@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2.4'
 
 services:
   base:
@@ -34,6 +34,7 @@ services:
     ports:
       - 7000:7000
     volumes:
+      - /sys/fs/cgroup
       - ../../../..:/study
 
   hbase:
@@ -46,6 +47,17 @@ services:
     links:
       - zk:zk
       - hadoop:hadoop
+
+  tsdb:
+    extends:
+      file: tsdb/compose.yml
+      service: tsdb
+    depends_on:
+      - zk
+      - hbase
+    links:
+      - zk:zk
+      - hbase:hbase-box
 
   kafka:
     extends:

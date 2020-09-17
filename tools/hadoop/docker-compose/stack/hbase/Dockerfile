@@ -1,11 +1,11 @@
 FROM stack_base
 
-ENV HBASE_HOME       /usr/local/hbase
-ENV HBASE_CONF_DIR   ${HBASE_HOME}/conf
-ENV HBASE_LOG_DIR    /var/log/hbase
-ENV HBASE_TMP_DIR    /tmp/hbase
-
-ENV HBASE_VERSION=1.4.9
+ENV HBASE_VERSION=1.4.13
+ENV HBASE_HOME=/usr/local/hbase
+ENV HBASE_CONF_DIR=${HBASE_HOME}/conf
+ENV HBASE_LOG_DIR=/var/log/hbase
+ENV HBASE_TMP_DIR=/tmp/hbase
+ENV PATH=${PATH}:${HBASE_HOME}/bin
 
 RUN set -x \
     && mirror_url=$( \
@@ -36,16 +36,15 @@ RUN set -x \
         ${HBASE_LOG_DIR}  \
     && rm -rf ${HBASE_HOME}/docs
 
-COPY conf/* ${HBASE_CONF_DIR}/
+# Configuration files
+COPY files/hbase-* ${HBASE_CONF_DIR}/
 
-# Bootstrap script
-COPY start.sh /etc/start.sh
-RUN chmod +x /etc/start.sh
-
-ENV PATH=${PATH}:${HBASE_HOME}/bin
+# Bootstrap scripts
+COPY files/create_tsdb_tables.sh /create_tsdb_tables.sh
+COPY files/entrypoint.sh /entrypoint.sh
 
 WORKDIR ${HBASE_HOME}
 
 EXPOSE 16000 16010 16020 16030
 
-ENTRYPOINT [ "/etc/start.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]

@@ -1,6 +1,9 @@
-version: '2.1'
+version: '2.4'
 
 services:
   base:
     build: .
     container_name: base
+    volumes:
+      - /sys/fs/cgroup
+    entrypoint: bash
