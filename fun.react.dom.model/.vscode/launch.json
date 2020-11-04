@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "scala",
+      "name": "Enumerations",
+      "request": "launch",
+      "mainClass": "com.afecioru.apps.enumerations.MainApp",
+      "args": []
+    },
+    {
+      "type": "scala",
+      "name": "Either",
+      "request": "launch",
+      "mainClass": "com.afecioru.apps.either.MainApp",
+      "args": []
+    }
+  ]
+}
