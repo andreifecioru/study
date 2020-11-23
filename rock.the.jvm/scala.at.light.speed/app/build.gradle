@@ -1,0 +1,22 @@
+plugins {
+    id 'scala'
+    id 'application'
+}
+
+version = '1.1'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.13.3'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.scalatest:scalatest_2.13:3.1.0'
+    testImplementation 'org.scalatestplus:junit-4-12_2.13:3.1.0.0'
+
+    testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.13:1.2.0'
+}
+
