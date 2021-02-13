@@ -12,14 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee1b4deb-1e5a-4bd5-b3c8-26e962402655" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_02/quiz_02.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_02/quiz_02.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_05/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_05/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_05/quiz_02.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_05/quiz_02.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_xx/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_xx/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_11/quiz_02.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_11/quiz_02.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_14/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_19/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_19/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_xx/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_xx/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_xx/quiz_02.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_xx/quiz_02.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_xx/quiz_04.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_xx/quiz_04.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_xx/quiz_07.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_09/lec_xx/quiz_07.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lectures.h" beforeDir="false" afterPath="$PROJECT_DIR$/lectures.h" afterDir="false" />
@@ -36,6 +41,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1oPfMmvwxV3rOsZYAtSgpqab2LC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -60,22 +73,12 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="learn_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="learn_cpp" TARGET_NAME="learn_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="learn_cpp" RUN_TARGET_NAME="learn_cpp">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -91,7 +94,14 @@
       <workItem from="1613194640249" duration="197000" />
       <workItem from="1613194845375" duration="65000" />
       <workItem from="1613194921799" duration="4786000" />
-      <workItem from="1613209694967" duration="5108000" />
+      <workItem from="1613209694967" duration="13188000" />
+      <workItem from="1613287981731" duration="3599000" />
+      <workItem from="1613359206713" duration="26000" />
+      <workItem from="1613403700533" duration="8916000" />
+      <workItem from="1613541896058" duration="674000" />
+      <workItem from="1613638959114" duration="50000" />
+      <workItem from="1613728419206" duration="42000" />
+      <workItem from="1613728470384" duration="4455000" />
     </task>
     <servers />
   </component>
