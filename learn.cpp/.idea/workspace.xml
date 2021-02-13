@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="learn_cpp" targetName="learn_cpp" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee1b4deb-1e5a-4bd5-b3c8-26e962402655" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/learn.cpp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_06/lec_03/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_06/lec_03/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_06/lec_xx/quiz_03.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_06/lec_xx/quiz_03.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_01/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_01/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lectures.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opt_01/lec_03/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opt_01/lec_03/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opt_01/lec_04/quiz_06.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opt_01/lec_04/quiz_06.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.00/test_compiler.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.01/lecture_1_11.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.01/quiz_1_x_3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/add.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/add.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/io.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/io.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.02/quiz_2_3_5.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/lecture_4_3/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/lecture_4_3/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/lecture_4_3/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_10_1/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_10_1/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_10_1/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_3/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_3/io.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_3/io.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_3/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/constants.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/io.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/io.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_4/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_4/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_6/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_6/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_6/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/io.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/io.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/io.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/io.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_x_3/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_x_3/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_x_3/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_3_1/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_3_1/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_3_1/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/io.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/io.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/main.cpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1oPfMmvwxV3rOsZYAtSgpqab2LC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="learn_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="learn_cpp" TARGET_NAME="learn_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="learn_cpp" RUN_TARGET_NAME="learn_cpp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee1b4deb-1e5a-4bd5-b3c8-26e962402655" name="Default Changelist" comment="" />
+      <created>1613193102201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613193102201</updated>
+      <workItem from="1613193103847" duration="36000" />
+      <workItem from="1613194640249" duration="197000" />
+      <workItem from="1613194845375" duration="65000" />
+      <workItem from="1613194921799" duration="2061000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
