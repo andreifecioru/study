@@ -16,7 +16,11 @@
 #define CH_05_LECTURE_06                OFF
 #define CH_06_LECTURE_03_QUIZ_01        OFF
 #define CH_06_LECTURE_XX_QUIZ_03        OFF
-#define CH_08_LECTURE_01_QUIZ_01        ON
+#define CH_08_LECTURE_01_QUIZ_01        OFF
+#define CH_08_LECTURE_02_QUIZ_02        OFF
+#define CH_08_LECTURE_05_QUIZ_01        OFF
+#define CH_08_LECTURE_05_QUIZ_02        OFF
+#define CH_08_LECTURE_XX_QUIZ_01        ON
 
 #define OPT_01_LECTURE_03_QUIZ_01       OFF
 #define OPT_01_LECTURE_04_QUIZ_06       OFF

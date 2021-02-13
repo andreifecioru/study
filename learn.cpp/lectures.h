@@ -80,6 +80,26 @@ using ch_06_lecture_xx_quiz_03::run;
 using ch_08_lecture_01_quiz_01::run;
 #endif
 
+#if CH_08_LECTURE_02_QUIZ_02 == ON
+#include "ch_08/lec_02/quiz_02.h"
+using ch_08_lecture_02_quiz_02::run;
+#endif
+
+#if CH_08_LECTURE_05_QUIZ_01 == ON
+#include "ch_08/lec_05/quiz_01.h"
+using ch_08_lecture_05_quiz_01::run;
+#endif
+
+#if CH_08_LECTURE_05_QUIZ_02 == ON
+#include "ch_08/lec_05/quiz_02.h"
+using ch_08_lecture_05_quiz_02::run;
+#endif
+
+#if CH_08_LECTURE_XX_QUIZ_01 == ON
+#include "ch_08/lec_xx/quiz_01.h"
+using ch_08_lecture_xx_quiz_01::run;
+#endif
+
 
 
 #if OPT_01_LECTURE_03_QUIZ_01 == ON

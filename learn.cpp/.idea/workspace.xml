@@ -12,75 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee1b4deb-1e5a-4bd5-b3c8-26e962402655" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/learn.cpp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_06/lec_03/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_06/lec_03/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_06/lec_xx/quiz_03.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_06/lec_xx/quiz_03.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_01/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_08/lec_01/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lectures.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opt_01/lec_03/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opt_01/lec_03/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opt_01/lec_04/quiz_06.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opt_01/lec_04/quiz_06.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.00/test_compiler.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.01/lecture_1_11.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.01/quiz_1_x_3.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_3.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/add.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/add.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/io.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/io.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.02/lecture_2_7/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.02/quiz_2_3_5.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/lecture_4_3/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/lecture_4_3/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/lecture_4_3/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_10_1/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_10_1/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_10_1/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_3/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_3/io.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_3/io.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_3/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/constants.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/io.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/io.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.04/quiz_4_x_4/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_4/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_4/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_6/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_6/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/lecture_5_6/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/io.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/io.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.05/quiz_5_3_2/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/io.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/io.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_3_1/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_x_3/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_x_3/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch.06/quiz_6_x_3/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_3_1/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_3_1/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_3_1/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/io.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/io.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opt.01/quiz_0_4_6/main.cpp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_02/quiz_02.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_02/quiz_02.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_05/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_05/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_05/quiz_02.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_05/quiz_02.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_xx/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_08/lec_xx/quiz_01.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lectures.h" beforeDir="false" afterPath="$PROJECT_DIR$/lectures.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,9 +63,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="learn_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="learn_cpp" TARGET_NAME="learn_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="learn_cpp" RUN_TARGET_NAME="learn_cpp">
@@ -147,7 +90,8 @@
       <workItem from="1613193103847" duration="36000" />
       <workItem from="1613194640249" duration="197000" />
       <workItem from="1613194845375" duration="65000" />
-      <workItem from="1613194921799" duration="2061000" />
+      <workItem from="1613194921799" duration="4786000" />
+      <workItem from="1613209694967" duration="5108000" />
     </task>
     <servers />
   </component>

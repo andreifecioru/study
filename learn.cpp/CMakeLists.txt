@@ -24,5 +24,8 @@ add_executable(learn_cpp
         ch_06/lec_xx/quiz_03.h ch_06/lec_xx/quiz_03.cpp
         opt_01/lec_03/quiz_01.h opt_01/lec_03/quiz_01.cpp
         opt_01/lec_04/quiz_06.h opt_01/lec_04/quiz_06.cpp
-        ch_08/lec_01/quiz_01.h ch_08/lec_01/quiz_01.cpp)
+        ch_08/lec_01/quiz_01.h ch_08/lec_01/quiz_01.cpp
+        ch_08/lec_02/quiz_02.h ch_08/lec_02/quiz_02.cpp
+        ch_08/lec_05/quiz_01.h ch_08/lec_05/quiz_01.cpp
+        ch_08/lec_05/quiz_02.h ch_08/lec_05/quiz_02.cpp ch_08/lec_xx/quiz_01.h ch_08/lec_xx/quiz_01.cpp)
 
