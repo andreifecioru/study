@@ -31,7 +31,15 @@
 #define CH_09_LECTURE_XX_QUIZ_01        OFF
 #define CH_09_LECTURE_XX_QUIZ_02        OFF
 #define CH_09_LECTURE_XX_QUIZ_04        OFF
-#define CH_09_LECTURE_XX_QUIZ_07        ON
+#define CH_09_LECTURE_XX_QUIZ_07        OFF
+#define CH_10_LECTURE_09_QUIZ_01        OFF
+#define CH_10_LECTURE_10_QUIZ_01        OFF
+#define CH_10_LECTURE_10_QUIZ_02        OFF
+#define CH_10_LECTURE_10_QUIZ_03        OFF
+#define CH_10_LECTURE_15_QUIZ_01        OFF
+#define CH_10_LECTURE_15_QUIZ_02        OFF
+#define CH_10_LECTURE_16_QUIZ_03        OFF
+#define CH_10_LECTURE_XX_QUIZ_03        ON
 
 #define OPT_01_LECTURE_03_QUIZ_01       OFF
 #define OPT_01_LECTURE_04_QUIZ_06       OFF

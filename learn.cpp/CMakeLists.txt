@@ -39,5 +39,12 @@ add_executable(learn_cpp
         ch_09/lec_xx/quiz_01.h ch_09/lec_xx/quiz_01.cpp
         ch_09/lec_xx/quiz_02.h ch_09/lec_xx/quiz_02.cpp
         ch_09/lec_xx/quiz_04.h ch_09/lec_xx/quiz_04.cpp
-        ch_09/lec_xx/quiz_07.h ch_09/lec_xx/quiz_07.cpp)
+        ch_09/lec_xx/quiz_07.h ch_09/lec_xx/quiz_07.cpp
+        ch_10/lec_09/quiz_01.h ch_10/lec_09/quiz_01.cpp
+        ch_10/lec_10/quiz_01.h ch_10/lec_10/quiz_01.cpp
+        ch_10/lec_10/quiz_02.h ch_10/lec_10/quiz_02.cpp
+        ch_10/lec_10/quiz_03.h ch_10/lec_10/quiz_03.cpp
+        ch_10/lec_15/quiz_01.h ch_10/lec_15/quiz_01.cpp
+        ch_10/lec_15/quiz_02.h ch_10/lec_15/quiz_02.cpp
+        ch_10/lec_16/quiz_03.h ch_10/lec_16/quiz_03.cpp ch_10/lec_xx/quiz_03.h ch_10/lec_xx/quiz_03.cpp)
 

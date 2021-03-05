@@ -15,6 +15,7 @@ namespace ch_08_lecture_xx_quiz_01 {
                 case MonsterType::slime: return "Slime";
                 default:
                     static_assert("Invalid monster type.");
+                    return "";
             }
         }
 
