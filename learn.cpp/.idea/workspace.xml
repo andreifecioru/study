@@ -12,25 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee1b4deb-1e5a-4bd5-b3c8-26e962402655" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_09/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_09/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_10/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_10/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_10/quiz_02.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_10/quiz_02.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_10/quiz_03.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_10/quiz_03.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_15/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_15/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_15/quiz_02.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_15/quiz_02.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_16/quiz_03.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_16/quiz_03.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_xx/quiz_03.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_10/lec_xx/quiz_03.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_01/extra_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extra_01/extra_01.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/learn.cpp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learn.cpp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch_08/lec_xx/quiz_01.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ch_08/lec_xx/quiz_01.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lectures.h" beforeDir="false" afterPath="$PROJECT_DIR$/lectures.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -85,11 +71,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -116,6 +97,10 @@
       <workItem from="1613887453731" duration="5860000" />
       <workItem from="1613908364531" duration="4758000" />
       <workItem from="1614080879867" duration="6000" />
+      <workItem from="1615029586593" duration="2490000" />
+      <workItem from="1615270891452" duration="599000" />
+      <workItem from="1615362274908" duration="7000" />
+      <workItem from="1615793041858" duration="622000" />
     </task>
     <servers />
   </component>

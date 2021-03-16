@@ -195,6 +195,10 @@ using ch_10_lecture_16_quiz_03::run;
 using  ch_10_lecture_xx_quiz_03::run;
 #endif
 
+#if EXTRA_01 == ON
+#include "extra_01/extra_01.h"
+using extra_01::run;
+#endif
 
 
 

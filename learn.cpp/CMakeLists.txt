@@ -46,5 +46,5 @@ add_executable(learn_cpp
         ch_10/lec_10/quiz_03.h ch_10/lec_10/quiz_03.cpp
         ch_10/lec_15/quiz_01.h ch_10/lec_15/quiz_01.cpp
         ch_10/lec_15/quiz_02.h ch_10/lec_15/quiz_02.cpp
-        ch_10/lec_16/quiz_03.h ch_10/lec_16/quiz_03.cpp ch_10/lec_xx/quiz_03.h ch_10/lec_xx/quiz_03.cpp)
+        ch_10/lec_16/quiz_03.h ch_10/lec_16/quiz_03.cpp ch_10/lec_xx/quiz_03.h ch_10/lec_xx/quiz_03.cpp extra_01/extra_01.h extra_01/extra_01.cpp)
 
