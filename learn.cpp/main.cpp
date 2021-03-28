@@ -40,11 +40,21 @@
 #define CH_10_LECTURE_15_QUIZ_02        OFF
 #define CH_10_LECTURE_16_QUIZ_03        OFF
 #define CH_10_LECTURE_XX_QUIZ_03        OFF
+#define CH_11_LECTURE_02_QUIZ_01        OFF
+#define CH_11_LECTURE_03_QUIZ_02        OFF
+#define CH_11_LECTURE_03_QUIZ_03        OFF
+#define CH_11_LECTURE_05_QUIZ_01        OFF
+#define CH_11_LECTURE_06_QUIZ_01        OFF
+#define CH_11_LECTURE_14                OFF
+#define CH_11_LECTURE_14_QUIZ_01        OFF
+#define CH_11_LECTURE_XX_QUIZ_01        OFF
+#define CH_11_LECTURE_XX_QUIZ_03        OFF
+#define CH_11_LECTURE_XX_QUIZ_04        ON
 
 #define OPT_01_LECTURE_03_QUIZ_01       OFF
 #define OPT_01_LECTURE_04_QUIZ_06       OFF
 
-#define EXTRA_01                        ON
+#define EXTRA_01                        OFF
 
 
 #include "lectures.h"

@@ -195,13 +195,66 @@ using ch_10_lecture_16_quiz_03::run;
 using  ch_10_lecture_xx_quiz_03::run;
 #endif
 
+#if CH_11_LECTURE_02_QUIZ_01 == ON
+#include "ch_11/lec_02/quiz_01/quiz_01.h"
+using ch_11_lecture_02_quiz_01::run;
+#endif
+
+#if CH_11_LECTURE_03_QUIZ_02 == ON
+#include "ch_11/lec_03/quiz_02/quiz_02.h"
+using ch_11_lecture_03_quiz_02::run;
+#endif
+
+#if CH_11_LECTURE_03_QUIZ_03 == ON
+#include "ch_11/lec_03/quiz_03/quiz_03.h"
+using ch_11_lecture_11_quiz_03::run;
+#endif
+
+#if CH_11_LECTURE_05_QUIZ_01 == ON
+#include "ch_11/lec_05/quiz_01/quiz_01.h"
+using ch_11_lecture_05_quiz_01::run;
+#endif
+
+#if CH_11_LECTURE_06_QUIZ_01 == ON
+#include "ch_11/lec_06/quiz_01/quiz_01.h"
+using ch_11_lecture_06_quiz_01::run;
+#endif
+
+#if CH_11_LECTURE_14 == ON
+#include "ch_11/lec_14/lecture_14.h"
+using ch_11_lecture_14::run;
+#endif
+
+#if CH_11_LECTURE_14_QUIZ_01 == ON
+#include "ch_11/lec_14/quiz_01/quiz_01.h"
+using ch_11_lecture_14_quiz_01::run;
+#endif
+
+#if CH_11_LECTURE_XX_QUIZ_01 == ON
+#include "ch_11/lec_xx/quiz_01/quiz_01.h"
+using ch_11_lecture_xx_quiz_01::run;
+#endif
+
+#if CH_11_LECTURE_XX_QUIZ_03 == ON
+#include "ch_11/lec_xx/quiz_03/quiz_03.h"
+using ch_11_lecture_xx_quiz_03::run;
+#endif
+
+#if CH_11_LECTURE_XX_QUIZ_04 == ON
+#include "ch_11/lec_xx/quiz_04/quiz_04.h"
+using ch_11_lecture_xx_quiz_04::run;
+#endif
+
+
+// =======================
+
 #if EXTRA_01 == ON
 #include "extra_01/extra_01.h"
 using extra_01::run;
 #endif
 
 
-
+// =======================
 
 #if OPT_01_LECTURE_03_QUIZ_01 == ON
 #include "opt_01/lec_03/quiz_01.h"
