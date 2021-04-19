@@ -245,6 +245,36 @@ using ch_11_lecture_xx_quiz_03::run;
 using ch_11_lecture_xx_quiz_04::run;
 #endif
 
+#if CH_13_LECTURE_02 == ON
+#include "ch_13/lec_02/lecture_02.h"
+using ch_13_lecture_02::run;
+#endif
+
+#if CH_13_LECTURE_02_QUIZ_01 == ON
+#include "ch_13/lec_02/quiz_01/quiz_01.h"
+using ch_13_lecture_02_quiz_01::run;
+#endif
+
+#if CH_13_LECTURE_09_QUIZ_01 == ON
+#include "ch_13/lec_09/quiz_01/quiz_01.h"
+using ch_13_lecture_09_quiz_01::run;
+#endif
+
+#if CH_13_LECTURE_10_QUIZ_01 == ON
+#include "ch_13/lec_10/quiz_01/quiz_01.h"
+using ch_13_lecture_10_quiz_01::run;
+#endif
+
+#if CH_13_LECTURE_XX_QUIZ_02 == ON
+#include "ch_13/lec_xx/quiz_02/quiz_02.h"
+using ch_13_lecture_xx_quiz_02::run;
+#endif
+
+#if CH_13_LECTURE_XX_QUIZ_03 == ON
+#include "ch_13/lec_xx/quiz_03/quiz_03.h"
+using ch_13_lecture_xx_quiz_03::run;
+#endif
+
 
 // =======================
 

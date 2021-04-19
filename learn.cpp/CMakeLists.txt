@@ -14,3 +14,7 @@ add_executable(learn_cpp
         main.cpp lectures.h
         ${CHAPTER_SOURCES})
 
+target_include_directories(learn_cpp PRIVATE
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/external/fmt/include>
+)
+

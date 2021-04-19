@@ -12,66 +12,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee1b4deb-1e5a-4bd5-b3c8-26e962402655" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_02/quiz_01/IntPair.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_02/quiz_01/IntPair.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_02/quiz_01/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_02/quiz_01/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_03/quiz_02/Point3D.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_03/quiz_02/Point3D.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_03/quiz_02/quiz_02.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_03/quiz_02/quiz_02.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_03/quiz_03/Stack.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_03/quiz_03/Stack.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_03/quiz_03/quiz_03.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_03/quiz_03/quiz_03.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_05/quiz_01/Ball.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_05/quiz_01/Ball.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_05/quiz_01/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_05/quiz_01/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_06/quiz_01/RGBA.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_06/quiz_01/RGBA.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_06/quiz_01/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_06/quiz_01/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/StaticConstrInnerClass.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/StaticConstrInnerClass.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/StaticConstrLambda.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/StaticConstrLambda.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/lecture_14.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/lecture_14.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/quiz_01/Point3D.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/quiz_01/Point3D.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/quiz_01/Printable.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/quiz_01/Printable.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/quiz_01/Vector3D.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/quiz_01/Vector3D.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/quiz_01/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_14/quiz_01/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_01/Point2D.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_01/Point2D.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_01/Printable.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_01/Printable.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_01/quiz_01.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_01/quiz_01.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_03/Monster.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_03/Monster.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_03/MonsterGenerator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_03/MonsterGenerator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_03/Printable.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_03/Printable.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_03/quiz_03.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_03/quiz_03.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Card.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Card.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Deck.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Deck.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Game.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Game.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Hand.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Hand.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Printable.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/Printable.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/quiz_04.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch_11/lec_xx/quiz_04/quiz_04.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/Cents.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/Cents.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/MinMax.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/MinMax.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/Printable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/Printable.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/lecture_02.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/lecture_02.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/quiz_01/DivisionByZeroException.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/quiz_01/Fraction.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/quiz_01/Fraction.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/quiz_01/Printable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/quiz_01/Printable.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/quiz_01/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_02/quiz_01/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_09/quiz_01/Printable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_09/quiz_01/Printable.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_09/quiz_01/StudentGrades.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_09/quiz_01/StudentGrades.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_09/quiz_01/StudentNotFoundException.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_09/quiz_01/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_09/quiz_01/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_10/quiz_01/MyString.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_10/quiz_01/MyString.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_10/quiz_01/Printable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_10/quiz_01/Printable.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_10/quiz_01/quiz_01.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_10/quiz_01/quiz_01.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_02/Average.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_02/Average.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_02/Printable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_02/Printable.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_02/quiz_02.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_02/quiz_02.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_03/IndexOutOfBoundsException.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_03/IntArray.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_03/IntArray.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_03/Printable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_03/Printable.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_03/quiz_03.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch_13/lec_xx/quiz_03/quiz_03.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/external/fmt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lectures.h" beforeDir="false" afterPath="$PROJECT_DIR$/lectures.h" afterDir="false" />
@@ -97,6 +81,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1oPfMmvwxV3rOsZYAtSgpqab2LC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -110,9 +97,13 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.has.clang-format" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -130,17 +121,17 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="learn_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="learn_cpp" TARGET_NAME="learn_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="learn_cpp" RUN_TARGET_NAME="learn_cpp">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="learn_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="learn_cpp" TARGET_NAME="learn_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="learn_cpp" RUN_TARGET_NAME="learn_cpp">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -181,6 +172,10 @@
       <workItem from="1616744217434" duration="3391000" />
       <workItem from="1616824004119" duration="14152000" />
       <workItem from="1616909441272" duration="8525000" />
+      <workItem from="1617080673831" duration="599000" />
+      <workItem from="1618741202665" duration="11939000" />
+      <workItem from="1618809052482" duration="211000" />
+      <workItem from="1618809273795" duration="6301000" />
     </task>
     <servers />
   </component>

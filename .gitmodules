@@ -1,0 +1,3 @@
+[submodule "learn.cpp/external/fmt"]
+	path = learn.cpp/external/fmt
+	url = https://github.com/fmtlib/fmt.git
