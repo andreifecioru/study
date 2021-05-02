@@ -275,6 +275,16 @@ using ch_13_lecture_xx_quiz_02::run;
 using ch_13_lecture_xx_quiz_03::run;
 #endif
 
+#if CH_16_LECTURE_03_quiz_02 == ON
+#include "ch_16/lec_03/quiz_02/quiz_02.h"
+using ch_16_lecture_03_quiz_02::run;
+#endif
+
+#if CH_16_LECTURE_04 == ON
+#include "ch_16/lec_04/lecture_04.h"
+using ch_16_lecture_04::run;
+#endif
+
 
 // =======================
 

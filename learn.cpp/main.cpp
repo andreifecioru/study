@@ -55,7 +55,9 @@
 #define CH_13_LECTURE_09_QUIZ_01        OFF
 #define CH_13_LECTURE_10_QUIZ_01        OFF
 #define CH_13_LECTURE_XX_QUIZ_02        OFF
-#define CH_13_LECTURE_XX_QUIZ_03        ON
+#define CH_13_LECTURE_XX_QUIZ_03        OFF
+#define CH_16_LECTURE_03_quiz_02        OFF
+#define CH_16_LECTURE_04                ON
 
 #define OPT_01_LECTURE_03_QUIZ_01       OFF
 #define OPT_01_LECTURE_04_QUIZ_06       OFF
