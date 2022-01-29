@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="scala.essential">
+      <plugins>
+        <plugin path="$USER_HOME$/.cache/coursier/v1/https/repo.artima.com/releases/com/artima/supersafe/supersafe_2.13.7/1.1.12/supersafe_2.13.7-1.1.12.jar" />
+      </plugins>
+    </profile>
+  </component>
+</project>
