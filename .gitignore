@@ -3,4 +3,5 @@
 .idea/
 tools/hadoop/deploy/work/
 target/
+node_modules/
 
