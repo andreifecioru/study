@@ -1,0 +1,1 @@
+Demp app version {{version}}. Request processed by "{{hostname}}". Client IP: {{clientIP}}
