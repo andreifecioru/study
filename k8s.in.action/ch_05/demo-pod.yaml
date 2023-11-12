@@ -1,17 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  creationTimestamp: null
   labels:
     run: demo-pod
   name: demo-pod
 spec:
   containers:
-  - image: andreifecioru/k8s_demo_app:x86_0.1
-    name: demo-pod
+  - image: andreifecioru/k8s_demo_app:darwin_0.2
+    name: demo-container
+    stdin: true
     ports:
     - containerPort: 8080
-    resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-status: {}

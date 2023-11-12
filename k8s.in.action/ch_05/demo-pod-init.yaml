@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: demo-pod-init
+  name: demo-pod-init
+spec:
+  initContainers:
+  - name: demo-init
+    image: luksa/init-demo:0.1
+  - name: net-check
+    image: luksa/network-connectivity-checker:0.1
+
+  containers:
+  - name: demo-container-ssl
+    image: andreifecioru/k8s_demo_app:darwin_0.2
+    stdin: true
+    ports:
+    - name: http
+      containerPort: 8080
+
+  - name: envoy
+    image: luksa/kiada-ssl-proxy:0.1
+    ports:
+    - name: https
+      containerPort: 8443
+    - name: admin
+      containerPort: 9901
+
+
