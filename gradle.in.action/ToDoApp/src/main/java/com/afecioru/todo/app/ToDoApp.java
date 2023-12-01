@@ -1,27 +1,26 @@
 package com.afecioru.todo.app;
 
+import org.apache.commons.lang3.CharUtils;
+
 import com.afecioru.todo.utils.CommandLineInput;
 import com.afecioru.todo.utils.CommandLineInputHandler;
 
-import java.io.IOException;
-import java.text.MessageFormat;
 
 public class ToDoApp {
+  private static final char DEFAULT_INPUT = '?';
+
   public static void main(String[] args) {
     CommandLineInputHandler cmdLineHandler = new CommandLineInputHandler();
 
     while (true) {
       cmdLineHandler.printMenu();
       String input = cmdLineHandler.readInput("cmd > ");
+      char command = CharUtils.toChar(input, DEFAULT_INPUT);
 
-      if (input.length() > 1) {
-        cmdLineHandler.handleUnknownInput();
-      } else {
-        CommandLineInput cmdLineInput = CommandLineInput.getCommandLineForInput(input.charAt(0));
-        boolean shouldExit = cmdLineHandler.handleInput(cmdLineInput);
+      CommandLineInput cmdLineInput = CommandLineInput.getCommandLineForInput(command);
+      boolean shouldExit = cmdLineHandler.handleInput(cmdLineInput);
 
-        if (shouldExit) break;
-      }
+      if (shouldExit) break;
     }
 
     System.out.println("Bye!");
