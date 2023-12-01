@@ -1,7 +1,9 @@
 .gradle/
 .vagrant/
 .idea/
+.vscode/
 tools/hadoop/deploy/work/
 target/
 node_modules/
+build/
 

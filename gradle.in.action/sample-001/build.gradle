@@ -1,0 +1,24 @@
+// write custom code anywhere you like
+def chant() {
+  // deep intergation with the Ant build tool
+  ant.echo(message: 'Repeat after me...') 
+}
+
+task startSession {
+  doLast {
+    chant()
+  }
+}
+
+3.times { // dynamically defined tasks
+  task "yayGradle$it" {
+    doLast {
+      println 'Gradle rocks!'
+    }
+  }
+}
+
+// setup task deps
+yayGradle0.dependsOn startSession
+yayGradle2.dependsOn yayGradle1, yayGradle0
+task entryPoint(dependsOn: yayGradle2)
