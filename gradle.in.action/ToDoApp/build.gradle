@@ -1,0 +1,15 @@
+plugins {
+  id 'java'
+}
+
+version = '0.1'
+group = 'com.afecioru.todo'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compileOnly 'org.projectlombok:lombok:1.18.30'
+  annotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
