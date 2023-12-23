@@ -1,7 +1,10 @@
+.bloop/
 .gradle/
 .vagrant/
 .idea/
 .vscode/
+.settings/
+.metals/
 tools/hadoop/deploy/work/
 target/
 node_modules/

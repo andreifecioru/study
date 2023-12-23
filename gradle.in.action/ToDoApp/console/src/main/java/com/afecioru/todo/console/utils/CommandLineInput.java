@@ -1,4 +1,4 @@
-package com.afecioru.todo.utils;
+package com.afecioru.todo.console.utils;
 
 import java.util.HashMap;
 import java.util.Map;

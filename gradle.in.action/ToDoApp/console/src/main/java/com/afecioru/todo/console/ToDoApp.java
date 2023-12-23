@@ -1,9 +1,9 @@
-package com.afecioru.todo.app;
+package com.afecioru.todo.console;
 
 import org.apache.commons.lang3.CharUtils;
 
-import com.afecioru.todo.utils.CommandLineInput;
-import com.afecioru.todo.utils.CommandLineInputHandler;
+import com.afecioru.todo.console.utils.CommandLineInput;
+import com.afecioru.todo.console.utils.CommandLineInputHandler;
 
 
 public class ToDoApp {
@@ -11,6 +11,9 @@ public class ToDoApp {
 
   public static void main(String[] args) {
     CommandLineInputHandler cmdLineHandler = new CommandLineInputHandler();
+
+    cmdLineHandler.readInput(">");
+
 
     while (true) {
       cmdLineHandler.printMenu();

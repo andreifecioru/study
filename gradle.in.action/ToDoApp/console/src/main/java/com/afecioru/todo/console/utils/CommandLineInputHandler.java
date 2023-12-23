@@ -1,4 +1,4 @@
-package com.afecioru.todo.utils;
+package com.afecioru.todo.console.utils;
 
 import com.afecioru.todo.models.ToDoItem;
 import com.afecioru.todo.repository.InMemoryToDoRepository;
