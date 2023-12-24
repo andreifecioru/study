@@ -1,4 +1,4 @@
-package com.afecioru.mjia.ch02;
+package com.afecioru.mjia.lambdas;
 
 import java.text.MessageFormat;
 

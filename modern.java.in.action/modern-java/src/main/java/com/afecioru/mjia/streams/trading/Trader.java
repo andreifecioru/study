@@ -1,4 +1,4 @@
-package com.afecioru.mjia.ch03.trading;
+package com.afecioru.mjia.streams.trading;
 
 public record Trader(String name, String city) {
     @Override

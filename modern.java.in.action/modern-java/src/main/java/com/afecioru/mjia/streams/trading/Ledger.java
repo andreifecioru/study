@@ -1,4 +1,4 @@
-package com.afecioru.mjia.ch03.trading;
+package com.afecioru.mjia.streams.trading;
 
 import java.util.List;
 

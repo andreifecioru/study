@@ -1,6 +1,7 @@
-package com.afecioru.mjia.ch03.trading;
+package com.afecioru.mjia.streams.trading;
 
 import java.util.Comparator;
+import java.util.stream.Collectors;
 
 public class TradingApp {
     public static void main(String[] args) {
@@ -42,7 +43,7 @@ public class TradingApp {
             .map(Trader::name)
             .distinct()
             .sorted()
-            .toList();
+            .collect(Collectors.joining());
         System.out.println("[4] Result: " + q4Result);
 
         System.out.println("/n-------------------/n");

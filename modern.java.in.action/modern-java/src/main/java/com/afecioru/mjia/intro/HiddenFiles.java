@@ -1,4 +1,4 @@
-package com.afecioru.mjia.ch01;
+package com.afecioru.mjia.intro;
 
 import java.io.File;
 import java.io.FileFilter;

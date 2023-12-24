@@ -1,4 +1,4 @@
-package com.afecioru.mjia.ch03.menu;
+package com.afecioru.mjia.streams.menu;
 
 public record Dish(String name, boolean vegetarian, int calories, Type type) {
 

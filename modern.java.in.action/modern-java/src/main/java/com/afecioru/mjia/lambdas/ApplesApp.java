@@ -1,11 +1,11 @@
-package com.afecioru.mjia.ch02;
+package com.afecioru.mjia.lambdas;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.concurrent.*;
 
-import static com.afecioru.mjia.ch02.Apple.Color;
-import static com.afecioru.mjia.ch02.Apples.APPLES;
+import static com.afecioru.mjia.lambdas.Apple.Color;
+import static com.afecioru.mjia.lambdas.Apples.APPLES;
 
 public class ApplesApp {
     public static void main(String[] args)

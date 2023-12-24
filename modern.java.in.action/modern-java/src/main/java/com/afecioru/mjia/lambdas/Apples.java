@@ -1,4 +1,4 @@
-package com.afecioru.mjia.ch02;
+package com.afecioru.mjia.lambdas;
 
 import java.text.MessageFormat;
 import java.util.Collection;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-import static com.afecioru.mjia.ch02.Apple.Color;
+import static com.afecioru.mjia.lambdas.Apple.Color;
 
 public class Apples {
     public static final List<Apple> APPLES = List.of(
