@@ -1,11 +1,18 @@
 package com.afecioru.mjia.lambdas;
 
+import com.afecioru.mjia.collectors.menu.Dish;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.concurrent.*;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.IntPredicate;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static com.afecioru.mjia.lambdas.Apple.Color;
-import static com.afecioru.mjia.lambdas.Apples.APPLES;
+import static com.afecioru.mjia.lambdas.Apples.*;
 
 public class ApplesApp {
     public static void main(String[] args)
