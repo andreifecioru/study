@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 3</title>
+</head>
+<body>
+<main>
+    <h1>Learning Spring Boot 3</h1>
+
+    <h2>Chapter 3</h2>
+
+    <hr/>
+
+    <h3>List of existing videos</h3>
+
+    <ul>
+        {{#videos}}
+            <li>{{name}}</li>
+        {{/videos}}
+    </ul>
+
+    <hr/>
+
+    <h3>Add a new video</h3>
+
+    <form method="POST" action="/new-video">
+        <label for="name"> Name:
+            <input type="text" name="name">
+        </label>
+
+        <label for="description"> Description:
+            <input type="text" name="description">
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr/>
+
+    <h3>Search</h3>
+
+    <form method="POST" action="/search">
+        <label for="term"> Name:
+            <input type="text" name="term">
+        </label>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <hr/>
+
+    <h3>Multi-field search</h3>
+
+    <form method="POST" action="/multi-field-search">
+        <label for="name"> Name:
+            <input type="text" name="name">
+        </label>
+
+        <label for="description"> Description:
+            <input type="text" name="description">
+        </label>
+
+        <button type="submit">Search</button>
+    </form>
+</main>
+</body>
+</html>
