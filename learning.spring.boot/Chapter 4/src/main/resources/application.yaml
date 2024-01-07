@@ -1,0 +1,23 @@
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+spring:
+  mustache:
+    servlet:
+      expose-request-attributes: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ''
+            client-secret: ''
+            scope:
+              - openid
+              - profile
+              - email
+              - https://www.googleapis.com/auth/youtube
+
