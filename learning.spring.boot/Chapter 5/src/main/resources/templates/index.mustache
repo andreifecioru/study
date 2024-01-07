@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 5</title>
+</head>
+<body>
+<main>
+    <h1>Learning Spring Boot 3</h1>
+
+    <h2>Chapter 5</h2>
+
+    <a href="/logout">Logout</a>
+
+    <hr/>
+
+    <h2>Available books</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Author</td>
+                <td>Copies Sold</td>
+            </tr>
+        </thead>
+        <tbody>
+        {{#books}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{author}}</td>
+                <td>{{copiesSold}}</td>
+                <td>
+                    <form method="POST" action="/delete/{{id}}">
+                        <button type="submit">Delete</button>
+                        <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}">
+                    </form>
+                </td>
+            </tr>
+        {{/books}}
+        </tbody>
+    </table>
+
+    <hr />
+
+    <h2>Add a new book</h2>
+
+    <form method="POST" action="/add">
+        <label for="title"> Title:
+            <input type="text" name="title">
+        </label>
+
+        <label for="author"> Author:
+            <input type="text" name="author">
+        </label>
+
+        <label for="copiesSold"> Author:
+            <input type="number" name="copiesSold">
+        </label>
+
+        <button type="submit">Add</button>
+
+        <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}">
+    </form>
+</main>
+</body>
+</html>

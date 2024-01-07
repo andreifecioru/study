@@ -1,0 +1,4 @@
+spring:
+  mustache:
+    servlet:
+      expose-request-attributes: true
