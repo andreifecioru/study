@@ -9,6 +9,7 @@ lazy val root = (project in file("."))
   .disablePlugins(AssemblyPlugin)
   .aggregate(
     type_classes,
+    playground
   )
 
 lazy val type_classes = project
@@ -19,13 +20,19 @@ lazy val type_classes = project
   )
   .disablePlugins(AssemblyPlugin)
 
+lazy val playground = project
+  .settings(
+    name := "playground",
+    settings,
+    libraryDependencies ++= commonDependencies
+  )
+  .disablePlugins(AssemblyPlugin)
 
 // ---------------------[ DEPENDENCIES ]-----------------------
 
 lazy val dependencies =
   new {
     val catsCoreV = "2.10.0"
-
     val catsCore = "org.typelevel" %% "cats-core" % catsCoreV
   }
 
