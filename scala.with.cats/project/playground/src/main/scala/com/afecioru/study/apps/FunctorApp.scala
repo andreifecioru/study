@@ -8,7 +8,7 @@ object FunctorApp extends App {
   }
 
   // instance
-  implicit val listFunctor = new Functor[List] {
+  implicit val listFunctor: Functor[List] = new Functor[List] {
     override def mapN[A, B](container: List[A])(f: A => B): List[B] = container.map(f)
   }
 

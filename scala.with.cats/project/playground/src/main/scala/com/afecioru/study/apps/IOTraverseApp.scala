@@ -1,7 +1,6 @@
 package com.afecioru.study.apps
 
 import cats.effect.{IO, IOApp}
-import jdk.nashorn.internal.ir.LiteralNode
 
 import java.util.concurrent.TimeUnit
 import scala.util.Random
