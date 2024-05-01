@@ -29,15 +29,18 @@ lazy val playground = project
   .disablePlugins(AssemblyPlugin)
 
 // ---------------------[ DEPENDENCIES ]-----------------------
-
 lazy val dependencies =
   new {
     val catsCoreV = "2.10.0"
+    val catsEffectV = "3.5.4"
+
     val catsCore = "org.typelevel" %% "cats-core" % catsCoreV
+    val catsEffect = "org.typelevel" %% "cats-effect" % catsEffectV
   }
 
 lazy val commonDependencies = Seq(
-  dependencies.catsCore
+  dependencies.catsCore,
+  dependencies.catsEffect
 )
 
 // ------------------------[ SETTINGS ]--------------------------

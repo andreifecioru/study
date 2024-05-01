@@ -1,6 +1,7 @@
 package com.afecioru.study.apps
 
 import java.util.concurrent.TimeUnit
+import scala.io.StdIn.readLine
 
 object IOEffectApp extends App {
 
@@ -29,7 +30,14 @@ object IOEffectApp extends App {
     TimeUnit.SECONDS.sleep(1)
   }
 
+  val lineReader = MyIO[String] { () =>
+    println("Your input: ")
+    readLine()
+  }
+
   val duration = measure(computation).unsafe()
   println(s"Duration: $duration")
+
+  println(lineReader.unsafe())
 
 }
