@@ -1,0 +1,11 @@
+name: demo-app
+description: Demo App infra.
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
