@@ -1,8 +1,8 @@
-import pulumi
-from pulumi_aws import ec2, rds, iam
+import pulumi as pm
+from pulumi_aws import ec2, rds, iam, elasticbeanstalk as eb
 
-project_name = pulumi.get_project()
-aws_config = pulumi.Config("aws")
+project_name = pm.get_project()
+aws_config = pm.Config("aws")
 aws_region = aws_config.require("region")
 
 
@@ -217,7 +217,7 @@ def create_instance_sg(vpc, bastion_sg):
     return instance_sg
   
 
-def create_rds_sg(vpc, bastion_sg):
+def create_rds_sg(vpc, bastion_sg, instance_sg):
     # Create the security group
     rds_sg = ec2.SecurityGroup(f'{project_name}-rds-sg',
         description='Security group for RDS instance',
@@ -229,7 +229,7 @@ def create_rds_sg(vpc, bastion_sg):
     )
 
     # Allow inbound traffic from the bastion host
-    ec2.SecurityGroupRule(f'{project_name}-rds-postgres-in',
+    ec2.SecurityGroupRule(f'{project_name}-rds-postgres-bastion-in',
         type='ingress',
         from_port=5432,
         to_port=5432,
@@ -237,6 +237,17 @@ def create_rds_sg(vpc, bastion_sg):
         security_group_id=rds_sg.id,
         source_security_group_id=bastion_sg.id,
         description='Allow Postgres access from bastion host'
+    )
+
+    # Allow inbound traffic from the application instances
+    ec2.SecurityGroupRule(f'{project_name}-rds-postgres-instance-in',
+        type='ingress',
+        from_port=5432,
+        to_port=5432,
+        protocol='tcp',
+        security_group_id=rds_sg.id,
+        source_security_group_id=instance_sg.id,
+        description='Allow Postgres access from application instances'
     )
 
     # Allow all outbound traffic
@@ -273,15 +284,15 @@ def create_bastion_host(subnet, bastion_sg, instance_key):
   with open('./resources/scripts/update_packages.sh', 'r') as f:
     user_data = f.read() 
     
-  return ec2.Instance('bastion-host',
+  return ec2.Instance(f'{project_name}-bastion-host',
       instance_type='t2.micro',
-      ami='ami-0669b163befffbdfc',  # Amazon Linux 2023 AMI in eu-central-1
+      ami='ami-0b5673b5f6e8f7fa7',
       subnet_id=subnet.id,
       vpc_security_group_ids=[bastion_sg.id],
       key_name=instance_key.key_name,
-      user_data=user_data,
+    #   user_data=user_data,
       tags={
-          'Name': 'bastion-host',
+          'Name': f'{project_name}-bastion-host',
           'Project': project_name
       }
   )
@@ -342,7 +353,18 @@ def create_iam_eb_instance_profile(role):
     )
 
 
-def configure_vpc():
+def create_eb_application():
+  return eb.Application(f'{project_name}-backend',
+      name=f'{project_name}-backend',
+      description='Elastic Beanstalk application for the DemoApp project',
+      tags={
+          'Name': f'{project_name}-backend',
+          'Project': project_name
+      }
+  )
+  
+  
+def create_global_resources():
   # Create the VPC and IGW
   vpc = create_vpc()
   igw = create_internet_gateway(vpc)
@@ -359,7 +381,7 @@ def configure_vpc():
   # Create security groups
   bastion_sg = create_bastion_sg(vpc)
   instance_sg = create_instance_sg(vpc, bastion_sg)
-  rds_sg = create_rds_sg(vpc, bastion_sg)
+  rds_sg = create_rds_sg(vpc, bastion_sg, instance_sg)
   
   # Create bastion host
   instance_key = create_instance_key(vpc)
@@ -372,32 +394,33 @@ def configure_vpc():
   eb_role = create_iam_eb_role()
   eb_instance_profile = create_iam_eb_instance_profile(eb_role)
   
+  # Create EB application
+  eb_application = create_eb_application()
+  
   return {
-    'vpc': vpc,
-    'subnets': {
-      'public': public_subnets,
-      'private': private_subnets
-    },
-    'security_groups': {
-      'bastion': bastion_sg,
-      'instance': instance_sg,
-      'rds': rds_sg
-    },
-    'keys': {
-      'instance': instance_key
-    },
-    'instances': {
-      'bastion': bastion_host
-    },
-    'subnet_groups': {
-      'rds': rds_subnet_group
-    },
-    'iam': {
-      'roles': {
-        'eb': eb_role,
-      },
-      'instance_profiles': {
-        'eb': eb_instance_profile
-      }
-    }
+    'vpc.id': vpc.id,
+    
+    'subnets.public.a.id': public_subnets['a'].id,
+    'subnets.public.b.id': public_subnets['b'].id,
+    'subnets.public.c.id': public_subnets['c'].id,
+    
+    'subnets.private.a.id': private_subnets['a'].id,
+    'subnets.private.b.id': private_subnets['b'].id,
+    'subnets.private.c.id': private_subnets['c'].id,
+    
+    'security_groups.bastion.id': bastion_sg.id,
+    'security_groups.instance.id': instance_sg.id,
+    'security_groups.rds.id': rds_sg.id,
+    
+    'keys.instance.key_name': instance_key.key_name,
+    
+    'instances.bastion.id': bastion_host.id,
+    'instances.bastion.public_ip': bastion_host.public_ip,
+    
+    'subnet_groups.rds.name': rds_subnet_group.name,
+    
+    'iam.roles.eb.name': eb_role.name,
+    'iam.instance_profiles.eb.name': eb_instance_profile.name,
+    
+    'applications.eb.name': eb_application.name
   }

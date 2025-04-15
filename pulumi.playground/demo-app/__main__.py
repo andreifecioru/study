@@ -1,12 +1,27 @@
-import pulumi
+import pulumi as pm
 from pulumi_aws import ec2
 
-from vpc import configure_vpc
+from global_resources import create_global_resources
 from backend import create_backend
-from compute import create_private_ec2_instance
+from compute import create_compute_resources
 
 
 if __name__ == '__main__':
-  vpc_data = configure_vpc()
-  #backend_data = create_backend(vpc_data)
-  private_ec2_instance = create_private_ec2_instance(vpc_data)
+  org_name = pm.get_organization()  
+  project_name = pm.get_project()
+  stack_name = pm.get_stack()
+  
+  if stack_name == 'global':
+    global_data = create_global_resources()
+    
+    for key, value in global_data.items():
+      pm.export(key, value)
+    
+  else:
+    global_data = pm.StackReference(f'{org_name}/{project_name}/global').outputs
+    
+    compute_data = create_backend(global_data)
+    
+    for key, value in compute_data.items():
+      pm.export(key, value)
+    
