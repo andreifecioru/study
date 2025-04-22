@@ -1,6 +1,6 @@
 import pulumi
 from pulumi_aws import ec2, rds, elasticbeanstalk as eb
-from utils import eb_env_settings
+from .utils import eb_env_settings
 
 project_name = pulumi.get_project()
 stack_name = pulumi.get_stack()

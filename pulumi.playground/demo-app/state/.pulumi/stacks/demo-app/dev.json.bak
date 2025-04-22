@@ -1,0 +1,69 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/demo-app/dev",
+        "latest": {
+            "manifest": {
+                "time": "2025-04-22T11:49:21.478736+03:00",
+                "magic": "2bd4745a5107d793d99154515a56ea83ac634c18f2078efd20f2659b45247146",
+                "version": "v3.163.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:NQepbFxbeSQ=:v1:omBBECaOj0beuiSO:s8cfiozhrPyFP5br5ZuXpZSBmS7ODA=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:dev::demo-app::pulumi:providers:aws::default_6_76_0",
+                    "custom": true,
+                    "id": "4bd2e710-1f5c-499d-b117-2e337001bde4",
+                    "type": "pulumi:providers:aws",
+                    "inputs": {
+                        "__internal": {},
+                        "region": "eu-central-1",
+                        "skipCredentialsValidation": "false",
+                        "skipRegionValidation": "true",
+                        "version": "6.76.0"
+                    },
+                    "outputs": {
+                        "region": "eu-central-1",
+                        "skipCredentialsValidation": "false",
+                        "skipRegionValidation": "true",
+                        "version": "6.76.0"
+                    },
+                    "created": "2025-04-22T08:15:54.884157Z",
+                    "modified": "2025-04-22T08:15:54.884157Z"
+                }
+            ],
+            "pending_operations": [
+                {
+                    "resource": {
+                        "urn": "urn:pulumi:dev::demo-app::pulumi:providers:aws::default_6_76_0",
+                        "custom": true,
+                        "id": "4bd2e710-1f5c-499d-b117-2e337001bde4",
+                        "type": "pulumi:providers:aws",
+                        "inputs": {
+                            "__internal": {},
+                            "region": "eu-central-1",
+                            "skipCredentialsValidation": "false",
+                            "skipRegionValidation": "true",
+                            "version": "6.76.0"
+                        },
+                        "outputs": {
+                            "region": "eu-central-1",
+                            "skipCredentialsValidation": "false",
+                            "skipRegionValidation": "true",
+                            "version": "6.76.0"
+                        },
+                        "created": "2025-04-22T08:15:54.884157Z",
+                        "modified": "2025-04-22T08:15:54.884157Z"
+                    },
+                    "type": "deleting"
+                }
+            ],
+            "metadata": {}
+        }
+    }
+}

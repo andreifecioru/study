@@ -1,9 +1,9 @@
 import pulumi as pm
 from pulumi_aws import ec2
 
-from global_resources import create_global_resources
-from backend import create_backend
-from compute import create_compute_resources
+from src.global_resources import create_global_resources
+from src.backend import create_backend
+from src.compute import create_compute_resources
 
 
 if __name__ == '__main__':

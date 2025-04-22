@@ -6,6 +6,7 @@ runtime:
     toolchain: pip
     virtualenv: venv
 config:
+  aws:region: eu-central-1
   pulumi:tags:
     value:
       pulumi:template: aws-python

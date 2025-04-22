@@ -1,0 +1,1107 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/demo-app/dev",
+        "latest": {
+            "manifest": {
+                "time": "2025-04-22T11:22:14.652012+03:00",
+                "magic": "2bd4745a5107d793d99154515a56ea83ac634c18f2078efd20f2659b45247146",
+                "version": "v3.163.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:NQepbFxbeSQ=:v1:omBBECaOj0beuiSO:s8cfiozhrPyFP5br5ZuXpZSBmS7ODA=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:dev::demo-app::pulumi:pulumi:Stack::demo-app-dev",
+                    "custom": false,
+                    "type": "pulumi:pulumi:Stack",
+                    "outputs": {
+                        "eb.environment.cname": "demo-app-backend-dev.eba-qxvzhap3.eu-central-1.elasticbeanstalk.com",
+                        "rds.instance.endpoint": "demo-app-dev-rds570307e.cfakeekoea5o.eu-central-1.rds.amazonaws.com:5432"
+                    },
+                    "created": "2025-04-22T08:15:53.816836Z",
+                    "modified": "2025-04-22T08:15:53.816836Z",
+                    "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#140"
+                },
+                {
+                    "urn": "urn:pulumi:dev::demo-app::pulumi:providers:pulumi::default",
+                    "custom": true,
+                    "id": "71f2afce-45b4-4f14-b79d-6ce9ade0ef93",
+                    "type": "pulumi:providers:pulumi",
+                    "created": "2025-04-22T08:15:53.819628Z",
+                    "modified": "2025-04-22T08:15:53.819628Z"
+                },
+                {
+                    "urn": "urn:pulumi:dev::demo-app::pulumi:pulumi:StackReference::organization/demo-app/global",
+                    "custom": true,
+                    "id": "organization/demo-app/global",
+                    "type": "pulumi:pulumi:StackReference",
+                    "inputs": {
+                        "name": "organization/demo-app/global"
+                    },
+                    "outputs": {
+                        "name": "organization/demo-app/global",
+                        "outputs": {
+                            "applications.eb.name": "demo-app-backend",
+                            "iam.instance_profiles.eb.name": "demo-app-eb-profile-59da909",
+                            "iam.roles.eb.name": "demo-app-eb-role-7c078ae",
+                            "instances.bastion.id": "i-0e3d9a0c581892902",
+                            "instances.bastion.public_ip": "3.123.16.219",
+                            "keys.instance.key_name": "demo-app-key-79fadc0",
+                            "security_groups.bastion.id": "sg-0005694a5c120e6b8",
+                            "security_groups.instance.id": "sg-08f72d449fd406a47",
+                            "security_groups.rds.id": "sg-09d604b1db7f0c96b",
+                            "subnet_groups.rds.name": "demo-app-rds-subnet-group-7c8e74b",
+                            "subnets.private.a.id": "subnet-047a74782fc284961",
+                            "subnets.private.b.id": "subnet-0ca69b126bb3d36fa",
+                            "subnets.private.c.id": "subnet-0c00d56c4d7f1aba0",
+                            "subnets.public.a.id": "subnet-0a4d221f4f3153edf",
+                            "subnets.public.b.id": "subnet-002180f8ba8b59912",
+                            "subnets.public.c.id": "subnet-08b43af03d65ba998",
+                            "vpc.id": "vpc-043465edf09d89301"
+                        },
+                        "secretOutputNames": []
+                    },
+                    "parent": "urn:pulumi:dev::demo-app::pulumi:pulumi:Stack::demo-app-dev",
+                    "external": true,
+                    "provider": "urn:pulumi:dev::demo-app::pulumi:providers:pulumi::default::71f2afce-45b4-4f14-b79d-6ce9ade0ef93",
+                    "sourcePosition": "project:///__main__.py#21"
+                },
+                {
+                    "urn": "urn:pulumi:dev::demo-app::pulumi:providers:aws::default_6_76_0",
+                    "custom": true,
+                    "id": "4bd2e710-1f5c-499d-b117-2e337001bde4",
+                    "type": "pulumi:providers:aws",
+                    "inputs": {
+                        "__internal": {},
+                        "region": "eu-central-1",
+                        "skipCredentialsValidation": "false",
+                        "skipRegionValidation": "true",
+                        "version": "6.76.0"
+                    },
+                    "outputs": {
+                        "region": "eu-central-1",
+                        "skipCredentialsValidation": "false",
+                        "skipRegionValidation": "true",
+                        "version": "6.76.0"
+                    },
+                    "created": "2025-04-22T08:15:54.884157Z",
+                    "modified": "2025-04-22T08:15:54.884157Z"
+                },
+                {
+                    "urn": "urn:pulumi:dev::demo-app::aws:rds/instance:Instance::demo-app-dev-rds",
+                    "custom": true,
+                    "id": "db-MFJB7MU6U45GGTUJYX2LWWUB5Y",
+                    "type": "aws:rds/instance:Instance",
+                    "inputs": {
+                        "__defaults": [
+                            "applyImmediately",
+                            "autoMinorVersionUpgrade",
+                            "copyTagsToSnapshot",
+                            "dedicatedLogVolume",
+                            "deleteAutomatedBackups",
+                            "identifier",
+                            "monitoringInterval",
+                            "performanceInsightsEnabled",
+                            "publiclyAccessible"
+                        ],
+                        "allocatedStorage": 10,
+                        "applyImmediately": false,
+                        "autoMinorVersionUpgrade": true,
+                        "copyTagsToSnapshot": false,
+                        "dbName": "demoappdb",
+                        "dbSubnetGroupName": "demo-app-rds-subnet-group-7c8e74b",
+                        "dedicatedLogVolume": false,
+                        "deleteAutomatedBackups": true,
+                        "engine": "postgres",
+                        "engineVersion": "17.2",
+                        "identifier": "demo-app-dev-rds570307e",
+                        "instanceClass": "db.t3.small",
+                        "monitoringInterval": 0,
+                        "password": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:CfhR54HFp9YEMzY1:x9JidRGba23GeRZa4ZBs9Pc0/sESwcAjeLzgnmn9"
+                        },
+                        "performanceInsightsEnabled": false,
+                        "publiclyAccessible": false,
+                        "skipFinalSnapshot": true,
+                        "tags": {
+                            "Environment": "dev",
+                            "Name": "demo-app-dev-rds",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Environment": "dev",
+                            "Name": "demo-app-dev-rds",
+                            "Project": "demo-app"
+                        },
+                        "username": "dbadmin",
+                        "vpcSecurityGroupIds": [
+                            "sg-09d604b1db7f0c96b",
+                            "sg-0005694a5c120e6b8"
+                        ]
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":3000000000000,\"delete\":3600000000000,\"update\":4800000000000},\"schema_version\":\"2\"}",
+                        "address": "demo-app-dev-rds570307e.cfakeekoea5o.eu-central-1.rds.amazonaws.com",
+                        "allocatedStorage": 10,
+                        "allowMajorVersionUpgrade": null,
+                        "applyImmediately": false,
+                        "arn": "arn:aws:rds:eu-central-1:276479089394:db:demo-app-dev-rds570307e",
+                        "autoMinorVersionUpgrade": true,
+                        "availabilityZone": "eu-central-1a",
+                        "backupRetentionPeriod": 0,
+                        "backupTarget": "region",
+                        "backupWindow": "01:51-02:21",
+                        "blueGreenUpdate": null,
+                        "caCertIdentifier": "rds-ca-rsa2048-g1",
+                        "characterSetName": "",
+                        "copyTagsToSnapshot": false,
+                        "customIamInstanceProfile": "",
+                        "customerOwnedIpEnabled": false,
+                        "databaseInsightsMode": "standard",
+                        "dbName": "demoappdb",
+                        "dbSubnetGroupName": "demo-app-rds-subnet-group-7c8e74b",
+                        "dedicatedLogVolume": false,
+                        "deleteAutomatedBackups": true,
+                        "deletionProtection": false,
+                        "domain": "",
+                        "domainAuthSecretArn": "",
+                        "domainDnsIps": null,
+                        "domainFqdn": "",
+                        "domainIamRoleName": "",
+                        "domainOu": "",
+                        "enabledCloudwatchLogsExports": null,
+                        "endpoint": "demo-app-dev-rds570307e.cfakeekoea5o.eu-central-1.rds.amazonaws.com:5432",
+                        "engine": "postgres",
+                        "engineLifecycleSupport": "open-source-rds-extended-support",
+                        "engineVersion": "17.2",
+                        "engineVersionActual": "17.2",
+                        "finalSnapshotIdentifier": null,
+                        "hostedZoneId": "Z1RLNUO7B9Q6NB",
+                        "iamDatabaseAuthenticationEnabled": false,
+                        "id": "db-MFJB7MU6U45GGTUJYX2LWWUB5Y",
+                        "identifier": "demo-app-dev-rds570307e",
+                        "identifierPrefix": "",
+                        "instanceClass": "db.t3.small",
+                        "iops": 0,
+                        "kmsKeyId": "",
+                        "latestRestorableTime": "",
+                        "licenseModel": "postgresql-license",
+                        "listenerEndpoints": [],
+                        "maintenanceWindow": "fri:02:49-fri:03:19",
+                        "manageMasterUserPassword": null,
+                        "masterUserSecretKmsKeyId": null,
+                        "masterUserSecrets": [],
+                        "maxAllocatedStorage": 0,
+                        "monitoringInterval": 0,
+                        "monitoringRoleArn": "",
+                        "multiAz": false,
+                        "ncharCharacterSetName": "",
+                        "networkType": "IPV4",
+                        "optionGroupName": "default:postgres-17",
+                        "parameterGroupName": "default.postgres17",
+                        "password": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:klOX4ci9Vr1K3PRW:1QTyo31Od1Ao5kE5OO6DLoD/bwjV6q57QXrIDE9O"
+                        },
+                        "passwordWo": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:URNvTlOGtlgpywHa:8xSsJX4cm3grDBh2WFjfbmcrauI="
+                        },
+                        "passwordWoVersion": null,
+                        "performanceInsightsEnabled": false,
+                        "performanceInsightsKmsKeyId": "",
+                        "performanceInsightsRetentionPeriod": 0,
+                        "port": 5432,
+                        "publiclyAccessible": false,
+                        "replicaMode": "",
+                        "replicas": [],
+                        "replicateSourceDb": "",
+                        "resourceId": "db-MFJB7MU6U45GGTUJYX2LWWUB5Y",
+                        "restoreToPointInTime": null,
+                        "s3Import": null,
+                        "skipFinalSnapshot": true,
+                        "snapshotIdentifier": null,
+                        "status": "available",
+                        "storageEncrypted": false,
+                        "storageThroughput": 0,
+                        "storageType": "gp2",
+                        "tags": {
+                            "Environment": "dev",
+                            "Name": "demo-app-dev-rds",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Environment": "dev",
+                            "Name": "demo-app-dev-rds",
+                            "Project": "demo-app"
+                        },
+                        "timezone": "",
+                        "upgradeStorageConfig": null,
+                        "username": "dbadmin",
+                        "vpcSecurityGroupIds": [
+                            "sg-0005694a5c120e6b8",
+                            "sg-09d604b1db7f0c96b"
+                        ]
+                    },
+                    "parent": "urn:pulumi:dev::demo-app::pulumi:pulumi:Stack::demo-app-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::demo-app::pulumi:pulumi:StackReference::organization/demo-app/global"
+                    ],
+                    "provider": "urn:pulumi:dev::demo-app::pulumi:providers:aws::default_6_76_0::4bd2e710-1f5c-499d-b117-2e337001bde4",
+                    "propertyDependencies": {
+                        "allocatedStorage": [],
+                        "dbName": [],
+                        "dbSubnetGroupName": [
+                            "urn:pulumi:dev::demo-app::pulumi:pulumi:StackReference::organization/demo-app/global"
+                        ],
+                        "engine": [],
+                        "engineVersion": [],
+                        "instanceClass": [],
+                        "password": [],
+                        "skipFinalSnapshot": [],
+                        "tags": [],
+                        "username": [],
+                        "vpcSecurityGroupIds": [
+                            "urn:pulumi:dev::demo-app::pulumi:pulumi:StackReference::organization/demo-app/global"
+                        ]
+                    },
+                    "additionalSecretOutputs": [
+                        "password"
+                    ],
+                    "created": "2025-04-22T08:20:09.394391Z",
+                    "modified": "2025-04-22T08:20:09.394391Z",
+                    "sourcePosition": "project:///src/backend.py#12"
+                },
+                {
+                    "urn": "urn:pulumi:dev::demo-app::aws:elasticbeanstalk/environment:Environment::demo-app-backend-dev",
+                    "custom": true,
+                    "id": "e-ap7mqd3szg",
+                    "type": "aws:elasticbeanstalk/environment:Environment",
+                    "inputs": {
+                        "__defaults": [
+                            "tier",
+                            "waitForReadyTimeout"
+                        ],
+                        "application": "demo-app-backend",
+                        "name": "demo-app-backend-dev",
+                        "settings": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:dg4jlrv0WmECpqpA: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"
+                        },
+                        "solutionStackName": "64bit Amazon Linux 2023 v4.5.0 running Corretto 17",
+                        "tags": {
+                            "Environment": "dev",
+                            "Name": "demo-app-env",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Environment": "dev",
+                            "Name": "demo-app-env",
+                            "Project": "demo-app"
+                        },
+                        "tier": "WebServer",
+                        "waitForReadyTimeout": "20m"
+                    },
+                    "outputs": {
+                        "__meta": "{\"schema_version\":\"1\"}",
+                        "allSettings": [
+                            {
+                                "name": "AppSource",
+                                "namespace": "aws:cloudformation:template:parameter",
+                                "resource": "",
+                                "value": "https://elasticbeanstalk-platform-assets-eu-central-1.s3.eu-central-1.amazonaws.com/stalks/eb_corretto17_amazon_linux_2023_1.0.599.0_20250327002531/sampleapp/EBSampleApp-Corretto.zip"
+                            },
+                            {
+                                "name": "Application Healthcheck URL",
+                                "namespace": "aws:elasticbeanstalk:application",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "AssociatePublicIpAddress",
+                                "namespace": "aws:ec2:vpc",
+                                "resource": "",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Automatically Terminate Unhealthy Instances",
+                                "namespace": "aws:elasticbeanstalk:monitoring",
+                                "resource": "",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Availability Zones",
+                                "namespace": "aws:autoscaling:asg",
+                                "resource": "",
+                                "value": "Any"
+                            },
+                            {
+                                "name": "BatchSize",
+                                "namespace": "aws:elasticbeanstalk:command",
+                                "resource": "",
+                                "value": "100"
+                            },
+                            {
+                                "name": "BatchSizeType",
+                                "namespace": "aws:elasticbeanstalk:command",
+                                "resource": "",
+                                "value": "Percentage"
+                            },
+                            {
+                                "name": "BlockDeviceMappings",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "BreachDuration",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "5"
+                            },
+                            {
+                                "name": "ConfigDocument",
+                                "namespace": "aws:elasticbeanstalk:healthreporting:system",
+                                "resource": "",
+                                "value": "{\"Version\":1,\"CloudWatchMetrics\":{\"Instance\":{\"CPUIrq\":null,\"LoadAverage5min\":null,\"ApplicationRequests5xx\":null,\"ApplicationRequests4xx\":null,\"CPUUser\":null,\"LoadAverage1min\":null,\"ApplicationLatencyP50\":null,\"CPUIdle\":null,\"InstanceHealth\":null,\"ApplicationLatencyP95\":null,\"ApplicationLatencyP85\":null,\"RootFilesystemUtil\":null,\"ApplicationLatencyP90\":null,\"CPUSystem\":null,\"ApplicationLatencyP75\":null,\"CPUSoftirq\":null,\"ApplicationLatencyP10\":null,\"ApplicationLatencyP99\":null,\"ApplicationRequestsTotal\":null,\"ApplicationLatencyP99.9\":null,\"ApplicationRequests3xx\":null,\"ApplicationRequests2xx\":null,\"CPUIowait\":null,\"CPUNice\":null},\"Environment\":{\"InstancesSevere\":null,\"InstancesDegraded\":null,\"ApplicationRequests5xx\":null,\"ApplicationRequests4xx\":null,\"ApplicationLatencyP50\":null,\"ApplicationLatencyP95\":null,\"ApplicationLatencyP85\":null,\"InstancesUnknown\":null,\"ApplicationLatencyP90\":null,\"InstancesInfo\":null,\"InstancesPending\":null,\"ApplicationLatencyP75\":null,\"ApplicationLatencyP10\":null,\"ApplicationLatencyP99\":null,\"ApplicationRequestsTotal\":null,\"InstancesNoData\":null,\"ApplicationLatencyP99.9\":null,\"ApplicationRequests3xx\":null,\"ApplicationRequests2xx\":null,\"InstancesOk\":null,\"InstancesWarning\":null}}}"
+                            },
+                            {
+                                "name": "ConnectionDrainingEnabled",
+                                "namespace": "aws:elb:policies",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "ConnectionDrainingTimeout",
+                                "namespace": "aws:elb:policies",
+                                "resource": "",
+                                "value": "20"
+                            },
+                            {
+                                "name": "ConnectionSettingIdleTimeout",
+                                "namespace": "aws:elb:policies",
+                                "resource": "",
+                                "value": "60"
+                            },
+                            {
+                                "name": "Cooldown",
+                                "namespace": "aws:autoscaling:asg",
+                                "resource": "",
+                                "value": "360"
+                            },
+                            {
+                                "name": "CrossZone",
+                                "namespace": "aws:elb:loadbalancer",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Custom Availability Zones",
+                                "namespace": "aws:autoscaling:asg",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "DB_HOST",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "demo-app-dev-rds570307e.cfakeekoea5o.eu-central-1.rds.amazonaws.com:5432"
+                            },
+                            {
+                                "name": "DB_NAME",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "demoappdb"
+                            },
+                            {
+                                "name": "DB_PASSWORD",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "LockBox#1121"
+                            },
+                            {
+                                "name": "DB_USER",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "dbadmin"
+                            },
+                            {
+                                "name": "DefaultSSHPort",
+                                "namespace": "aws:elasticbeanstalk:control",
+                                "resource": "",
+                                "value": "22"
+                            },
+                            {
+                                "name": "DeleteOnTerminate",
+                                "namespace": "aws:elasticbeanstalk:cloudwatch:logs",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "DeleteOnTerminate",
+                                "namespace": "aws:elasticbeanstalk:cloudwatch:logs:health",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "DeploymentPolicy",
+                                "namespace": "aws:elasticbeanstalk:command",
+                                "resource": "",
+                                "value": "AllAtOnce"
+                            },
+                            {
+                                "name": "DisableIMDSv1",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "true"
+                            },
+                            {
+                                "name": "EC2KeyName",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "demo-app-key-79fadc0"
+                            },
+                            {
+                                "name": "ELBScheme",
+                                "namespace": "aws:ec2:vpc",
+                                "resource": "",
+                                "value": "public"
+                            },
+                            {
+                                "name": "ELBSubnets",
+                                "namespace": "aws:ec2:vpc",
+                                "resource": "",
+                                "value": "subnet-002180f8ba8b59912,subnet-08b43af03d65ba998,subnet-0a4d221f4f3153edf"
+                            },
+                            {
+                                "name": "EnableCapacityRebalancing",
+                                "namespace": "aws:autoscaling:asg",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "EnableSpot",
+                                "namespace": "aws:ec2:instances",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "EnhancedHealthAuthEnabled",
+                                "namespace": "aws:elasticbeanstalk:healthreporting:system",
+                                "resource": "",
+                                "value": "true"
+                            },
+                            {
+                                "name": "EnvironmentType",
+                                "namespace": "aws:elasticbeanstalk:environment",
+                                "resource": "",
+                                "value": "LoadBalanced"
+                            },
+                            {
+                                "name": "EnvironmentVariables",
+                                "namespace": "aws:cloudformation:template:parameter",
+                                "resource": "",
+                                "value": "PORT=8080,M2=/usr/local/apache-maven/bin,DB_USER=dbadmin,M2_HOME=/usr/local/apache-maven,SPRING_PROFILES_ACTIVE=dev,DB_NAME=demoappdb,DB_HOST=demo-app-dev-rds570307e.cfakeekoea5o.eu-central-1.rds.amazonaws.com:5432,GRADLE_HOME=/usr/local/gradle,DB_PASSWORD=LockBox#1121"
+                            },
+                            {
+                                "name": "EvaluationPeriods",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "1"
+                            },
+                            {
+                                "name": "ExternalExtensionsS3Bucket",
+                                "namespace": "aws:elasticbeanstalk:environment",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "ExternalExtensionsS3Key",
+                                "namespace": "aws:elasticbeanstalk:environment",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "GRADLE_HOME",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "/usr/local/gradle"
+                            },
+                            {
+                                "name": "HasCoupledDatabase",
+                                "namespace": "aws:rds:dbinstance",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "HealthCheckSuccessThreshold",
+                                "namespace": "aws:elasticbeanstalk:healthreporting:system",
+                                "resource": "",
+                                "value": "Ok"
+                            },
+                            {
+                                "name": "HealthStreamingEnabled",
+                                "namespace": "aws:elasticbeanstalk:cloudwatch:logs:health",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "HealthyThreshold",
+                                "namespace": "aws:elb:healthcheck",
+                                "resource": "",
+                                "value": "3"
+                            },
+                            {
+                                "name": "HooksPkgUrl",
+                                "namespace": "aws:cloudformation:template:parameter",
+                                "resource": "",
+                                "value": "https://elasticbeanstalk-platform-assets-eu-central-1.s3.eu-central-1.amazonaws.com/stalks/eb_corretto17_amazon_linux_2023_1.0.599.0_20250327002531/lib/hooks.tar.gz"
+                            },
+                            {
+                                "name": "IamInstanceProfile",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "demo-app-eb-profile-59da909"
+                            },
+                            {
+                                "name": "IgnoreHealthCheck",
+                                "namespace": "aws:elasticbeanstalk:command",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "ImageId",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "ami-0e994c5a8caa6aa32"
+                            },
+                            {
+                                "name": "InstancePort",
+                                "namespace": "aws:cloudformation:template:parameter",
+                                "resource": "",
+                                "value": "80"
+                            },
+                            {
+                                "name": "InstancePort",
+                                "namespace": "aws:elb:listener:80",
+                                "resource": "",
+                                "value": "80"
+                            },
+                            {
+                                "name": "InstanceProtocol",
+                                "namespace": "aws:elb:listener:80",
+                                "resource": "",
+                                "value": "HTTP"
+                            },
+                            {
+                                "name": "InstanceRefreshEnabled",
+                                "namespace": "aws:elasticbeanstalk:managedactions:platformupdate",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "InstanceType",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "t3.small"
+                            },
+                            {
+                                "name": "InstanceTypeFamily",
+                                "namespace": "aws:cloudformation:template:parameter",
+                                "resource": "",
+                                "value": "t3"
+                            },
+                            {
+                                "name": "InstanceTypes",
+                                "namespace": "aws:ec2:instances",
+                                "resource": "",
+                                "value": "t3.small"
+                            },
+                            {
+                                "name": "Interval",
+                                "namespace": "aws:elb:healthcheck",
+                                "resource": "",
+                                "value": "10"
+                            },
+                            {
+                                "name": "LaunchTemplateTagPropagationEnabled",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "LaunchTimeout",
+                                "namespace": "aws:elasticbeanstalk:control",
+                                "resource": "",
+                                "value": "0"
+                            },
+                            {
+                                "name": "LaunchType",
+                                "namespace": "aws:elasticbeanstalk:control",
+                                "resource": "",
+                                "value": "Migration"
+                            },
+                            {
+                                "name": "ListenerEnabled",
+                                "namespace": "aws:elb:listener:80",
+                                "resource": "",
+                                "value": "true"
+                            },
+                            {
+                                "name": "ListenerProtocol",
+                                "namespace": "aws:elb:listener:80",
+                                "resource": "",
+                                "value": "HTTP"
+                            },
+                            {
+                                "name": "LoadBalancerHTTPPort",
+                                "namespace": "aws:elb:loadbalancer",
+                                "resource": "",
+                                "value": "80"
+                            },
+                            {
+                                "name": "LoadBalancerHTTPSPort",
+                                "namespace": "aws:elb:loadbalancer",
+                                "resource": "",
+                                "value": "OFF"
+                            },
+                            {
+                                "name": "LoadBalancerPortProtocol",
+                                "namespace": "aws:elb:loadbalancer",
+                                "resource": "",
+                                "value": "HTTP"
+                            },
+                            {
+                                "name": "LoadBalancerSSLPortProtocol",
+                                "namespace": "aws:elb:loadbalancer",
+                                "resource": "",
+                                "value": "HTTPS"
+                            },
+                            {
+                                "name": "LoadBalancerType",
+                                "namespace": "aws:elasticbeanstalk:environment",
+                                "resource": "",
+                                "value": "classic"
+                            },
+                            {
+                                "name": "LogPublicationControl",
+                                "namespace": "aws:elasticbeanstalk:hostmanager",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "LowerBreachScaleIncrement",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "-1"
+                            },
+                            {
+                                "name": "LowerThreshold",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "2000000"
+                            },
+                            {
+                                "name": "M2",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "/usr/local/apache-maven/bin"
+                            },
+                            {
+                                "name": "M2_HOME",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "/usr/local/apache-maven"
+                            },
+                            {
+                                "name": "ManagedActionsEnabled",
+                                "namespace": "aws:elasticbeanstalk:managedactions",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "MaxBatchSize",
+                                "namespace": "aws:autoscaling:updatepolicy:rollingupdate",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "MaxSize",
+                                "namespace": "aws:autoscaling:asg",
+                                "resource": "",
+                                "value": "1"
+                            },
+                            {
+                                "name": "MeasureName",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "NetworkOut"
+                            },
+                            {
+                                "name": "MinInstancesInService",
+                                "namespace": "aws:autoscaling:updatepolicy:rollingupdate",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "MinSize",
+                                "namespace": "aws:autoscaling:asg",
+                                "resource": "",
+                                "value": "1"
+                            },
+                            {
+                                "name": "MonitoringInterval",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "5 minute"
+                            },
+                            {
+                                "name": "Notification Endpoint",
+                                "namespace": "aws:elasticbeanstalk:sns:topics",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "Notification Protocol",
+                                "namespace": "aws:elasticbeanstalk:sns:topics",
+                                "resource": "",
+                                "value": "email"
+                            },
+                            {
+                                "name": "Notification Topic ARN",
+                                "namespace": "aws:elasticbeanstalk:sns:topics",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "Notification Topic Name",
+                                "namespace": "aws:elasticbeanstalk:sns:topics",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "PORT",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "8080"
+                            },
+                            {
+                                "name": "PauseTime",
+                                "namespace": "aws:autoscaling:updatepolicy:rollingupdate",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "Period",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "5"
+                            },
+                            {
+                                "name": "PreferredStartTime",
+                                "namespace": "aws:elasticbeanstalk:managedactions",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "RetentionInDays",
+                                "namespace": "aws:elasticbeanstalk:cloudwatch:logs",
+                                "resource": "",
+                                "value": "7"
+                            },
+                            {
+                                "name": "RetentionInDays",
+                                "namespace": "aws:elasticbeanstalk:cloudwatch:logs:health",
+                                "resource": "",
+                                "value": "7"
+                            },
+                            {
+                                "name": "RollbackLaunchOnFailure",
+                                "namespace": "aws:elasticbeanstalk:control",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "RollingUpdateEnabled",
+                                "namespace": "aws:autoscaling:updatepolicy:rollingupdate",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "RollingUpdateType",
+                                "namespace": "aws:autoscaling:updatepolicy:rollingupdate",
+                                "resource": "",
+                                "value": "Time"
+                            },
+                            {
+                                "name": "RootVolumeIOPS",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "3000"
+                            },
+                            {
+                                "name": "RootVolumeSize",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "10"
+                            },
+                            {
+                                "name": "RootVolumeThroughput",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "125"
+                            },
+                            {
+                                "name": "RootVolumeType",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "gp3"
+                            },
+                            {
+                                "name": "SPRING_PROFILES_ACTIVE",
+                                "namespace": "aws:elasticbeanstalk:application:environment",
+                                "resource": "",
+                                "value": "dev"
+                            },
+                            {
+                                "name": "SSHSourceRestriction",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "tcp,22,22,0.0.0.0/0"
+                            },
+                            {
+                                "name": "SSLCertificateId",
+                                "namespace": "aws:elb:listener:80",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "SSLCertificateId",
+                                "namespace": "aws:elb:loadbalancer",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "SecurityGroups",
+                                "namespace": "aws:autoscaling:launchconfiguration",
+                                "resource": "",
+                                "value": "sg-08f72d449fd406a47"
+                            },
+                            {
+                                "name": "SecurityGroups",
+                                "namespace": "aws:elb:loadbalancer",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "ServiceRole",
+                                "namespace": "aws:elasticbeanstalk:environment",
+                                "resource": "",
+                                "value": "AWSServiceRoleForElasticBeanstalk"
+                            },
+                            {
+                                "name": "ServiceRoleForManagedUpdates",
+                                "namespace": "aws:elasticbeanstalk:managedactions",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "SpotAllocationStrategy",
+                                "namespace": "aws:ec2:instances",
+                                "resource": "",
+                                "value": "capacity-optimized"
+                            },
+                            {
+                                "name": "SpotFleetOnDemandAboveBasePercentage",
+                                "namespace": "aws:ec2:instances",
+                                "resource": "",
+                                "value": "70"
+                            },
+                            {
+                                "name": "SpotFleetOnDemandBase",
+                                "namespace": "aws:ec2:instances",
+                                "resource": "",
+                                "value": "0"
+                            },
+                            {
+                                "name": "SpotMaxPrice",
+                                "namespace": "aws:ec2:instances",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "StaticFiles",
+                                "namespace": "aws:cloudformation:template:parameter",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "Statistic",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "Average"
+                            },
+                            {
+                                "name": "StreamLogs",
+                                "namespace": "aws:elasticbeanstalk:cloudwatch:logs",
+                                "resource": "",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Subnets",
+                                "namespace": "aws:ec2:vpc",
+                                "resource": "",
+                                "value": "subnet-047a74782fc284961,subnet-0c00d56c4d7f1aba0,subnet-0ca69b126bb3d36fa"
+                            },
+                            {
+                                "name": "SupportedArchitectures",
+                                "namespace": "aws:ec2:instances",
+                                "resource": "",
+                                "value": "x86_64"
+                            },
+                            {
+                                "name": "SystemType",
+                                "namespace": "aws:elasticbeanstalk:healthreporting:system",
+                                "resource": "",
+                                "value": "enhanced"
+                            },
+                            {
+                                "name": "Target",
+                                "namespace": "aws:elb:healthcheck",
+                                "resource": "",
+                                "value": "TCP:80"
+                            },
+                            {
+                                "name": "Timeout",
+                                "namespace": "aws:autoscaling:updatepolicy:rollingupdate",
+                                "resource": "",
+                                "value": "PT30M"
+                            },
+                            {
+                                "name": "Timeout",
+                                "namespace": "aws:elasticbeanstalk:command",
+                                "resource": "",
+                                "value": "600"
+                            },
+                            {
+                                "name": "Timeout",
+                                "namespace": "aws:elb:healthcheck",
+                                "resource": "",
+                                "value": "5"
+                            },
+                            {
+                                "name": "UnhealthyThreshold",
+                                "namespace": "aws:elb:healthcheck",
+                                "resource": "",
+                                "value": "5"
+                            },
+                            {
+                                "name": "Unit",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "Bytes"
+                            },
+                            {
+                                "name": "UpdateLevel",
+                                "namespace": "aws:elasticbeanstalk:managedactions:platformupdate",
+                                "resource": "",
+                                "value": ""
+                            },
+                            {
+                                "name": "UpperBreachScaleIncrement",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "1"
+                            },
+                            {
+                                "name": "UpperThreshold",
+                                "namespace": "aws:autoscaling:trigger",
+                                "resource": "",
+                                "value": "6000000"
+                            },
+                            {
+                                "name": "VPCId",
+                                "namespace": "aws:ec2:vpc",
+                                "resource": "",
+                                "value": "vpc-043465edf09d89301"
+                            },
+                            {
+                                "name": "XRayEnabled",
+                                "namespace": "aws:elasticbeanstalk:xray",
+                                "resource": "",
+                                "value": "false"
+                            }
+                        ],
+                        "application": "demo-app-backend",
+                        "arn": "arn:aws:elasticbeanstalk:eu-central-1:276479089394:environment/demo-app-backend/demo-app-backend-dev",
+                        "autoscalingGroups": [
+                            "awseb-e-ap7mqd3szg-stack-AWSEBAutoScalingGroup-P2nvmFMVSlay"
+                        ],
+                        "cname": "demo-app-backend-dev.eba-qxvzhap3.eu-central-1.elasticbeanstalk.com",
+                        "cnamePrefix": "",
+                        "description": "",
+                        "endpointUrl": "awseb-e-a-AWSEBLoa-NN6F3YV0JGCN-1059957829.eu-central-1.elb.amazonaws.com",
+                        "id": "e-ap7mqd3szg",
+                        "instances": [
+                            "i-054c49fa7f8325ae9"
+                        ],
+                        "launchConfigurations": [],
+                        "loadBalancers": [
+                            "awseb-e-a-AWSEBLoa-NN6F3YV0JGCN"
+                        ],
+                        "name": "demo-app-backend-dev",
+                        "platformArn": "arn:aws:elasticbeanstalk:eu-central-1::platform/Corretto 17 running on 64bit Amazon Linux 2023/4.5.0",
+                        "pollInterval": null,
+                        "queues": [],
+                        "settings": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "v1:RIyuJARfYpPQC3mt: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"
+                        },
+                        "solutionStackName": "64bit Amazon Linux 2023 v4.5.0 running Corretto 17",
+                        "tags": {
+                            "Environment": "dev",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Environment": "dev",
+                            "Project": "demo-app"
+                        },
+                        "templateName": null,
+                        "tier": "WebServer",
+                        "triggers": [],
+                        "version": "",
+                        "waitForReadyTimeout": "20m"
+                    },
+                    "parent": "urn:pulumi:dev::demo-app::pulumi:pulumi:Stack::demo-app-dev",
+                    "dependencies": [
+                        "urn:pulumi:dev::demo-app::aws:rds/instance:Instance::demo-app-dev-rds",
+                        "urn:pulumi:dev::demo-app::pulumi:pulumi:StackReference::organization/demo-app/global"
+                    ],
+                    "provider": "urn:pulumi:dev::demo-app::pulumi:providers:aws::default_6_76_0::4bd2e710-1f5c-499d-b117-2e337001bde4",
+                    "propertyDependencies": {
+                        "application": [
+                            "urn:pulumi:dev::demo-app::pulumi:pulumi:StackReference::organization/demo-app/global"
+                        ],
+                        "name": [],
+                        "settings": [
+                            "urn:pulumi:dev::demo-app::aws:rds/instance:Instance::demo-app-dev-rds",
+                            "urn:pulumi:dev::demo-app::pulumi:pulumi:StackReference::organization/demo-app/global"
+                        ],
+                        "solutionStackName": [],
+                        "tags": []
+                    },
+                    "created": "2025-04-22T08:22:14.6048Z",
+                    "modified": "2025-04-22T08:22:14.6048Z",
+                    "sourcePosition": "project:///src/backend.py#47"
+                }
+            ],
+            "metadata": {}
+        }
+    }
+}

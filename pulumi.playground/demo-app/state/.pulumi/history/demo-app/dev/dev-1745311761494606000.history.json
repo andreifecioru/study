@@ -1,0 +1,39 @@
+{
+    "kind": "destroy",
+    "startTime": 1745311293,
+    "message": "[PULUMI] - Experimenting with cross-stack references",
+    "environment": {
+        "exec.kind": "cli",
+        "git.author": "Andrei Fecioru",
+        "git.author.email": "afecioru@adobe.com",
+        "git.committer": "Andrei Fecioru",
+        "git.committer.email": "afecioru@adobe.com",
+        "git.dirty": "true",
+        "git.head": "b600be4d55ec08843ddd161cad66cd8ae1315acc",
+        "git.headName": "refs/heads/master",
+        "pulumi.arch": "arm64",
+        "pulumi.env.PULUMI_CONFIG": "set",
+        "pulumi.env.PULUMI_CONFIG_PASSPHRASE": "set",
+        "pulumi.os": "darwin",
+        "pulumi.version": "v3.163.0",
+        "stack.environments": "[]",
+        "updatePlan": "false",
+        "vcs.kind": "github.com",
+        "vcs.owner": "andreifecioru",
+        "vcs.repo": "study",
+        "vcs.root": "pulumi.playground/demo-app"
+    },
+    "config": {
+        "aws:region": "eu-central-1",
+        "pulumi:tags": {
+            "pulumi:template": "aws-python"
+        }
+    },
+    "version": 0,
+    "result": "succeeded",
+    "endTime": 1745311761,
+    "resourceChanges": {
+        "delete": 3,
+        "discard": 1
+    }
+}
