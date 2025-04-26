@@ -1,9 +1,8 @@
 import pulumi as pm
-from pulumi_aws import ec2
 
 from src.global_resources import create_global_resources
 from src.backend import create_backend
-from src.compute import create_compute_resources
+from src.frontend import create_frontend
 
 
 if __name__ == '__main__':
@@ -20,8 +19,9 @@ if __name__ == '__main__':
   else:
     global_data = pm.StackReference(f'{org_name}/{project_name}/global').outputs
     
-    compute_data = create_backend(global_data)
+    backend_data = create_backend(global_data)
+    frontend_data = create_frontend(global_data, backend_data)
     
-    for key, value in compute_data.items():
+    for key, value in {**backend_data, **frontend_data}.items():
       pm.export(key, value)
     

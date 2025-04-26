@@ -1,0 +1,40 @@
+{
+    "kind": "update",
+    "startTime": 1745675780,
+    "message": "[PULUMI] - Added a cloud-front distribution",
+    "environment": {
+        "exec.kind": "cli",
+        "git.author": "Andrei Fecioru",
+        "git.author.email": "andrei.fecioru@gmail.com",
+        "git.committer": "Andrei Fecioru",
+        "git.committer.email": "andrei.fecioru@gmail.com",
+        "git.dirty": "true",
+        "git.head": "bded64bfc36e7d9832b7525a48b92b968dda101e",
+        "git.headName": "refs/heads/master",
+        "pulumi.arch": "amd64",
+        "pulumi.env.PULUMI_CONFIG_PASSPHRASE": "set",
+        "pulumi.os": "linux",
+        "pulumi.version": "v3.165.0",
+        "stack.environments": "[]",
+        "updatePlan": "false",
+        "vcs.kind": "github.com",
+        "vcs.owner": "andreifecioru",
+        "vcs.repo": "study",
+        "vcs.root": "pulumi.playground/demo-app"
+    },
+    "config": {
+        "aws:region": "eu-central-1",
+        "pulumi:tags": {
+            "pulumi:template": "aws-python"
+        }
+    },
+    "version": 0,
+    "result": "succeeded",
+    "endTime": 1745675795,
+    "resourceChanges": {
+        "create": 1,
+        "read": 1,
+        "same": 3,
+        "update": 1
+    }
+}

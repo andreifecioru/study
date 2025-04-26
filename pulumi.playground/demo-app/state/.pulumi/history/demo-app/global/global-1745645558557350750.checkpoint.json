@@ -1,0 +1,2217 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/demo-app/global",
+        "latest": {
+            "manifest": {
+                "time": "2025-04-26T08:32:38.539036607+03:00",
+                "magic": "afb0b63d6746c8d512491ec16bc9053776fb43c6f21375a7d61f5b0f2bfcfb5e",
+                "version": "v3.165.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:bQMnofQcXSE=:v1:749fyiHOeMLGAJqI:7vCAYrilTO/u5672bjweNvmQYT8vcg=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "custom": false,
+                    "type": "pulumi:pulumi:Stack",
+                    "outputs": {
+                        "applications.eb.name": "demo-app-backend",
+                        "iam.instance_profiles.eb.name": "demo-app-eb-profile-c4dd1c9",
+                        "iam.roles.eb.name": "demo-app-eb-role-c69cca0",
+                        "instances.bastion.id": "i-092842468695fdec3",
+                        "instances.bastion.public_ip": "18.185.16.195",
+                        "keys.instance.key_name": "demo-app-key-1c78cbe",
+                        "security_groups.bastion.id": "sg-08cb61763476d4151",
+                        "security_groups.instance.id": "sg-04973d3e744e58d59",
+                        "security_groups.rds.id": "sg-0022b1396179b2538",
+                        "subnet_groups.rds.name": "demo-app-rds-subnet-group-9c253a0",
+                        "subnets.private.a.id": "subnet-04b96461f1db05f14",
+                        "subnets.private.b.id": "subnet-04f129ac35444bb72",
+                        "subnets.private.c.id": "subnet-085aaa66554db22ce",
+                        "subnets.public.a.id": "subnet-00ad509fe88a5d967",
+                        "subnets.public.b.id": "subnet-0a9c66959327e045a",
+                        "subnets.public.c.id": "subnet-0af1c4c8ea63fd1c5",
+                        "vpc.id": "vpc-09c6371548d54391f"
+                    },
+                    "created": "2025-04-26T05:30:38.317220174Z",
+                    "modified": "2025-04-26T05:30:38.317220174Z",
+                    "sourcePosition": "project:///venv/lib/python3.10/site-packages/pulumi/runtime/stack.py#140"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0",
+                    "custom": true,
+                    "id": "7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "type": "pulumi:providers:aws",
+                    "inputs": {
+                        "__internal": {},
+                        "region": "eu-central-1",
+                        "skipCredentialsValidation": "false",
+                        "skipRegionValidation": "true",
+                        "version": "6.78.0"
+                    },
+                    "outputs": {
+                        "region": "eu-central-1",
+                        "skipCredentialsValidation": "false",
+                        "skipRegionValidation": "true",
+                        "version": "6.78.0"
+                    },
+                    "created": "2025-04-26T05:30:39.464159636Z",
+                    "modified": "2025-04-26T05:30:39.464159636Z"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/keyPair:KeyPair::demo-app-key",
+                    "custom": true,
+                    "id": "demo-app-key-1c78cbe",
+                    "type": "aws:ec2/keyPair:KeyPair",
+                    "inputs": {
+                        "__defaults": [
+                            "keyName"
+                        ],
+                        "keyName": "demo-app-key-1c78cbe",
+                        "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDANpIN3vvvY2p6+xpNe+d7H77zqc8J7KG2G86tbkZ3ilKme2BKn/szoh3NejciBpUyVJ58NWW6Afike9nHutbb5QOEsm6TC/5dlnhzbIm7qkPHsjPp/lNul6ui+g4vUkEjcMI1Dxu/b8MhZC7TSJ33n9vqyOb8rW5IEbP2+JDDM+MSgf1NeETD9nqSyWwi+K4tW1xw/3bsce0ordndjbY2/qUSh6ABuQQ81Wfonyf4z/KDbiSDzEows+DsKsjhH7oHVc/rL9cuTjmi/WSJec0HeFF0bhRb566sCKhZFHWES/2LoWTm0pP/L3fQvYLdLabmialnGY5TCsp0tMJERff7eMafx/ynnF5czOl/rZCbkPTDslXZFF56QlZ1prLl+H28igAPf9DrCzp4AVkqZzq9BUan+ZJnZfxzZU8ehv0J/5VODKZf1Sbi13FEoPMV+H8JD3ZUwIX4Q6gYC5ybUKgKqJ4XrtWBQnyd0ozaNrRrRLAZTEav59+k6ynaJv/trKc= demo-app\n",
+                        "tags": {
+                            "Name": "demo-app-key",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-key",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "outputs": {
+                        "__meta": "{\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:key-pair/demo-app-key-1c78cbe",
+                        "fingerprint": "a0:9c:e6:87:aa:3f:e1:fc:ae:67:ef:8d:11:42:e5:d9",
+                        "id": "demo-app-key-1c78cbe",
+                        "keyName": "demo-app-key-1c78cbe",
+                        "keyNamePrefix": "",
+                        "keyPairId": "key-03fd3310c44600b19",
+                        "keyType": "rsa",
+                        "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDANpIN3vvvY2p6+xpNe+d7H77zqc8J7KG2G86tbkZ3ilKme2BKn/szoh3NejciBpUyVJ58NWW6Afike9nHutbb5QOEsm6TC/5dlnhzbIm7qkPHsjPp/lNul6ui+g4vUkEjcMI1Dxu/b8MhZC7TSJ33n9vqyOb8rW5IEbP2+JDDM+MSgf1NeETD9nqSyWwi+K4tW1xw/3bsce0ordndjbY2/qUSh6ABuQQ81Wfonyf4z/KDbiSDzEows+DsKsjhH7oHVc/rL9cuTjmi/WSJec0HeFF0bhRb566sCKhZFHWES/2LoWTm0pP/L3fQvYLdLabmialnGY5TCsp0tMJERff7eMafx/ynnF5czOl/rZCbkPTDslXZFF56QlZ1prLl+H28igAPf9DrCzp4AVkqZzq9BUan+ZJnZfxzZU8ehv0J/5VODKZf1Sbi13FEoPMV+H8JD3ZUwIX4Q6gYC5ybUKgKqJ4XrtWBQnyd0ozaNrRrRLAZTEav59+k6ynaJv/trKc= demo-app",
+                        "tags": {
+                            "Name": "demo-app-key",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-key",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "publicKey": [],
+                        "tags": []
+                    },
+                    "created": "2025-04-26T05:30:40.159382059Z",
+                    "modified": "2025-04-26T05:30:40.159382059Z",
+                    "sourcePosition": "project:///src/global_resources.py#273"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:elasticbeanstalk/application:Application::demo-app-backend",
+                    "custom": true,
+                    "id": "demo-app-backend",
+                    "type": "aws:elasticbeanstalk/application:Application",
+                    "inputs": {
+                        "__defaults": [],
+                        "description": "Elastic Beanstalk application for the DemoApp project",
+                        "name": "demo-app-backend",
+                        "tags": {
+                            "Name": "demo-app-backend",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-backend",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "outputs": {
+                        "appversionLifecycle": null,
+                        "arn": "arn:aws:elasticbeanstalk:eu-central-1:276479089394:application/demo-app-backend",
+                        "description": "Elastic Beanstalk application for the DemoApp project",
+                        "id": "demo-app-backend",
+                        "name": "demo-app-backend",
+                        "tags": {
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Project": "demo-app"
+                        }
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "description": [],
+                        "name": [],
+                        "tags": []
+                    },
+                    "created": "2025-04-26T05:30:40.586821484Z",
+                    "modified": "2025-04-26T05:30:40.586821484Z",
+                    "sourcePosition": "project:///src/global_resources.py#357"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/eip:Eip::demo-app-nat-eip",
+                    "custom": true,
+                    "id": "eipalloc-0ccb27c4592537526",
+                    "type": "aws:ec2/eip:Eip",
+                    "inputs": {
+                        "__defaults": [],
+                        "tags": {
+                            "Name": "demo-app-nat-eip",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-nat-eip",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"delete\":180000000000,\"read\":900000000000,\"update\":300000000000}}",
+                        "address": null,
+                        "allocationId": "eipalloc-0ccb27c4592537526",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:elastic-ip/eipalloc-0ccb27c4592537526",
+                        "associateWithPrivateIp": null,
+                        "associationId": "",
+                        "carrierIp": "",
+                        "customerOwnedIp": "",
+                        "customerOwnedIpv4Pool": "",
+                        "domain": "vpc",
+                        "id": "eipalloc-0ccb27c4592537526",
+                        "instance": "",
+                        "ipamPoolId": null,
+                        "networkBorderGroup": "eu-central-1",
+                        "networkInterface": "",
+                        "privateDns": null,
+                        "privateIp": "",
+                        "ptrRecord": "",
+                        "publicDns": "ec2-63-178-55-230.eu-central-1.compute.amazonaws.com",
+                        "publicIp": "63.178.55.230",
+                        "publicIpv4Pool": "amazon",
+                        "tags": {
+                            "Name": "demo-app-nat-eip",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-nat-eip",
+                            "Project": "demo-app"
+                        },
+                        "vpc": true
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "tags": []
+                    },
+                    "created": "2025-04-26T05:30:40.637211828Z",
+                    "modified": "2025-04-26T05:30:40.637211828Z",
+                    "sourcePosition": "project:///src/global_resources.py#116"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:iam/role:Role::demo-app-eb-role",
+                    "custom": true,
+                    "id": "demo-app-eb-role-c69cca0",
+                    "type": "aws:iam/role:Role",
+                    "inputs": {
+                        "__defaults": [
+                            "forceDetachPolicies",
+                            "maxSessionDuration",
+                            "name",
+                            "path"
+                        ],
+                        "assumeRolePolicy": "{\n            \"Version\": \"2012-10-17\",\n            \"Statement\": [\n                {\n                    \"Action\": \"sts:AssumeRole\",\n                    \"Principal\": {\n                        \"Service\": \"ec2.amazonaws.com\"\n                    },\n                    \"Effect\": \"Allow\",\n                    \"Sid\": \"\"\n                }\n            ]\n        }",
+                        "forceDetachPolicies": false,
+                        "maxSessionDuration": 3600,
+                        "name": "demo-app-eb-role-c69cca0",
+                        "path": "/",
+                        "tags": {
+                            "Name": "demo-app-eb-role",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-eb-role",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "outputs": {
+                        "arn": "arn:aws:iam::276479089394:role/demo-app-eb-role-c69cca0",
+                        "assumeRolePolicy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"},\"Sid\":\"\"}],\"Version\":\"2012-10-17\"}",
+                        "createDate": "2025-04-26T05:30:40Z",
+                        "description": "",
+                        "forceDetachPolicies": false,
+                        "id": "demo-app-eb-role-c69cca0",
+                        "inlinePolicies": [],
+                        "managedPolicyArns": [],
+                        "maxSessionDuration": 3600,
+                        "name": "demo-app-eb-role-c69cca0",
+                        "namePrefix": "",
+                        "path": "/",
+                        "permissionsBoundary": "",
+                        "tags": {
+                            "Name": "demo-app-eb-role",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-eb-role",
+                            "Project": "demo-app"
+                        },
+                        "uniqueId": "AROAUAX3QDLZIHORJ74CX"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "assumeRolePolicy": [],
+                        "tags": []
+                    },
+                    "created": "2025-04-26T05:30:40.800065596Z",
+                    "modified": "2025-04-26T05:30:40.800065596Z",
+                    "sourcePosition": "project:///src/global_resources.py#317"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc",
+                    "custom": true,
+                    "id": "vpc-09c6371548d54391f",
+                    "type": "aws:ec2/vpc:Vpc",
+                    "inputs": {
+                        "__defaults": [
+                            "enableDnsSupport"
+                        ],
+                        "cidrBlock": "10.0.0.0/16",
+                        "enableDnsSupport": true,
+                        "tags": {
+                            "Name": "demo-app-vpc",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-vpc",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "outputs": {
+                        "__meta": "{\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:vpc/vpc-09c6371548d54391f",
+                        "assignGeneratedIpv6CidrBlock": false,
+                        "cidrBlock": "10.0.0.0/16",
+                        "defaultNetworkAclId": "acl-0c9a4bcaaaba03680",
+                        "defaultRouteTableId": "rtb-016e5a1cc689923e0",
+                        "defaultSecurityGroupId": "sg-000f53ce2e0e03946",
+                        "dhcpOptionsId": "dopt-93b259fa",
+                        "enableDnsHostnames": false,
+                        "enableDnsSupport": true,
+                        "enableNetworkAddressUsageMetrics": false,
+                        "id": "vpc-09c6371548d54391f",
+                        "instanceTenancy": "default",
+                        "ipv4IpamPoolId": null,
+                        "ipv4NetmaskLength": null,
+                        "ipv6AssociationId": "",
+                        "ipv6CidrBlock": "",
+                        "ipv6CidrBlockNetworkBorderGroup": "",
+                        "ipv6IpamPoolId": "",
+                        "ipv6NetmaskLength": 0,
+                        "mainRouteTableId": "rtb-016e5a1cc689923e0",
+                        "ownerId": "276479089394",
+                        "tags": {
+                            "Name": "demo-app-vpc",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-vpc",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "cidrBlock": [],
+                        "tags": []
+                    },
+                    "created": "2025-04-26T05:30:41.255420095Z",
+                    "modified": "2025-04-26T05:30:41.255420095Z",
+                    "sourcePosition": "project:///src/global_resources.py#10"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:iam/rolePolicyAttachment:RolePolicyAttachment::demo-app-eb-policy",
+                    "custom": true,
+                    "id": "demo-app-eb-role-c69cca0-20250426053041046000000001",
+                    "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                    "inputs": {
+                        "__defaults": [],
+                        "policyArn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService",
+                        "role": "demo-app-eb-role-c69cca0"
+                    },
+                    "outputs": {
+                        "id": "demo-app-eb-role-c69cca0-20250426053041046000000001",
+                        "policyArn": "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService",
+                        "role": "demo-app-eb-role-c69cca0"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:iam/role:Role::demo-app-eb-role"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "policyArn": [],
+                        "role": [
+                            "urn:pulumi:global::demo-app::aws:iam/role:Role::demo-app-eb-role"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:41.378248201Z",
+                    "modified": "2025-04-26T05:30:41.378248201Z",
+                    "sourcePosition": "project:///src/global_resources.py#338"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/internetGateway:InternetGateway::demo-app-igw",
+                    "custom": true,
+                    "id": "igw-0b7ab5603b954da31",
+                    "type": "aws:ec2/internetGateway:InternetGateway",
+                    "inputs": {
+                        "__defaults": [],
+                        "tags": {
+                            "Name": "demo-app-igw",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-igw",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":1200000000000,\"update\":1200000000000}}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:internet-gateway/igw-0b7ab5603b954da31",
+                        "id": "igw-0b7ab5603b954da31",
+                        "ownerId": "276479089394",
+                        "tags": {
+                            "Name": "demo-app-igw",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-igw",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:41.931533438Z",
+                    "modified": "2025-04-26T05:30:41.931533438Z",
+                    "sourcePosition": "project:///src/global_resources.py#20"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt",
+                    "custom": true,
+                    "id": "rtb-0e925fd2739a29190",
+                    "type": "aws:ec2/routeTable:RouteTable",
+                    "inputs": {
+                        "__defaults": [],
+                        "tags": {
+                            "Name": "demo-app-public-rt",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-public-rt",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:route-table/rtb-0e925fd2739a29190",
+                        "id": "rtb-0e925fd2739a29190",
+                        "ownerId": "276479089394",
+                        "propagatingVgws": [],
+                        "routes": [],
+                        "tags": {
+                            "Name": "demo-app-public-rt",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-public-rt",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:42.021692504Z",
+                    "modified": "2025-04-26T05:30:42.021692504Z",
+                    "sourcePosition": "project:///src/global_resources.py#30"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt",
+                    "custom": true,
+                    "id": "rtb-01d00ec6d0f0b1c59",
+                    "type": "aws:ec2/routeTable:RouteTable",
+                    "inputs": {
+                        "__defaults": [],
+                        "tags": {
+                            "Name": "demo-app-private-rt",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-private-rt",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:route-table/rtb-01d00ec6d0f0b1c59",
+                        "id": "rtb-01d00ec6d0f0b1c59",
+                        "ownerId": "276479089394",
+                        "propagatingVgws": [],
+                        "routes": [],
+                        "tags": {
+                            "Name": "demo-app-private-rt",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-private-rt",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:42.132142413Z",
+                    "modified": "2025-04-26T05:30:42.132142413Z",
+                    "sourcePosition": "project:///src/global_resources.py#50"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/route:Route::demo-app-public-route",
+                    "custom": true,
+                    "id": "r-rtb-0e925fd2739a291901080289494",
+                    "type": "aws:ec2/route:Route",
+                    "inputs": {
+                        "__defaults": [],
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": "igw-0b7ab5603b954da31",
+                        "routeTableId": "rtb-0e925fd2739a29190"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "carrierGatewayId": "",
+                        "coreNetworkArn": "",
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "destinationIpv6CidrBlock": "",
+                        "destinationPrefixListId": "",
+                        "egressOnlyGatewayId": "",
+                        "gatewayId": "igw-0b7ab5603b954da31",
+                        "id": "r-rtb-0e925fd2739a291901080289494",
+                        "instanceId": "",
+                        "instanceOwnerId": "",
+                        "localGatewayId": "",
+                        "natGatewayId": "",
+                        "networkInterfaceId": "",
+                        "origin": "CreateRoute",
+                        "routeTableId": "rtb-0e925fd2739a29190",
+                        "state": "active",
+                        "transitGatewayId": "",
+                        "vpcEndpointId": "",
+                        "vpcPeeringConnectionId": ""
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt",
+                        "urn:pulumi:global::demo-app::aws:ec2/internetGateway:InternetGateway::demo-app-igw"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "destinationCidrBlock": [],
+                        "gatewayId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/internetGateway:InternetGateway::demo-app-igw"
+                        ],
+                        "routeTableId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:42.891989616Z",
+                    "modified": "2025-04-26T05:30:42.891989616Z",
+                    "sourcePosition": "project:///src/global_resources.py#39"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-instance-sg",
+                    "custom": true,
+                    "id": "sg-04973d3e744e58d59",
+                    "type": "aws:ec2/securityGroup:SecurityGroup",
+                    "inputs": {
+                        "__defaults": [
+                            "name",
+                            "revokeRulesOnDelete"
+                        ],
+                        "description": "Security group for instances in private subnets",
+                        "name": "demo-app-instance-sg-7e39674",
+                        "revokeRulesOnDelete": false,
+                        "tags": {
+                            "Name": "demo-app-instance-sg",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-instance-sg",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":900000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:security-group/sg-04973d3e744e58d59",
+                        "description": "Security group for instances in private subnets",
+                        "egress": [],
+                        "id": "sg-04973d3e744e58d59",
+                        "ingress": [],
+                        "name": "demo-app-instance-sg-7e39674",
+                        "namePrefix": "",
+                        "ownerId": "276479089394",
+                        "revokeRulesOnDelete": false,
+                        "tags": {
+                            "Name": "demo-app-instance-sg",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-instance-sg",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "description": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:43.610548621Z",
+                    "modified": "2025-04-26T05:30:43.610548621Z",
+                    "sourcePosition": "project:///src/global_resources.py#186"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-a",
+                    "custom": true,
+                    "id": "subnet-04b96461f1db05f14",
+                    "type": "aws:ec2/subnet:Subnet",
+                    "inputs": {
+                        "__defaults": [
+                            "assignIpv6AddressOnCreation",
+                            "enableDns64",
+                            "enableResourceNameDnsARecordOnLaunch",
+                            "enableResourceNameDnsAaaaRecordOnLaunch",
+                            "ipv6Native"
+                        ],
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1a",
+                        "cidrBlock": "10.0.11.0/24",
+                        "enableDns64": false,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "ipv6Native": false,
+                        "mapPublicIpOnLaunch": false,
+                        "tags": {
+                            "Name": "demo-app-private-subnet-a",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-private-subnet-a",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:subnet/subnet-04b96461f1db05f14",
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1a",
+                        "availabilityZoneId": "euc1-az2",
+                        "cidrBlock": "10.0.11.0/24",
+                        "customerOwnedIpv4Pool": "",
+                        "enableDns64": false,
+                        "enableLniAtDeviceIndex": 0,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "id": "subnet-04b96461f1db05f14",
+                        "ipv6CidrBlock": "",
+                        "ipv6CidrBlockAssociationId": "",
+                        "ipv6Native": false,
+                        "mapCustomerOwnedIpOnLaunch": false,
+                        "mapPublicIpOnLaunch": false,
+                        "outpostArn": "",
+                        "ownerId": "276479089394",
+                        "privateDnsHostnameTypeOnLaunch": "ip-name",
+                        "tags": {
+                            "Name": "demo-app-private-subnet-a",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-private-subnet-a",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "availabilityZone": [],
+                        "cidrBlock": [],
+                        "mapPublicIpOnLaunch": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:43.620552881Z",
+                    "modified": "2025-04-26T05:30:43.620552881Z",
+                    "sourcePosition": "project:///src/global_resources.py#95"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg",
+                    "custom": true,
+                    "id": "sg-08cb61763476d4151",
+                    "type": "aws:ec2/securityGroup:SecurityGroup",
+                    "inputs": {
+                        "__defaults": [
+                            "name",
+                            "revokeRulesOnDelete"
+                        ],
+                        "description": "Security group for bastion host",
+                        "name": "demo-app-bastion-sg-9ec2dc9",
+                        "revokeRulesOnDelete": false,
+                        "tags": {
+                            "Name": "demo-app-bastion-sg",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-bastion-sg",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":900000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:security-group/sg-08cb61763476d4151",
+                        "description": "Security group for bastion host",
+                        "egress": [],
+                        "id": "sg-08cb61763476d4151",
+                        "ingress": [],
+                        "name": "demo-app-bastion-sg-9ec2dc9",
+                        "namePrefix": "",
+                        "ownerId": "276479089394",
+                        "revokeRulesOnDelete": false,
+                        "tags": {
+                            "Name": "demo-app-bastion-sg",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-bastion-sg",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "description": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:43.676388735Z",
+                    "modified": "2025-04-26T05:30:43.676388735Z",
+                    "sourcePosition": "project:///src/global_resources.py#150"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-rds-sg",
+                    "custom": true,
+                    "id": "sg-0022b1396179b2538",
+                    "type": "aws:ec2/securityGroup:SecurityGroup",
+                    "inputs": {
+                        "__defaults": [
+                            "name",
+                            "revokeRulesOnDelete"
+                        ],
+                        "description": "Security group for RDS instance",
+                        "name": "demo-app-rds-sg-a4fc9e7",
+                        "revokeRulesOnDelete": false,
+                        "tags": {
+                            "Name": "demo-app-rds-sg",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-rds-sg",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":900000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:security-group/sg-0022b1396179b2538",
+                        "description": "Security group for RDS instance",
+                        "egress": [],
+                        "id": "sg-0022b1396179b2538",
+                        "ingress": [],
+                        "name": "demo-app-rds-sg-a4fc9e7",
+                        "namePrefix": "",
+                        "ownerId": "276479089394",
+                        "revokeRulesOnDelete": false,
+                        "tags": {
+                            "Name": "demo-app-rds-sg",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-rds-sg",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "description": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:43.709052406Z",
+                    "modified": "2025-04-26T05:30:43.709052406Z",
+                    "sourcePosition": "project:///src/global_resources.py#222"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-b",
+                    "custom": true,
+                    "id": "subnet-04f129ac35444bb72",
+                    "type": "aws:ec2/subnet:Subnet",
+                    "inputs": {
+                        "__defaults": [
+                            "assignIpv6AddressOnCreation",
+                            "enableDns64",
+                            "enableResourceNameDnsARecordOnLaunch",
+                            "enableResourceNameDnsAaaaRecordOnLaunch",
+                            "ipv6Native"
+                        ],
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1b",
+                        "cidrBlock": "10.0.12.0/24",
+                        "enableDns64": false,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "ipv6Native": false,
+                        "mapPublicIpOnLaunch": false,
+                        "tags": {
+                            "Name": "demo-app-private-subnet-b",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-private-subnet-b",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:subnet/subnet-04f129ac35444bb72",
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1b",
+                        "availabilityZoneId": "euc1-az3",
+                        "cidrBlock": "10.0.12.0/24",
+                        "customerOwnedIpv4Pool": "",
+                        "enableDns64": false,
+                        "enableLniAtDeviceIndex": 0,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "id": "subnet-04f129ac35444bb72",
+                        "ipv6CidrBlock": "",
+                        "ipv6CidrBlockAssociationId": "",
+                        "ipv6Native": false,
+                        "mapCustomerOwnedIpOnLaunch": false,
+                        "mapPublicIpOnLaunch": false,
+                        "outpostArn": "",
+                        "ownerId": "276479089394",
+                        "privateDnsHostnameTypeOnLaunch": "ip-name",
+                        "tags": {
+                            "Name": "demo-app-private-subnet-b",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-private-subnet-b",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "availabilityZone": [],
+                        "cidrBlock": [],
+                        "mapPublicIpOnLaunch": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:43.811782456Z",
+                    "modified": "2025-04-26T05:30:43.811782456Z",
+                    "sourcePosition": "project:///src/global_resources.py#95"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroupRule:SecurityGroupRule::demo-app-instance-all-out",
+                    "custom": true,
+                    "id": "sgrule-3032707928",
+                    "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                    "inputs": {
+                        "__defaults": [],
+                        "cidrBlocks": [
+                            "0.0.0.0/0"
+                        ],
+                        "description": "Allow all outbound traffic",
+                        "fromPort": 0,
+                        "protocol": "-1",
+                        "securityGroupId": "sg-04973d3e744e58d59",
+                        "toPort": 0,
+                        "type": "egress"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000},\"schema_version\":\"2\"}",
+                        "cidrBlocks": [
+                            "0.0.0.0/0"
+                        ],
+                        "description": "Allow all outbound traffic",
+                        "fromPort": 0,
+                        "id": "sgrule-3032707928",
+                        "ipv6CidrBlocks": null,
+                        "prefixListIds": null,
+                        "protocol": "-1",
+                        "securityGroupId": "sg-04973d3e744e58d59",
+                        "securityGroupRuleId": "sgr-08cb07432a210a686",
+                        "self": false,
+                        "sourceSecurityGroupId": null,
+                        "toPort": 0,
+                        "type": "egress"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-instance-sg"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "cidrBlocks": [],
+                        "description": [],
+                        "fromPort": [],
+                        "protocol": [],
+                        "securityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-instance-sg"
+                        ],
+                        "toPort": [],
+                        "type": []
+                    },
+                    "created": "2025-04-26T05:30:44.193345798Z",
+                    "modified": "2025-04-26T05:30:44.193345798Z",
+                    "sourcePosition": "project:///src/global_resources.py#207"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/routeTableAssociation:RouteTableAssociation::demo-app-private-rta-a",
+                    "custom": true,
+                    "id": "rtbassoc-0fac18bf16d527da0",
+                    "type": "aws:ec2/routeTableAssociation:RouteTableAssociation",
+                    "inputs": {
+                        "__defaults": [],
+                        "routeTableId": "rtb-01d00ec6d0f0b1c59",
+                        "subnetId": "subnet-04b96461f1db05f14"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "gatewayId": "",
+                        "id": "rtbassoc-0fac18bf16d527da0",
+                        "routeTableId": "rtb-01d00ec6d0f0b1c59",
+                        "subnetId": "subnet-04b96461f1db05f14"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-a",
+                        "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "routeTableId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-a"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:44.275141974Z",
+                    "modified": "2025-04-26T05:30:44.275141974Z",
+                    "sourcePosition": "project:///src/global_resources.py#106"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroupRule:SecurityGroupRule::demo-app-bastion-ssh-in",
+                    "custom": true,
+                    "id": "sgrule-2732831993",
+                    "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                    "inputs": {
+                        "__defaults": [],
+                        "cidrBlocks": [
+                            "0.0.0.0/0"
+                        ],
+                        "description": "Allow SSH access from anywhere",
+                        "fromPort": 22,
+                        "protocol": "tcp",
+                        "securityGroupId": "sg-08cb61763476d4151",
+                        "toPort": 22,
+                        "type": "ingress"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000},\"schema_version\":\"2\"}",
+                        "cidrBlocks": [
+                            "0.0.0.0/0"
+                        ],
+                        "description": "Allow SSH access from anywhere",
+                        "fromPort": 22,
+                        "id": "sgrule-2732831993",
+                        "ipv6CidrBlocks": null,
+                        "prefixListIds": null,
+                        "protocol": "tcp",
+                        "securityGroupId": "sg-08cb61763476d4151",
+                        "securityGroupRuleId": "sgr-0f610a710bb66baae",
+                        "self": false,
+                        "sourceSecurityGroupId": null,
+                        "toPort": 22,
+                        "type": "ingress"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "cidrBlocks": [],
+                        "description": [],
+                        "fromPort": [],
+                        "protocol": [],
+                        "securityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                        ],
+                        "toPort": [],
+                        "type": []
+                    },
+                    "created": "2025-04-26T05:30:44.479931332Z",
+                    "modified": "2025-04-26T05:30:44.479931332Z",
+                    "sourcePosition": "project:///src/global_resources.py#160"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-c",
+                    "custom": true,
+                    "id": "subnet-085aaa66554db22ce",
+                    "type": "aws:ec2/subnet:Subnet",
+                    "inputs": {
+                        "__defaults": [
+                            "assignIpv6AddressOnCreation",
+                            "enableDns64",
+                            "enableResourceNameDnsARecordOnLaunch",
+                            "enableResourceNameDnsAaaaRecordOnLaunch",
+                            "ipv6Native"
+                        ],
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1c",
+                        "cidrBlock": "10.0.13.0/24",
+                        "enableDns64": false,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "ipv6Native": false,
+                        "mapPublicIpOnLaunch": false,
+                        "tags": {
+                            "Name": "demo-app-private-subnet-c",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-private-subnet-c",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:subnet/subnet-085aaa66554db22ce",
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1c",
+                        "availabilityZoneId": "euc1-az1",
+                        "cidrBlock": "10.0.13.0/24",
+                        "customerOwnedIpv4Pool": "",
+                        "enableDns64": false,
+                        "enableLniAtDeviceIndex": 0,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "id": "subnet-085aaa66554db22ce",
+                        "ipv6CidrBlock": "",
+                        "ipv6CidrBlockAssociationId": "",
+                        "ipv6Native": false,
+                        "mapCustomerOwnedIpOnLaunch": false,
+                        "mapPublicIpOnLaunch": false,
+                        "outpostArn": "",
+                        "ownerId": "276479089394",
+                        "privateDnsHostnameTypeOnLaunch": "ip-name",
+                        "tags": {
+                            "Name": "demo-app-private-subnet-c",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-private-subnet-c",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "availabilityZone": [],
+                        "cidrBlock": [],
+                        "mapPublicIpOnLaunch": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:44.491999125Z",
+                    "modified": "2025-04-26T05:30:44.491999125Z",
+                    "sourcePosition": "project:///src/global_resources.py#95"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/routeTableAssociation:RouteTableAssociation::demo-app-private-rta-b",
+                    "custom": true,
+                    "id": "rtbassoc-0c4533fb02f52c4b0",
+                    "type": "aws:ec2/routeTableAssociation:RouteTableAssociation",
+                    "inputs": {
+                        "__defaults": [],
+                        "routeTableId": "rtb-01d00ec6d0f0b1c59",
+                        "subnetId": "subnet-04f129ac35444bb72"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "gatewayId": "",
+                        "id": "rtbassoc-0c4533fb02f52c4b0",
+                        "routeTableId": "rtb-01d00ec6d0f0b1c59",
+                        "subnetId": "subnet-04f129ac35444bb72"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt",
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-b"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "routeTableId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-b"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:44.630491813Z",
+                    "modified": "2025-04-26T05:30:44.630491813Z",
+                    "sourcePosition": "project:///src/global_resources.py#106"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroupRule:SecurityGroupRule::demo-app-rds-all-out",
+                    "custom": true,
+                    "id": "sgrule-727114058",
+                    "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                    "inputs": {
+                        "__defaults": [],
+                        "cidrBlocks": [
+                            "0.0.0.0/0"
+                        ],
+                        "description": "Allow all outbound traffic",
+                        "fromPort": 0,
+                        "protocol": "-1",
+                        "securityGroupId": "sg-0022b1396179b2538",
+                        "toPort": 0,
+                        "type": "egress"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000},\"schema_version\":\"2\"}",
+                        "cidrBlocks": [
+                            "0.0.0.0/0"
+                        ],
+                        "description": "Allow all outbound traffic",
+                        "fromPort": 0,
+                        "id": "sgrule-727114058",
+                        "ipv6CidrBlocks": null,
+                        "prefixListIds": null,
+                        "protocol": "-1",
+                        "securityGroupId": "sg-0022b1396179b2538",
+                        "securityGroupRuleId": "sgr-0e88cbb7ccdccc876",
+                        "self": false,
+                        "sourceSecurityGroupId": null,
+                        "toPort": 0,
+                        "type": "egress"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-rds-sg"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "cidrBlocks": [],
+                        "description": [],
+                        "fromPort": [],
+                        "protocol": [],
+                        "securityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-rds-sg"
+                        ],
+                        "toPort": [],
+                        "type": []
+                    },
+                    "created": "2025-04-26T05:30:44.704801288Z",
+                    "modified": "2025-04-26T05:30:44.704801288Z",
+                    "sourcePosition": "project:///src/global_resources.py#254"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/routeTableAssociation:RouteTableAssociation::demo-app-private-rta-c",
+                    "custom": true,
+                    "id": "rtbassoc-025efbf932d2cc01f",
+                    "type": "aws:ec2/routeTableAssociation:RouteTableAssociation",
+                    "inputs": {
+                        "__defaults": [],
+                        "routeTableId": "rtb-01d00ec6d0f0b1c59",
+                        "subnetId": "subnet-085aaa66554db22ce"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "gatewayId": "",
+                        "id": "rtbassoc-025efbf932d2cc01f",
+                        "routeTableId": "rtb-01d00ec6d0f0b1c59",
+                        "subnetId": "subnet-085aaa66554db22ce"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-c",
+                        "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "routeTableId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-c"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:45.049317451Z",
+                    "modified": "2025-04-26T05:30:45.049317451Z",
+                    "sourcePosition": "project:///src/global_resources.py#106"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroupRule:SecurityGroupRule::demo-app-instance-ssh-in",
+                    "custom": true,
+                    "id": "sgrule-1951206810",
+                    "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                    "inputs": {
+                        "__defaults": [],
+                        "description": "Allow SSH access from bastion host",
+                        "fromPort": 22,
+                        "protocol": "tcp",
+                        "securityGroupId": "sg-04973d3e744e58d59",
+                        "sourceSecurityGroupId": "sg-08cb61763476d4151",
+                        "toPort": 22,
+                        "type": "ingress"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000},\"schema_version\":\"2\"}",
+                        "cidrBlocks": null,
+                        "description": "Allow SSH access from bastion host",
+                        "fromPort": 22,
+                        "id": "sgrule-1951206810",
+                        "ipv6CidrBlocks": null,
+                        "prefixListIds": null,
+                        "protocol": "tcp",
+                        "securityGroupId": "sg-04973d3e744e58d59",
+                        "securityGroupRuleId": "sgr-08972273ff4a2ba35",
+                        "self": false,
+                        "sourceSecurityGroupId": "sg-08cb61763476d4151",
+                        "toPort": 22,
+                        "type": "ingress"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-instance-sg",
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "description": [],
+                        "fromPort": [],
+                        "protocol": [],
+                        "securityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-instance-sg"
+                        ],
+                        "sourceSecurityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                        ],
+                        "toPort": [],
+                        "type": []
+                    },
+                    "created": "2025-04-26T05:30:45.087136831Z",
+                    "modified": "2025-04-26T05:30:45.087136831Z",
+                    "sourcePosition": "project:///src/global_resources.py#196"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroupRule:SecurityGroupRule::demo-app-bastion-all-out",
+                    "custom": true,
+                    "id": "sgrule-2204011112",
+                    "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                    "inputs": {
+                        "__defaults": [],
+                        "cidrBlocks": [
+                            "0.0.0.0/0"
+                        ],
+                        "description": "Allow all outbound traffic",
+                        "fromPort": 0,
+                        "protocol": "-1",
+                        "securityGroupId": "sg-08cb61763476d4151",
+                        "toPort": 0,
+                        "type": "egress"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000},\"schema_version\":\"2\"}",
+                        "cidrBlocks": [
+                            "0.0.0.0/0"
+                        ],
+                        "description": "Allow all outbound traffic",
+                        "fromPort": 0,
+                        "id": "sgrule-2204011112",
+                        "ipv6CidrBlocks": null,
+                        "prefixListIds": null,
+                        "protocol": "-1",
+                        "securityGroupId": "sg-08cb61763476d4151",
+                        "securityGroupRuleId": "sgr-017013b74430fba86",
+                        "self": false,
+                        "sourceSecurityGroupId": null,
+                        "toPort": 0,
+                        "type": "egress"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "cidrBlocks": [],
+                        "description": [],
+                        "fromPort": [],
+                        "protocol": [],
+                        "securityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                        ],
+                        "toPort": [],
+                        "type": []
+                    },
+                    "created": "2025-04-26T05:30:45.129495169Z",
+                    "modified": "2025-04-26T05:30:45.129495169Z",
+                    "sourcePosition": "project:///src/global_resources.py#171"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroupRule:SecurityGroupRule::demo-app-rds-postgres-bastion-in",
+                    "custom": true,
+                    "id": "sgrule-2885540236",
+                    "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                    "inputs": {
+                        "__defaults": [],
+                        "description": "Allow Postgres access from bastion host",
+                        "fromPort": 5432,
+                        "protocol": "tcp",
+                        "securityGroupId": "sg-0022b1396179b2538",
+                        "sourceSecurityGroupId": "sg-08cb61763476d4151",
+                        "toPort": 5432,
+                        "type": "ingress"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000},\"schema_version\":\"2\"}",
+                        "cidrBlocks": null,
+                        "description": "Allow Postgres access from bastion host",
+                        "fromPort": 5432,
+                        "id": "sgrule-2885540236",
+                        "ipv6CidrBlocks": null,
+                        "prefixListIds": null,
+                        "protocol": "tcp",
+                        "securityGroupId": "sg-0022b1396179b2538",
+                        "securityGroupRuleId": "sgr-053bb0ef7f45afd9c",
+                        "self": false,
+                        "sourceSecurityGroupId": "sg-08cb61763476d4151",
+                        "toPort": 5432,
+                        "type": "ingress"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-rds-sg",
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "description": [],
+                        "fromPort": [],
+                        "protocol": [],
+                        "securityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-rds-sg"
+                        ],
+                        "sourceSecurityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                        ],
+                        "toPort": [],
+                        "type": []
+                    },
+                    "created": "2025-04-26T05:30:45.347832662Z",
+                    "modified": "2025-04-26T05:30:45.347832662Z",
+                    "sourcePosition": "project:///src/global_resources.py#232"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:rds/subnetGroup:SubnetGroup::demo-app-rds-subnet-group",
+                    "custom": true,
+                    "id": "demo-app-rds-subnet-group-9c253a0",
+                    "type": "aws:rds/subnetGroup:SubnetGroup",
+                    "inputs": {
+                        "__defaults": [
+                            "name"
+                        ],
+                        "description": "Managed by Pulumi",
+                        "name": "demo-app-rds-subnet-group-9c253a0",
+                        "subnetIds": [
+                            "subnet-04b96461f1db05f14",
+                            "subnet-04f129ac35444bb72",
+                            "subnet-085aaa66554db22ce"
+                        ],
+                        "tags": {
+                            "Name": "demo-app-rds-subnet-group",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-rds-subnet-group",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "outputs": {
+                        "arn": "arn:aws:rds:eu-central-1:276479089394:subgrp:demo-app-rds-subnet-group-9c253a0",
+                        "description": "Managed by Pulumi",
+                        "id": "demo-app-rds-subnet-group-9c253a0",
+                        "name": "demo-app-rds-subnet-group-9c253a0",
+                        "namePrefix": "",
+                        "subnetIds": [
+                            "subnet-04b96461f1db05f14",
+                            "subnet-04f129ac35444bb72",
+                            "subnet-085aaa66554db22ce"
+                        ],
+                        "supportedNetworkTypes": [
+                            "IPV4"
+                        ],
+                        "tags": {
+                            "Name": "demo-app-rds-subnet-group",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-rds-subnet-group",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-a",
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-b",
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-c"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "description": [],
+                        "subnetIds": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-b",
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-c",
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-private-subnet-a"
+                        ],
+                        "tags": []
+                    },
+                    "created": "2025-04-26T05:30:45.810372505Z",
+                    "modified": "2025-04-26T05:30:45.810372505Z",
+                    "sourcePosition": "project:///src/global_resources.py#302"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/securityGroupRule:SecurityGroupRule::demo-app-rds-postgres-instance-in",
+                    "custom": true,
+                    "id": "sgrule-942794540",
+                    "type": "aws:ec2/securityGroupRule:SecurityGroupRule",
+                    "inputs": {
+                        "__defaults": [],
+                        "description": "Allow Postgres access from application instances",
+                        "fromPort": 5432,
+                        "protocol": "tcp",
+                        "securityGroupId": "sg-0022b1396179b2538",
+                        "sourceSecurityGroupId": "sg-04973d3e744e58d59",
+                        "toPort": 5432,
+                        "type": "ingress"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000},\"schema_version\":\"2\"}",
+                        "cidrBlocks": null,
+                        "description": "Allow Postgres access from application instances",
+                        "fromPort": 5432,
+                        "id": "sgrule-942794540",
+                        "ipv6CidrBlocks": null,
+                        "prefixListIds": null,
+                        "protocol": "tcp",
+                        "securityGroupId": "sg-0022b1396179b2538",
+                        "securityGroupRuleId": "sgr-03ad293501ce7157f",
+                        "self": false,
+                        "sourceSecurityGroupId": "sg-04973d3e744e58d59",
+                        "toPort": 5432,
+                        "type": "ingress"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-instance-sg",
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-rds-sg"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "description": [],
+                        "fromPort": [],
+                        "protocol": [],
+                        "securityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-rds-sg"
+                        ],
+                        "sourceSecurityGroupId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-instance-sg"
+                        ],
+                        "toPort": [],
+                        "type": []
+                    },
+                    "created": "2025-04-26T05:30:45.971481451Z",
+                    "modified": "2025-04-26T05:30:45.971481451Z",
+                    "sourcePosition": "project:///src/global_resources.py#243"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:iam/instanceProfile:InstanceProfile::demo-app-eb-profile",
+                    "custom": true,
+                    "id": "demo-app-eb-profile-c4dd1c9",
+                    "type": "aws:iam/instanceProfile:InstanceProfile",
+                    "inputs": {
+                        "__defaults": [
+                            "name",
+                            "path"
+                        ],
+                        "name": "demo-app-eb-profile-c4dd1c9",
+                        "path": "/",
+                        "role": "demo-app-eb-role-c69cca0",
+                        "tags": {
+                            "Name": "demo-app-eb-profile",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-eb-profile",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "outputs": {
+                        "arn": "arn:aws:iam::276479089394:instance-profile/demo-app-eb-profile-c4dd1c9",
+                        "createDate": "2025-04-26T05:30:41Z",
+                        "id": "demo-app-eb-profile-c4dd1c9",
+                        "name": "demo-app-eb-profile-c4dd1c9",
+                        "namePrefix": "",
+                        "path": "/",
+                        "role": "demo-app-eb-role-c69cca0",
+                        "tags": {
+                            "Name": "demo-app-eb-profile",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-eb-profile",
+                            "Project": "demo-app"
+                        },
+                        "uniqueId": "AIPAUAX3QDLZL5UBXL64Q"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:iam/role:Role::demo-app-eb-role"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "role": [
+                            "urn:pulumi:global::demo-app::aws:iam/role:Role::demo-app-eb-role"
+                        ],
+                        "tags": []
+                    },
+                    "created": "2025-04-26T05:30:47.763414871Z",
+                    "modified": "2025-04-26T05:30:47.763414871Z",
+                    "sourcePosition": "project:///src/global_resources.py#347"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-b",
+                    "custom": true,
+                    "id": "subnet-0a9c66959327e045a",
+                    "type": "aws:ec2/subnet:Subnet",
+                    "inputs": {
+                        "__defaults": [
+                            "assignIpv6AddressOnCreation",
+                            "enableDns64",
+                            "enableResourceNameDnsARecordOnLaunch",
+                            "enableResourceNameDnsAaaaRecordOnLaunch",
+                            "ipv6Native"
+                        ],
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1b",
+                        "cidrBlock": "10.0.2.0/24",
+                        "enableDns64": false,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "ipv6Native": false,
+                        "mapPublicIpOnLaunch": true,
+                        "tags": {
+                            "Name": "demo-app-public-subnet-b",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-public-subnet-b",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:subnet/subnet-0a9c66959327e045a",
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1b",
+                        "availabilityZoneId": "euc1-az3",
+                        "cidrBlock": "10.0.2.0/24",
+                        "customerOwnedIpv4Pool": "",
+                        "enableDns64": false,
+                        "enableLniAtDeviceIndex": 0,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "id": "subnet-0a9c66959327e045a",
+                        "ipv6CidrBlock": "",
+                        "ipv6CidrBlockAssociationId": "",
+                        "ipv6Native": false,
+                        "mapCustomerOwnedIpOnLaunch": false,
+                        "mapPublicIpOnLaunch": true,
+                        "outpostArn": "",
+                        "ownerId": "276479089394",
+                        "privateDnsHostnameTypeOnLaunch": "ip-name",
+                        "tags": {
+                            "Name": "demo-app-public-subnet-b",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-public-subnet-b",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "availabilityZone": [],
+                        "cidrBlock": [],
+                        "mapPublicIpOnLaunch": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:52.617703324Z",
+                    "modified": "2025-04-26T05:30:52.617703324Z",
+                    "sourcePosition": "project:///src/global_resources.py#72"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-a",
+                    "custom": true,
+                    "id": "subnet-00ad509fe88a5d967",
+                    "type": "aws:ec2/subnet:Subnet",
+                    "inputs": {
+                        "__defaults": [
+                            "assignIpv6AddressOnCreation",
+                            "enableDns64",
+                            "enableResourceNameDnsARecordOnLaunch",
+                            "enableResourceNameDnsAaaaRecordOnLaunch",
+                            "ipv6Native"
+                        ],
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1a",
+                        "cidrBlock": "10.0.1.0/24",
+                        "enableDns64": false,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "ipv6Native": false,
+                        "mapPublicIpOnLaunch": true,
+                        "tags": {
+                            "Name": "demo-app-public-subnet-a",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-public-subnet-a",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:subnet/subnet-00ad509fe88a5d967",
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1a",
+                        "availabilityZoneId": "euc1-az2",
+                        "cidrBlock": "10.0.1.0/24",
+                        "customerOwnedIpv4Pool": "",
+                        "enableDns64": false,
+                        "enableLniAtDeviceIndex": 0,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "id": "subnet-00ad509fe88a5d967",
+                        "ipv6CidrBlock": "",
+                        "ipv6CidrBlockAssociationId": "",
+                        "ipv6Native": false,
+                        "mapCustomerOwnedIpOnLaunch": false,
+                        "mapPublicIpOnLaunch": true,
+                        "outpostArn": "",
+                        "ownerId": "276479089394",
+                        "privateDnsHostnameTypeOnLaunch": "ip-name",
+                        "tags": {
+                            "Name": "demo-app-public-subnet-a",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-public-subnet-a",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "availabilityZone": [],
+                        "cidrBlock": [],
+                        "mapPublicIpOnLaunch": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:52.6331346Z",
+                    "modified": "2025-04-26T05:30:52.6331346Z",
+                    "sourcePosition": "project:///src/global_resources.py#72"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/routeTableAssociation:RouteTableAssociation::demo-app-public-rta-b",
+                    "custom": true,
+                    "id": "rtbassoc-0bdbf89c39447b67a",
+                    "type": "aws:ec2/routeTableAssociation:RouteTableAssociation",
+                    "inputs": {
+                        "__defaults": [],
+                        "routeTableId": "rtb-0e925fd2739a29190",
+                        "subnetId": "subnet-0a9c66959327e045a"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "gatewayId": "",
+                        "id": "rtbassoc-0bdbf89c39447b67a",
+                        "routeTableId": "rtb-0e925fd2739a29190",
+                        "subnetId": "subnet-0a9c66959327e045a"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-b",
+                        "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "routeTableId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-b"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:53.071042854Z",
+                    "modified": "2025-04-26T05:30:53.071042854Z",
+                    "sourcePosition": "project:///src/global_resources.py#83"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/routeTableAssociation:RouteTableAssociation::demo-app-public-rta-a",
+                    "custom": true,
+                    "id": "rtbassoc-095e181f4c829262a",
+                    "type": "aws:ec2/routeTableAssociation:RouteTableAssociation",
+                    "inputs": {
+                        "__defaults": [],
+                        "routeTableId": "rtb-0e925fd2739a29190",
+                        "subnetId": "subnet-00ad509fe88a5d967"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "gatewayId": "",
+                        "id": "rtbassoc-095e181f4c829262a",
+                        "routeTableId": "rtb-0e925fd2739a29190",
+                        "subnetId": "subnet-00ad509fe88a5d967"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-a",
+                        "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "routeTableId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-a"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:53.129553147Z",
+                    "modified": "2025-04-26T05:30:53.129553147Z",
+                    "sourcePosition": "project:///src/global_resources.py#83"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-c",
+                    "custom": true,
+                    "id": "subnet-0af1c4c8ea63fd1c5",
+                    "type": "aws:ec2/subnet:Subnet",
+                    "inputs": {
+                        "__defaults": [
+                            "assignIpv6AddressOnCreation",
+                            "enableDns64",
+                            "enableResourceNameDnsARecordOnLaunch",
+                            "enableResourceNameDnsAaaaRecordOnLaunch",
+                            "ipv6Native"
+                        ],
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1c",
+                        "cidrBlock": "10.0.3.0/24",
+                        "enableDns64": false,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "ipv6Native": false,
+                        "mapPublicIpOnLaunch": true,
+                        "tags": {
+                            "Name": "demo-app-public-subnet-c",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-public-subnet-c",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:subnet/subnet-0af1c4c8ea63fd1c5",
+                        "assignIpv6AddressOnCreation": false,
+                        "availabilityZone": "eu-central-1c",
+                        "availabilityZoneId": "euc1-az1",
+                        "cidrBlock": "10.0.3.0/24",
+                        "customerOwnedIpv4Pool": "",
+                        "enableDns64": false,
+                        "enableLniAtDeviceIndex": 0,
+                        "enableResourceNameDnsARecordOnLaunch": false,
+                        "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                        "id": "subnet-0af1c4c8ea63fd1c5",
+                        "ipv6CidrBlock": "",
+                        "ipv6CidrBlockAssociationId": "",
+                        "ipv6Native": false,
+                        "mapCustomerOwnedIpOnLaunch": false,
+                        "mapPublicIpOnLaunch": true,
+                        "outpostArn": "",
+                        "ownerId": "276479089394",
+                        "privateDnsHostnameTypeOnLaunch": "ip-name",
+                        "tags": {
+                            "Name": "demo-app-public-subnet-c",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-public-subnet-c",
+                            "Project": "demo-app"
+                        },
+                        "vpcId": "vpc-09c6371548d54391f"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "availabilityZone": [],
+                        "cidrBlock": [],
+                        "mapPublicIpOnLaunch": [],
+                        "tags": [],
+                        "vpcId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/vpc:Vpc::demo-app-vpc"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:54.127075061Z",
+                    "modified": "2025-04-26T05:30:54.127075061Z",
+                    "sourcePosition": "project:///src/global_resources.py#72"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/routeTableAssociation:RouteTableAssociation::demo-app-public-rta-c",
+                    "custom": true,
+                    "id": "rtbassoc-0272ad58215e910aa",
+                    "type": "aws:ec2/routeTableAssociation:RouteTableAssociation",
+                    "inputs": {
+                        "__defaults": [],
+                        "routeTableId": "rtb-0e925fd2739a29190",
+                        "subnetId": "subnet-0af1c4c8ea63fd1c5"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "gatewayId": "",
+                        "id": "rtbassoc-0272ad58215e910aa",
+                        "routeTableId": "rtb-0e925fd2739a29190",
+                        "subnetId": "subnet-0af1c4c8ea63fd1c5"
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-c",
+                        "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "routeTableId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-public-rt"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-c"
+                        ]
+                    },
+                    "created": "2025-04-26T05:30:54.819054945Z",
+                    "modified": "2025-04-26T05:30:54.819054945Z",
+                    "sourcePosition": "project:///src/global_resources.py#83"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/instance:Instance::demo-app-bastion-host",
+                    "custom": true,
+                    "id": "i-092842468695fdec3",
+                    "type": "aws:ec2/instance:Instance",
+                    "inputs": {
+                        "__defaults": [
+                            "getPasswordData",
+                            "sourceDestCheck",
+                            "userDataReplaceOnChange"
+                        ],
+                        "ami": "ami-0b5673b5f6e8f7fa7",
+                        "getPasswordData": false,
+                        "instanceType": "t2.micro",
+                        "keyName": "demo-app-key-1c78cbe",
+                        "sourceDestCheck": true,
+                        "subnetId": "subnet-00ad509fe88a5d967",
+                        "tags": {
+                            "Name": "demo-app-bastion-host",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-bastion-host",
+                            "Project": "demo-app"
+                        },
+                        "userDataReplaceOnChange": false,
+                        "vpcSecurityGroupIds": [
+                            "sg-08cb61763476d4151"
+                        ]
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000,\"read\":900000000000,\"update\":600000000000},\"schema_version\":\"1\"}",
+                        "ami": "ami-0b5673b5f6e8f7fa7",
+                        "arn": "arn:aws:ec2:eu-central-1:276479089394:instance/i-092842468695fdec3",
+                        "associatePublicIpAddress": true,
+                        "availabilityZone": "eu-central-1a",
+                        "capacityReservationSpecification": {
+                            "capacityReservationPreference": "open",
+                            "capacityReservationTarget": null
+                        },
+                        "cpuCoreCount": 1,
+                        "cpuOptions": {
+                            "amdSevSnp": "",
+                            "coreCount": 1,
+                            "threadsPerCore": 1
+                        },
+                        "cpuThreadsPerCore": 1,
+                        "creditSpecification": {
+                            "cpuCredits": "standard"
+                        },
+                        "disableApiStop": false,
+                        "disableApiTermination": false,
+                        "ebsBlockDevices": [],
+                        "ebsOptimized": false,
+                        "enablePrimaryIpv6": null,
+                        "enclaveOptions": {
+                            "enabled": false
+                        },
+                        "ephemeralBlockDevices": [],
+                        "getPasswordData": false,
+                        "hibernation": false,
+                        "hostId": "",
+                        "hostResourceGroupArn": null,
+                        "iamInstanceProfile": "",
+                        "id": "i-092842468695fdec3",
+                        "instanceInitiatedShutdownBehavior": "stop",
+                        "instanceLifecycle": "",
+                        "instanceMarketOptions": null,
+                        "instanceState": "running",
+                        "instanceType": "t2.micro",
+                        "ipv6AddressCount": 0,
+                        "ipv6Addresses": [],
+                        "keyName": "demo-app-key-1c78cbe",
+                        "launchTemplate": null,
+                        "maintenanceOptions": {
+                            "autoRecovery": "default"
+                        },
+                        "metadataOptions": {
+                            "httpEndpoint": "enabled",
+                            "httpProtocolIpv6": "disabled",
+                            "httpPutResponseHopLimit": 2,
+                            "httpTokens": "required",
+                            "instanceMetadataTags": "disabled"
+                        },
+                        "monitoring": false,
+                        "networkInterfaces": [],
+                        "outpostArn": "",
+                        "passwordData": "",
+                        "placementGroup": "",
+                        "placementPartitionNumber": 0,
+                        "primaryNetworkInterfaceId": "eni-01bf388e965cebf5d",
+                        "privateDns": "ip-10-0-1-45.eu-central-1.compute.internal",
+                        "privateDnsNameOptions": {
+                            "enableResourceNameDnsARecord": false,
+                            "enableResourceNameDnsAaaaRecord": false,
+                            "hostnameType": "ip-name"
+                        },
+                        "privateIp": "10.0.1.45",
+                        "publicDns": "",
+                        "publicIp": "18.185.16.195",
+                        "rootBlockDevice": {
+                            "deleteOnTermination": true,
+                            "deviceName": "/dev/xvda",
+                            "encrypted": false,
+                            "iops": 3000,
+                            "kmsKeyId": "",
+                            "tags": {},
+                            "tagsAll": {},
+                            "throughput": 125,
+                            "volumeId": "vol-00d44d835c1e38e40",
+                            "volumeSize": 8,
+                            "volumeType": "gp3"
+                        },
+                        "secondaryPrivateIps": [],
+                        "securityGroups": [],
+                        "sourceDestCheck": true,
+                        "spotInstanceRequestId": "",
+                        "subnetId": "subnet-00ad509fe88a5d967",
+                        "tags": {
+                            "Name": "demo-app-bastion-host",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-bastion-host",
+                            "Project": "demo-app"
+                        },
+                        "tenancy": "default",
+                        "userData": null,
+                        "userDataBase64": null,
+                        "userDataReplaceOnChange": false,
+                        "volumeTags": null,
+                        "vpcSecurityGroupIds": [
+                            "sg-08cb61763476d4151"
+                        ]
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-a",
+                        "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg",
+                        "urn:pulumi:global::demo-app::aws:ec2/keyPair:KeyPair::demo-app-key"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "ami": [],
+                        "instanceType": [],
+                        "keyName": [
+                            "urn:pulumi:global::demo-app::aws:ec2/keyPair:KeyPair::demo-app-key"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-a"
+                        ],
+                        "tags": [],
+                        "vpcSecurityGroupIds": [
+                            "urn:pulumi:global::demo-app::aws:ec2/securityGroup:SecurityGroup::demo-app-bastion-sg"
+                        ]
+                    },
+                    "created": "2025-04-26T05:31:06.03325411Z",
+                    "modified": "2025-04-26T05:31:06.03325411Z",
+                    "sourcePosition": "project:///src/global_resources.py#287"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/natGateway:NatGateway::demo-app-nat",
+                    "custom": true,
+                    "id": "nat-0dbc2d58a686a11dc",
+                    "type": "aws:ec2/natGateway:NatGateway",
+                    "inputs": {
+                        "__defaults": [
+                            "connectivityType"
+                        ],
+                        "allocationId": "eipalloc-0ccb27c4592537526",
+                        "connectivityType": "public",
+                        "subnetId": "subnet-00ad509fe88a5d967",
+                        "tags": {
+                            "Name": "demo-app-nat",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-nat",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1800000000000,\"update\":600000000000}}",
+                        "allocationId": "eipalloc-0ccb27c4592537526",
+                        "associationId": "eipassoc-0789df1e9e3419fb0",
+                        "connectivityType": "public",
+                        "id": "nat-0dbc2d58a686a11dc",
+                        "networkInterfaceId": "eni-07fb4688fbba6c222",
+                        "privateIp": "10.0.1.25",
+                        "publicIp": "63.178.55.230",
+                        "secondaryAllocationIds": null,
+                        "secondaryPrivateIpAddressCount": 0,
+                        "secondaryPrivateIpAddresses": [],
+                        "subnetId": "subnet-00ad509fe88a5d967",
+                        "tags": {
+                            "Name": "demo-app-nat",
+                            "Project": "demo-app"
+                        },
+                        "tagsAll": {
+                            "Name": "demo-app-nat",
+                            "Project": "demo-app"
+                        }
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-a",
+                        "urn:pulumi:global::demo-app::aws:ec2/eip:Eip::demo-app-nat-eip"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "allocationId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/eip:Eip::demo-app-nat-eip"
+                        ],
+                        "subnetId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/subnet:Subnet::demo-app-public-subnet-a"
+                        ],
+                        "tags": []
+                    },
+                    "created": "2025-04-26T05:32:37.576639083Z",
+                    "modified": "2025-04-26T05:32:37.576639083Z",
+                    "sourcePosition": "project:///src/global_resources.py#124"
+                },
+                {
+                    "urn": "urn:pulumi:global::demo-app::aws:ec2/route:Route::demo-app-private-route",
+                    "custom": true,
+                    "id": "r-rtb-01d00ec6d0f0b1c591080289494",
+                    "type": "aws:ec2/route:Route",
+                    "inputs": {
+                        "__defaults": [],
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": "nat-0dbc2d58a686a11dc",
+                        "routeTableId": "rtb-01d00ec6d0f0b1c59"
+                    },
+                    "outputs": {
+                        "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000,\"delete\":300000000000,\"update\":120000000000}}",
+                        "carrierGatewayId": "",
+                        "coreNetworkArn": "",
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "destinationIpv6CidrBlock": "",
+                        "destinationPrefixListId": "",
+                        "egressOnlyGatewayId": "",
+                        "gatewayId": "",
+                        "id": "r-rtb-01d00ec6d0f0b1c591080289494",
+                        "instanceId": "",
+                        "instanceOwnerId": "",
+                        "localGatewayId": "",
+                        "natGatewayId": "nat-0dbc2d58a686a11dc",
+                        "networkInterfaceId": "",
+                        "origin": "CreateRoute",
+                        "routeTableId": "rtb-01d00ec6d0f0b1c59",
+                        "state": "active",
+                        "transitGatewayId": "",
+                        "vpcEndpointId": "",
+                        "vpcPeeringConnectionId": ""
+                    },
+                    "parent": "urn:pulumi:global::demo-app::pulumi:pulumi:Stack::demo-app-global",
+                    "dependencies": [
+                        "urn:pulumi:global::demo-app::aws:ec2/natGateway:NatGateway::demo-app-nat",
+                        "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt"
+                    ],
+                    "provider": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0::7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
+                    "propertyDependencies": {
+                        "destinationCidrBlock": [],
+                        "natGatewayId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/natGateway:NatGateway::demo-app-nat"
+                        ],
+                        "routeTableId": [
+                            "urn:pulumi:global::demo-app::aws:ec2/routeTable:RouteTable::demo-app-private-rt"
+                        ]
+                    },
+                    "created": "2025-04-26T05:32:38.448921845Z",
+                    "modified": "2025-04-26T05:32:38.448921845Z",
+                    "sourcePosition": "project:///src/global_resources.py#59"
+                }
+            ],
+            "metadata": {}
+        }
+    }
+}

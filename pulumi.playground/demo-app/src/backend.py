@@ -1,6 +1,7 @@
 import pulumi
-from pulumi_aws import ec2, rds, elasticbeanstalk as eb
-from .utils import eb_env_settings
+from pulumi_aws import rds, elasticbeanstalk as eb
+
+from utils import eb_env_settings
 
 project_name = pulumi.get_project()
 stack_name = pulumi.get_stack()
@@ -9,49 +10,55 @@ aws_region = aws_config.require("region")
 
 
 def create_rds_instance(global_data):
-  return rds.Instance(f'{project_name}-{stack_name}-rds',
-      engine='postgres',
-      engine_version='17.2',
-      instance_class='db.t3.small',
-      allocated_storage=10,
-      db_name=f'{project_name}-db'.replace('-', ''),
-      username='dbadmin',
-      password='LockBox#1121',  # Consider using AWS Secrets Manager
-      vpc_security_group_ids=[
-          global_data['security_groups.rds.id'], 
-          global_data['security_groups.bastion.id']
-      ],
-      db_subnet_group_name=global_data['subnet_groups.rds.name'],
-      skip_final_snapshot=True,
-      tags={
-          'Name': f'{project_name}-{stack_name}-rds',
-          'Project': project_name,
-          'Environment': stack_name
-      }
-  )
+    return rds.Instance(
+        f'{project_name}-{stack_name}-rds',
+        engine='postgres',
+        engine_version='17.2',
+        instance_class='db.t3.small',
+        allocated_storage=10,
+        db_name=f'{project_name}-db'.replace('-', ''),
+        username='dbadmin',
+        password='LockBox#1121',  # Consider using AWS Secrets Manager
+        vpc_security_group_ids=[
+            global_data['security_groups.rds.id'],
+            global_data['security_groups.bastion.id']
+        ],
+        db_subnet_group_name=global_data['subnet_groups.rds.name'],
+        skip_final_snapshot=True,
+        tags={
+            'Name': f'{project_name}-{stack_name}-rds',
+            'Project': project_name,
+            'Environment': stack_name
+        }
+    )
 
 
 def create_eb_environment(global_data, rds_instance):
-    private_subnet_ids = pulumi.Output.all(
+    private_subnets = [
         global_data['subnets.private.a.id'],
         global_data['subnets.private.b.id'],
         global_data['subnets.private.c.id']
-    ).apply(lambda ids: ','.join(ids))
+    ]
+    private_subnet_ids = pulumi.Output.concat(','.join(private_subnets))
 
-    public_subnet_ids = pulumi.Output.all(
+    public_subnets = [
         global_data['subnets.public.a.id'],
         global_data['subnets.public.b.id'],
         global_data['subnets.public.c.id']
-    ).apply(lambda ids: ','.join(ids))
-    
-    return eb.Environment(f'{project_name}-backend-{stack_name}',
+    ]
+    public_subnet_ids = pulumi.Output.concat(','.join(public_subnets))
+
+    return eb.Environment(
+        f'{project_name}-backend-{stack_name}',
         name=f'{project_name}-backend-{stack_name}',
         application=global_data['applications.eb.name'],
         solution_stack_name='64bit Amazon Linux 2023 v4.5.0 running Corretto 17',
         settings=eb_env_settings({
-            'aws:autoscaling:launchconfiguration>IamInstanceProfile': global_data['iam.instance_profiles.eb.name'],
+            'aws:autoscaling:launchconfiguration>IamInstanceProfile': global_data[
+                'iam.instance_profiles.eb.name'],
             'aws:autoscaling:launchconfiguration>InstanceType': 't3.small',
-            'aws:autoscaling:launchconfiguration>SecurityGroups': global_data['security_groups.instance.id'],
+            'aws:autoscaling:launchconfiguration>SecurityGroups': global_data[
+                'security_groups.instance.id'],
             'aws:autoscaling:launchconfiguration>EC2KeyName': global_data['keys.instance.key_name'],
             'aws:autoscaling:launchconfiguration>ImageId': 'ami-0e994c5a8caa6aa32',
             'aws:autoscaling:launchconfiguration>RootVolumeType': 'gp3',
@@ -84,13 +91,14 @@ def create_eb_environment(global_data, rds_instance):
             'Environment': stack_name
         }
     )
-  
-  
+
+
 def create_backend(global_data):
-  rds_instance = create_rds_instance(global_data)
-  eb_environment = create_eb_environment(global_data, rds_instance)
-  
-  return {
-    'rds.instance.endpoint': rds_instance.endpoint,
-    'eb.environment.cname': eb_environment.cname
-  }
+    rds_instance = create_rds_instance(global_data)
+    eb_environment = create_eb_environment(global_data, rds_instance)
+
+    return {
+        'rds.instance.endpoint': rds_instance.endpoint,
+        'eb.environment.cname': eb_environment.cname,
+        'eb.environment.endpoint_url': eb_environment.endpoint_url,
+    }

@@ -1,0 +1,37 @@
+{
+    "kind": "update",
+    "startTime": 1745646118,
+    "message": "[PULUMI] - Switched to a local state backend",
+    "environment": {
+        "exec.kind": "cli",
+        "git.author": "Andrei Fecioru",
+        "git.author.email": "afecioru@adobe.com",
+        "git.committer": "Andrei Fecioru",
+        "git.committer.email": "afecioru@adobe.com",
+        "git.dirty": "true",
+        "git.head": "adb0c628819136f4503b1e89599e93b7ea9201c2",
+        "git.headName": "refs/heads/master",
+        "pulumi.arch": "amd64",
+        "pulumi.env.PULUMI_CONFIG_PASSPHRASE": "set",
+        "pulumi.os": "linux",
+        "pulumi.version": "v3.165.0",
+        "stack.environments": "[]",
+        "updatePlan": "false",
+        "vcs.kind": "github.com",
+        "vcs.owner": "andreifecioru",
+        "vcs.repo": "study",
+        "vcs.root": "pulumi.playground/demo-app"
+    },
+    "config": {
+        "aws:region": "eu-central-1",
+        "pulumi:tags": {
+            "pulumi:template": "aws-python"
+        }
+    },
+    "version": 0,
+    "result": "succeeded",
+    "endTime": 1745646502,
+    "resourceChanges": {
+        "create": 3
+    }
+}

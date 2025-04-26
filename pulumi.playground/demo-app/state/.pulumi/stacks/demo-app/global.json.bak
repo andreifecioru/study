@@ -4,9 +4,9 @@
         "stack": "organization/demo-app/global",
         "latest": {
             "manifest": {
-                "time": "2025-04-22T13:32:41.292383+03:00",
-                "magic": "2bd4745a5107d793d99154515a56ea83ac634c18f2078efd20f2659b45247146",
-                "version": "v3.163.0"
+                "time": "2025-05-09T21:04:54.583423714+03:00",
+                "magic": "ddbd0ff735ffe7afff6024a5108d8161cc4d85cd0ddbd9ddcc43a35f4b02ead1",
+                "version": "v3.169.0"
             },
             "secrets_providers": {
                 "type": "passphrase",
@@ -16,49 +16,49 @@
             },
             "resources": [
                 {
-                    "urn": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_76_0",
+                    "urn": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0",
                     "custom": true,
-                    "id": "bc170554-1a98-4bd2-8609-3f76ac1804cd",
+                    "id": "7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
                     "type": "pulumi:providers:aws",
                     "inputs": {
                         "__internal": {},
                         "region": "eu-central-1",
                         "skipCredentialsValidation": "false",
                         "skipRegionValidation": "true",
-                        "version": "6.76.0"
+                        "version": "6.78.0"
                     },
                     "outputs": {
                         "region": "eu-central-1",
                         "skipCredentialsValidation": "false",
                         "skipRegionValidation": "true",
-                        "version": "6.76.0"
+                        "version": "6.78.0"
                     },
-                    "created": "2025-04-22T07:39:05.048673Z",
-                    "modified": "2025-04-22T07:39:05.048673Z"
+                    "created": "2025-04-26T05:30:39.464159636Z",
+                    "modified": "2025-04-26T05:30:39.464159636Z"
                 }
             ],
             "pending_operations": [
                 {
                     "resource": {
-                        "urn": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_76_0",
+                        "urn": "urn:pulumi:global::demo-app::pulumi:providers:aws::default_6_78_0",
                         "custom": true,
-                        "id": "bc170554-1a98-4bd2-8609-3f76ac1804cd",
+                        "id": "7f32fe9b-f8d8-4d35-9565-a40d4e164fb1",
                         "type": "pulumi:providers:aws",
                         "inputs": {
                             "__internal": {},
                             "region": "eu-central-1",
                             "skipCredentialsValidation": "false",
                             "skipRegionValidation": "true",
-                            "version": "6.76.0"
+                            "version": "6.78.0"
                         },
                         "outputs": {
                             "region": "eu-central-1",
                             "skipCredentialsValidation": "false",
                             "skipRegionValidation": "true",
-                            "version": "6.76.0"
+                            "version": "6.78.0"
                         },
-                        "created": "2025-04-22T07:39:05.048673Z",
-                        "modified": "2025-04-22T07:39:05.048673Z"
+                        "created": "2025-04-26T05:30:39.464159636Z",
+                        "modified": "2025-04-26T05:30:39.464159636Z"
                     },
                     "type": "deleting"
                 }
