@@ -24,10 +24,10 @@ const myCar = carMakers.pop(); // ... same as above
 // FP methods are available on arrays
 carMakers
   .map((carMaker: string): string => {
-  return carMaker.toUpperCase();
+    return carMaker.toUpperCase();
   })
   .forEach((carMaker) => { // we can use type inference in this scenarios
-    console.log(`Car maker: ${carMaker}`)
+    console.log(`Car maker: ${carMaker}`);
   });
 
 // Arrays with more than one type (use union types)

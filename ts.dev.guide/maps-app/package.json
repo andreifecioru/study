@@ -1,20 +1,19 @@
 {
   "name": "maps-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "typescript": "^5.2.2"
+    "@types/google.maps": "^3.58.1",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
   },
   "dependencies": {
-    "@faker-js/faker": "^8.1.0",
-    "@types/faker": "^6.6.9"
+    "@faker-js/faker": "^9.8.0"
   }
 }

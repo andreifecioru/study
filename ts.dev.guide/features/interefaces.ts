@@ -34,7 +34,7 @@ printVehicle2(oldCivic);
 
 interface Reportable {
   // abstract methods on interfaces (just the signature)
-  summary(): string
+  summary(): string;
 }
 
 const printReport = (item: Reportable): void => {
