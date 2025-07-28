@@ -1,4 +1,4 @@
-package dev.afecioru;
+package dev.afecioru.xml;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

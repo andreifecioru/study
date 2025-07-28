@@ -8,8 +8,8 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <bean id="userDetailsProvider" class="dev.afecioru.DBUserDetailsProvider" />
-  <bean id="userManager" class="dev.afecioru.UserManager">
+  <bean id="userDetailsProvider" class="dev.afecioru.xml.DBUserDetailsProvider" />
+  <bean id="userManager" class="dev.afecioru.xml.UserManager">
     <constructor-arg ref="userDetailsProvider" />
   </bean>
 </beans>

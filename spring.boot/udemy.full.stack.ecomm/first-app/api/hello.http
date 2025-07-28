@@ -1,0 +1,9 @@
+### A simple API call
+GET {{base-url}}/hello/andrei
+Accept: application/json
+
+
+### Say hello!
+POST {{base-url}}/hello
+
+Andrei

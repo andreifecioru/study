@@ -1,4 +1,4 @@
-package dev.afecioru;
+package dev.afecioru.xml;
 
 public class DBUserDetailsProvider implements UserDetailsProvider {
     @Override
