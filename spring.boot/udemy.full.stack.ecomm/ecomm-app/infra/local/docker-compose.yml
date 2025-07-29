@@ -1,0 +1,21 @@
+version: '3.8'
+
+networks:
+  db-net:
+
+services:
+  postgres:
+    container_name: db-postgres
+    image: postgres:17.2
+    restart: always
+    volumes:
+      - ./db/data:/data
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin_pa$$
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: ecomm_app
+    networks:
+      - db-net
+    ports:
+      - 5432:5432

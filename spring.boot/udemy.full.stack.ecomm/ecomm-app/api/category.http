@@ -1,0 +1,31 @@
+### Fetch all categories
+GET {{base-url}}/api/v1/categories
+Accept: application/json
+
+
+### Create a category
+POST {{base-url}}/api/v1/categories
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Electronics"
+}
+
+
+### Update a category
+PUT {{base-url}}/api/v1/categories/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Travel"
+}
+
+
+### Delete a category
+DELETE {{base-url}}/api/v1/categories/1
+
+
+### Delete all categories
+DELETE {{base-url}}/api/v1/categories
