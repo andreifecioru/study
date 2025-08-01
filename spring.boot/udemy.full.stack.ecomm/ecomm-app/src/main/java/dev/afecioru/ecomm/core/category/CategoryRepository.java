@@ -5,7 +5,7 @@ import java.util.Optional;
 
 
 public interface CategoryRepository {
-    List<Category> findAll();
+    List<Category> findAll(int pageNo, int pageSize);
     Optional<Category> findById(Long id);
     Optional<Category> findByName(String name);
 

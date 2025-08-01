@@ -1,13 +1,14 @@
 package dev.afecioru.ecomm.core.category;
 
-import dev.afecioru.ecomm.core.Error.*;
+import dev.afecioru.ecomm.core.Error.GenericError;
+import dev.afecioru.ecomm.core.Error.InvalidOperationError;
+import dev.afecioru.ecomm.core.Error.NotFoundError;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.springframework.stereotype.Service;
 
-
 import java.util.List;
-import java.util.Optional;
 
 
 @RequiredArgsConstructor
@@ -16,19 +17,21 @@ import java.util.Optional;
 public class CategoryService {
     private final CategoryRepository categoryRepository;
 
-    public List<Category> getAll() {
-        return categoryRepository.findAll();
+    public List<Category> getAll(int pageNo, int pageSize) {
+        return categoryRepository.findAll(pageNo, pageSize);
     }
 
-    public Optional<Category> get(Long id) {
-        return categoryRepository.findById(id);
+    public Category get(Long id) {
+        return categoryRepository.findById(id)
+            .orElseThrow(() -> new NotFoundError("Category not found with id: " + id));
     }
 
     public Category create(Category category) {
         category.setId(null);
 
-        Category newCategory = categoryRepository.save(category);
+        val newCategory = save(category);
         log.info("Created category with ID: {}", newCategory.getId());
+
         return newCategory;
     }
 
@@ -37,7 +40,7 @@ public class CategoryService {
             .map(existingCategory -> {
                 existingCategory.setName(category.getName());
 
-                Category updatedCategory = categoryRepository.save(existingCategory);
+                Category updatedCategory = save(existingCategory);
                 log.info("Updated category with ID: {}", updatedCategory.getId());
                 return updatedCategory;
             })
@@ -66,5 +69,18 @@ public class CategoryService {
 
     public void deleteAll() {
         categoryRepository.deleteAll();
+    }
+
+    private Category save(Category category) {
+        try {
+            return categoryRepository.save(category);
+        } catch (Exception e) {
+            log.error("Unable to save category: {}", e.getMessage());
+            if (e.getMessage().contains("violates unique constraint")) {
+                throw new InvalidOperationError("Category with name: " + category.getName() + " already exists");
+            } else {
+                throw new GenericError("Unable to create category: " + e.getMessage());
+            }
+        }
     }
 }

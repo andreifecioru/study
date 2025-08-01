@@ -2,6 +2,9 @@
 GET {{base-url}}/api/v1/categories
 Accept: application/json
 
+### Fetch a specific category
+GET {{base-url}}/api/v1/categories/5
+Accept: application/json
 
 ### Create a category
 POST {{base-url}}/api/v1/categories
@@ -9,22 +12,22 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "Electronics"
+    "name": ""
 }
 
 
 ### Update a category
-PUT {{base-url}}/api/v1/categories/1
+PUT {{base-url}}/api/v1/categories/7
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Travel"
+  "name": "Electronics"
 }
 
 
 ### Delete a category
-DELETE {{base-url}}/api/v1/categories/1
+DELETE {{base-url}}/api/v1/categories/9
 
 
 ### Delete all categories

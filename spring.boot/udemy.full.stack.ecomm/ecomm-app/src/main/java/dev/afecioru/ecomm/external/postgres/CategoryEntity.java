@@ -18,24 +18,4 @@ public class CategoryEntity {
 
     @Column(nullable = false, unique = true)
     private String name;
-
-    public interface EntityMapper {
-        static Category fromEntity(CategoryEntity entity) {
-            Category category = new Category();
-
-            category.setId(entity.getId());
-            category.setName(entity.getName());
-
-            return category;
-        }
-
-        static CategoryEntity toEntity(Category category) {
-            CategoryEntity entity = new CategoryEntity();
-
-            entity.setId(category.getId());
-            entity.setName(category.getName());
-
-            return entity;
-        }
-    }
 }

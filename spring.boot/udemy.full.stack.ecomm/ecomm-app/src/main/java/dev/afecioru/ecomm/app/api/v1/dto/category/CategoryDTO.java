@@ -1,4 +1,4 @@
-package dev.afecioru.ecomm.core.category;
+package dev.afecioru.ecomm.app.api.v1.dto.category;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category {
+public class CategoryDTO {
     private Long id;
 
     @NotBlank
