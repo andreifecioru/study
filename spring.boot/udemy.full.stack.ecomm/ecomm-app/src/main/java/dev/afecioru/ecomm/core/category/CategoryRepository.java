@@ -1,11 +1,10 @@
 package dev.afecioru.ecomm.core.category;
 
-import java.util.List;
 import java.util.Optional;
 
 
 public interface CategoryRepository {
-    List<Category> findAll(int pageNo, int pageSize);
+    CategoryPage findAll(int pageNo, int pageSize, String sortBy, String sortOrder);
     Optional<Category> findById(Long id);
     Optional<Category> findByName(String name);
 

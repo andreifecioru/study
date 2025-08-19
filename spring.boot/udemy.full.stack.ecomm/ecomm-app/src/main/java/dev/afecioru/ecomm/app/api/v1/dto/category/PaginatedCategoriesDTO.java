@@ -1,12 +1,19 @@
 package dev.afecioru.ecomm.app.api.v1.dto.category;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class PaginatedCategoriesDTO {
-    private final List<CategoryDTO> content;
+    private List<CategoryDTO> content;
+    private int pageNo;
+    private int pageSize;
+    private long totalElements;
+    private int totalPages;
+    private boolean lastPage;
 }

@@ -17,8 +17,8 @@ import java.util.List;
 public class CategoryService {
     private final CategoryRepository categoryRepository;
 
-    public List<Category> getAll(int pageNo, int pageSize) {
-        return categoryRepository.findAll(pageNo, pageSize);
+    public CategoryPage getAll(int pageNo, int pageSize, String sortBy, String sortOrder) {
+        return categoryRepository.findAll(pageNo, pageSize, sortBy, sortOrder);
     }
 
     public Category get(Long id) {

@@ -26,15 +26,13 @@ public class CategoryController {
 
     @GetMapping("")
     public ResponseEntity<PaginatedCategoriesDTO> getAllCategories(
-        @RequestParam(name = "page", defaultValue = "0") int pageNo,
-        @RequestParam(name = "size", defaultValue = "10") int pageSize
+        @RequestParam(name = "page", defaultValue = "0", required = false) int pageNo,
+        @RequestParam(name = "size", defaultValue = "10", required = false) int pageSize,
+        @RequestParam(name = "sortBy", defaultValue = "id", required = false) String sortBy,
+        @RequestParam(name = "sortOrder", defaultValue = "asc", required = false) String sortOrder
     ) {
-        List<Category> categories = categoryService.getAll(pageNo, pageSize);
-        val response = new PaginatedCategoriesDTO(
-            categories.stream()
-                .map(category -> modelMapper.map(category, CategoryDTO.class))
-                .toList()
-        );
+        val categoryPage = categoryService.getAll(pageNo, pageSize, sortBy, sortOrder);
+        val response = modelMapper.map(categoryPage, PaginatedCategoriesDTO.class);
         return ResponseEntity.ok(response);
     }
 

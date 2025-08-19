@@ -2,6 +2,10 @@
 GET {{base-url}}/api/v1/categories
 Accept: application/json
 
+### Fetch all categories (paginated)
+GET {{base-url}}/api/v1/categories?page=2&size=10&sortBy=name&sortOrder=desc
+Accept: application/json
+
 ### Fetch a specific category
 GET {{base-url}}/api/v1/categories/5
 Accept: application/json

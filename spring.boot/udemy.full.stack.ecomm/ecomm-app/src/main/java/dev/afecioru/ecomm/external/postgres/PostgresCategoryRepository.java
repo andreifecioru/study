@@ -1,14 +1,15 @@
 package dev.afecioru.ecomm.external.postgres;
 
 import dev.afecioru.ecomm.core.category.Category;
+import dev.afecioru.ecomm.core.category.CategoryPage;
 import dev.afecioru.ecomm.core.category.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Optional;
 
 
@@ -19,13 +20,24 @@ public class PostgresCategoryRepository implements CategoryRepository {
     private final ModelMapper modelMapper;
 
     @Override
-    public List<Category> findAll(int pageNo, int pageSize) {
-        val pageable = PageRequest.of(pageNo, pageSize);
+    public CategoryPage findAll(int pageNo, int pageSize, String sortBy, String sortOrder) {
+        Sort sortCriteria = Sort.by(Sort.Direction.fromString(sortOrder), sortBy);
+
+        val pageable = PageRequest.of(pageNo, pageSize, sortCriteria);
         val categoryPage = categoryDB.findAll(pageable);
 
-        return categoryPage.getContent().stream()
+        val content = categoryPage.getContent().stream()
             .map(entity -> modelMapper.map(entity, Category.class))
             .toList();
+
+        return CategoryPage.builder()
+            .content(content)
+            .pageNo(categoryPage.getNumber())
+            .pageSize(categoryPage.getSize())
+            .totalElements(categoryPage.getTotalElements())
+            .totalPages(categoryPage.getTotalPages())
+            .lastPage(categoryPage.isLast())
+            .build();
     }
 
     @Override
