@@ -1,0 +1,3 @@
+### Home controller
+GET {{base-url}}/api/v1/home
+Accept: application/json

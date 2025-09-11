@@ -1,8 +1,7 @@
 package dev.afecioru.ecomm.app.api.v1.controllers;
 
-import dev.afecioru.ecomm.app.api.v1.dto.category.PaginatedCategoriesDTO;
 import dev.afecioru.ecomm.app.api.v1.dto.category.CategoryDTO;
-import dev.afecioru.ecomm.core.Error.*;
+import dev.afecioru.ecomm.app.api.v1.dto.category.PaginatedCategoriesDTO;
 import dev.afecioru.ecomm.core.category.Category;
 import dev.afecioru.ecomm.core.category.CategoryService;
 import jakarta.validation.Valid;
@@ -13,8 +12,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
