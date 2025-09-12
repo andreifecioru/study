@@ -1,4 +1,4 @@
-package dev.afecioru.springlabs.app.api.v1.dto.todo;
+package dev.afecioru.springlabs.app.api.dto.todo;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

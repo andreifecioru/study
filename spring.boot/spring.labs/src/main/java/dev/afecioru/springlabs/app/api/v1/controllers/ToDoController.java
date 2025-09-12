@@ -1,6 +1,6 @@
 package dev.afecioru.springlabs.app.api.v1.controllers;
 
-import dev.afecioru.springlabs.app.api.v1.dto.todo.ToDoDTO;
+import dev.afecioru.springlabs.app.api.dto.todo.ToDoDTO;
 import dev.afecioru.springlabs.core.todo.ToDo;
 import dev.afecioru.springlabs.core.todo.ToDoService;
 import jakarta.validation.Valid;

@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan({
     "dev.afecioru.springlabs.external.*",
     "dev.afecioru.springlabs.app.config.*",
+    "dev.afecioru.springlabs.app.api.*",
     "dev.afecioru.springlabs.core.*"
 })
 @EnableJpaRepositories({
@@ -17,5 +18,5 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan({
     "dev.afecioru.springlabs.external.*"
 })
-public class AppConfig {
-}
+
+public class AppConfig {}

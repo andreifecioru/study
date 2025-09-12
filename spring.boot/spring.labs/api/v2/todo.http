@@ -1,35 +1,35 @@
 ### Fetch all TODOs
-GET {{base-url}}/api/v1/todos
+GET {{base-url}}/api/v2/todos
 Accept: application/json
 
 ### Fetch a specific TODO
-GET {{base-url}}/api/v1/todos/1
+GET {{base-url}}/api/v2/todos/1
 Accept: application/json
 
 ### Create a TODO
-POST {{base-url}}/api/v1/todos
+POST {{base-url}}/api/v2/todos
 Content-Type: application/json
 Accept: application/json
 
 {
-    "title": "Work all day",
-    "description": "Work all day and all night",
+    "title": "Take  a break",
+    "description": "Relax and take a break",
     "completed": false
 }
 
 ### Update a TODO
-PUT {{base-url}}/api/v1/todos/1
+PUT {{base-url}}/api/v2/todos/1
 Content-Type: application/json
 Accept: application/json
 
 {
-  "title": "Work all day!",
+  "title": "Work all day",
   "description": "Work all day and all night",
   "completed": false
 }
 
 ### Delete a TODO
-DELETE {{base-url}}/api/v1/todos/1
+DELETE {{base-url}}/api/v2/todos/1
 
 ### Delete all TODOs
-DELETE {{base-url}}/api/v1/todos/
+DELETE {{base-url}}/api/v2/todos/
