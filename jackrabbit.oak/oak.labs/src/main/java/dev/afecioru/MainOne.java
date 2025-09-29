@@ -15,7 +15,7 @@ import org.apache.jackrabbit.oak.segment.file.FileStoreBuilder;
 import java.io.File;
 
 @Slf4j
-public class Main {
+public class MainOne {
     public static void main(String[] args) {
         // Path to local repository
         File repoDir = new File("repo");
@@ -41,11 +41,12 @@ public class Main {
                     .addNode("hello")
                     .addNode("world")
                     .setProperty("message", "Hello World!");
+
+                // Save the changes
+                session.save();
+                log.info("Content saved in repo");
             }
 
-            // Save the changes
-            session.save();
-            log.info("Content saved in repo");
 
             // Retrieve the content
             log.info("Retrieving content from the repository");

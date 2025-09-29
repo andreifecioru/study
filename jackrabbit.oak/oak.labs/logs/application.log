@@ -22,47 +22,56 @@
     - /oak:index/repMembers*(0)
 
 2025-09-15 09:08:27.499 [main] INFO  o.a.j.oak.plugins.index.IndexUpdate - Reindexing completed
-2025-09-15 09:08:27.534 [main] INFO  dev.afecioru.Main - Adding content to the repository
-2025-09-15 09:08:27.543 [main] INFO  dev.afecioru.Main - Retrieving content from the repository
+2025-09-15 09:08:27.534 [main] INFO  dev.afecioru.MainOne - Adding content to the repository
+2025-09-15 09:08:27.543 [main] INFO  dev.afecioru.MainOne - Retrieving content from the repository
 2025-09-15 09:08:27.566 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK closed: repo
-2025-09-15 09:08:27.566 [main] ERROR dev.afecioru.Main - Error: hello/world
+2025-09-15 09:08:27.566 [main] ERROR dev.afecioru.MainOne - Error: hello/world
 2025-09-15 09:09:29.420 [main] INFO  o.a.j.oak.segment.file.FileStore - Creating file store FileStoreBuilder{version=1.46.0, directory=repo, blobStore=null, binariesInlineThreshold=16512, maxFileSize=256, segmentCacheSize=256, stringCacheSize=256, templateCacheSize=64, stringDeduplicationCacheSize=15000, templateDeduplicationCacheSize=3000, nodeDeduplicationCacheSize=1048576, memoryMapping=true, offHeapAccess=false, gcOptions=SegmentGCOptions{paused=false, estimationDisabled=false, gcSizeDeltaEstimation=1073741824, retryCount=5, forceTimeout=60, retainedGenerations=2, gcType=FULL, compactorType=CHECKPOINT_COMPACTOR}}
 2025-09-15 09:09:29.500 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK opened at repo, mmap=true, offHeapAccess=false, size=315.9 kB (315904 bytes)
 2025-09-15 09:09:29.511 [main] INFO  o.a.j.o.s.SegmentNodeStore$SegmentNodeStoreBuilder - Creating segment node store SegmentNodeStoreBuilder{blobStore=inline}
 2025-09-15 09:09:29.514 [main] INFO  o.a.j.o.s.s.LockBasedScheduler - Initializing SegmentNodeStore with the commitFairLock option enabled.
-2025-09-15 09:09:29.690 [main] INFO  dev.afecioru.Main - Adding content to the repository
+2025-09-15 09:09:29.690 [main] INFO  dev.afecioru.MainOne - Adding content to the repository
 2025-09-15 09:09:29.711 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK closed: repo
 2025-09-15 09:10:28.371 [main] INFO  o.a.j.oak.segment.file.FileStore - Creating file store FileStoreBuilder{version=1.46.0, directory=repo, blobStore=null, binariesInlineThreshold=16512, maxFileSize=256, segmentCacheSize=256, stringCacheSize=256, templateCacheSize=64, stringDeduplicationCacheSize=15000, templateDeduplicationCacheSize=3000, nodeDeduplicationCacheSize=1048576, memoryMapping=true, offHeapAccess=false, gcOptions=SegmentGCOptions{paused=false, estimationDisabled=false, gcSizeDeltaEstimation=1073741824, retryCount=5, forceTimeout=60, retainedGenerations=2, gcType=FULL, compactorType=CHECKPOINT_COMPACTOR}}
 2025-09-15 09:10:28.462 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK opened at repo, mmap=true, offHeapAccess=false, size=321.0 kB (321024 bytes)
 2025-09-15 09:10:28.473 [main] INFO  o.a.j.o.s.SegmentNodeStore$SegmentNodeStoreBuilder - Creating segment node store SegmentNodeStoreBuilder{blobStore=inline}
 2025-09-15 09:10:28.476 [main] INFO  o.a.j.o.s.s.LockBasedScheduler - Initializing SegmentNodeStore with the commitFairLock option enabled.
-2025-09-15 09:10:28.655 [main] INFO  dev.afecioru.Main - Adding content to the repository
+2025-09-15 09:10:28.655 [main] INFO  dev.afecioru.MainOne - Adding content to the repository
 2025-09-15 09:10:28.680 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK closed: repo
 2025-09-15 09:12:50.052 [main] INFO  o.a.j.oak.segment.file.FileStore - Creating file store FileStoreBuilder{version=1.46.0, directory=repo, blobStore=null, binariesInlineThreshold=16512, maxFileSize=256, segmentCacheSize=256, stringCacheSize=256, templateCacheSize=64, stringDeduplicationCacheSize=15000, templateDeduplicationCacheSize=3000, nodeDeduplicationCacheSize=1048576, memoryMapping=true, offHeapAccess=false, gcOptions=SegmentGCOptions{paused=false, estimationDisabled=false, gcSizeDeltaEstimation=1073741824, retryCount=5, forceTimeout=60, retainedGenerations=2, gcType=FULL, compactorType=CHECKPOINT_COMPACTOR}}
 2025-09-15 09:12:50.142 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK opened at repo, mmap=true, offHeapAccess=false, size=326.1 kB (326144 bytes)
 2025-09-15 09:12:50.155 [main] INFO  o.a.j.o.s.SegmentNodeStore$SegmentNodeStoreBuilder - Creating segment node store SegmentNodeStoreBuilder{blobStore=inline}
 2025-09-15 09:12:50.160 [main] INFO  o.a.j.o.s.s.LockBasedScheduler - Initializing SegmentNodeStore with the commitFairLock option enabled.
-2025-09-15 09:12:50.345 [main] INFO  dev.afecioru.Main - Adding content to the repository
+2025-09-15 09:12:50.345 [main] INFO  dev.afecioru.MainOne - Adding content to the repository
 2025-09-15 09:12:50.366 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK closed: repo
 2025-09-15 09:13:19.875 [main] INFO  o.a.j.oak.segment.file.FileStore - Creating file store FileStoreBuilder{version=1.46.0, directory=repo, blobStore=null, binariesInlineThreshold=16512, maxFileSize=256, segmentCacheSize=256, stringCacheSize=256, templateCacheSize=64, stringDeduplicationCacheSize=15000, templateDeduplicationCacheSize=3000, nodeDeduplicationCacheSize=1048576, memoryMapping=true, offHeapAccess=false, gcOptions=SegmentGCOptions{paused=false, estimationDisabled=false, gcSizeDeltaEstimation=1073741824, retryCount=5, forceTimeout=60, retainedGenerations=2, gcType=FULL, compactorType=CHECKPOINT_COMPACTOR}}
 2025-09-15 09:13:19.953 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK opened at repo, mmap=true, offHeapAccess=false, size=331.3 kB (331264 bytes)
 2025-09-15 09:13:19.964 [main] INFO  o.a.j.o.s.SegmentNodeStore$SegmentNodeStoreBuilder - Creating segment node store SegmentNodeStoreBuilder{blobStore=inline}
 2025-09-15 09:13:19.967 [main] INFO  o.a.j.o.s.s.LockBasedScheduler - Initializing SegmentNodeStore with the commitFairLock option enabled.
-2025-09-15 09:13:20.169 [main] INFO  dev.afecioru.Main - Adding content to the repository
+2025-09-15 09:13:20.169 [main] INFO  dev.afecioru.MainOne - Adding content to the repository
 2025-09-15 09:13:20.190 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK closed: repo
 2025-09-15 09:14:13.491 [main] INFO  o.a.j.oak.segment.file.FileStore - Creating file store FileStoreBuilder{version=1.46.0, directory=repo, blobStore=null, binariesInlineThreshold=16512, maxFileSize=256, segmentCacheSize=256, stringCacheSize=256, templateCacheSize=64, stringDeduplicationCacheSize=15000, templateDeduplicationCacheSize=3000, nodeDeduplicationCacheSize=1048576, memoryMapping=true, offHeapAccess=false, gcOptions=SegmentGCOptions{paused=false, estimationDisabled=false, gcSizeDeltaEstimation=1073741824, retryCount=5, forceTimeout=60, retainedGenerations=2, gcType=FULL, compactorType=CHECKPOINT_COMPACTOR}}
 2025-09-15 09:14:13.569 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK opened at repo, mmap=true, offHeapAccess=false, size=336.4 kB (336384 bytes)
 2025-09-15 09:14:13.580 [main] INFO  o.a.j.o.s.SegmentNodeStore$SegmentNodeStoreBuilder - Creating segment node store SegmentNodeStoreBuilder{blobStore=inline}
 2025-09-15 09:14:13.583 [main] INFO  o.a.j.o.s.s.LockBasedScheduler - Initializing SegmentNodeStore with the commitFairLock option enabled.
-2025-09-15 09:14:13.762 [main] INFO  dev.afecioru.Main - Adding content to the repository
+2025-09-15 09:14:13.762 [main] INFO  dev.afecioru.MainOne - Adding content to the repository
 2025-09-15 09:14:13.783 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK closed: repo
-2025-09-15 09:14:15.877 [main] ERROR dev.afecioru.Main - Error: hello
+2025-09-15 09:14:15.877 [main] ERROR dev.afecioru.MainOne - Error: hello
 2025-09-15 09:16:46.761 [main] INFO  o.a.j.oak.segment.file.FileStore - Creating file store FileStoreBuilder{version=1.46.0, directory=repo, blobStore=null, binariesInlineThreshold=16512, maxFileSize=256, segmentCacheSize=256, stringCacheSize=256, templateCacheSize=64, stringDeduplicationCacheSize=15000, templateDeduplicationCacheSize=3000, nodeDeduplicationCacheSize=1048576, memoryMapping=true, offHeapAccess=false, gcOptions=SegmentGCOptions{paused=false, estimationDisabled=false, gcSizeDeltaEstimation=1073741824, retryCount=5, forceTimeout=60, retainedGenerations=2, gcType=FULL, compactorType=CHECKPOINT_COMPACTOR}}
 2025-09-15 09:16:46.841 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK opened at repo, mmap=true, offHeapAccess=false, size=341.5 kB (341504 bytes)
 2025-09-15 09:16:46.852 [main] INFO  o.a.j.o.s.SegmentNodeStore$SegmentNodeStoreBuilder - Creating segment node store SegmentNodeStoreBuilder{blobStore=inline}
 2025-09-15 09:16:46.855 [main] INFO  o.a.j.o.s.s.LockBasedScheduler - Initializing SegmentNodeStore with the commitFairLock option enabled.
-2025-09-15 09:16:47.033 [main] INFO  dev.afecioru.Main - Adding content to the repository
-2025-09-15 09:16:47.035 [main] INFO  dev.afecioru.Main - Content saved in repo
-2025-09-15 09:16:47.036 [main] INFO  dev.afecioru.Main - Retrieving content from the repository
-2025-09-15 09:16:57.694 [main] INFO  dev.afecioru.Main - Message: Hello World!
+2025-09-15 09:16:47.033 [main] INFO  dev.afecioru.MainOne - Adding content to the repository
+2025-09-15 09:16:47.035 [main] INFO  dev.afecioru.MainOne - Content saved in repo
+2025-09-15 09:16:47.036 [main] INFO  dev.afecioru.MainOne - Retrieving content from the repository
+2025-09-15 09:16:57.694 [main] INFO  dev.afecioru.MainOne - Message: Hello World!
 2025-09-15 09:16:57.725 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK closed: repo
+2025-09-22 09:33:24.216 [main] INFO  o.a.j.oak.segment.file.FileStore - Creating file store FileStoreBuilder{version=1.46.0, directory=repo, blobStore=null, binariesInlineThreshold=16512, maxFileSize=256, segmentCacheSize=256, stringCacheSize=256, templateCacheSize=64, stringDeduplicationCacheSize=15000, templateDeduplicationCacheSize=3000, nodeDeduplicationCacheSize=1048576, memoryMapping=true, offHeapAccess=false, gcOptions=SegmentGCOptions{paused=false, estimationDisabled=false, gcSizeDeltaEstimation=1073741824, retryCount=5, forceTimeout=60, retainedGenerations=2, gcType=FULL, compactorType=CHECKPOINT_COMPACTOR}}
+2025-09-22 09:33:24.306 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK opened at repo, mmap=true, offHeapAccess=false, size=346.6 kB (346624 bytes)
+2025-09-22 09:33:24.319 [main] INFO  o.a.j.o.s.SegmentNodeStore$SegmentNodeStoreBuilder - Creating segment node store SegmentNodeStoreBuilder{blobStore=inline}
+2025-09-22 09:33:24.324 [main] INFO  o.a.j.o.s.s.LockBasedScheduler - Initializing SegmentNodeStore with the commitFairLock option enabled.
+2025-09-22 09:33:24.532 [main] INFO  dev.afecioru.MainOne - Adding content to the repository
+2025-09-22 09:33:24.536 [main] INFO  dev.afecioru.MainOne - Content saved in repo
+2025-09-22 09:33:24.536 [main] INFO  dev.afecioru.MainOne - Retrieving content from the repository
+2025-09-22 09:33:24.537 [main] INFO  dev.afecioru.MainOne - Message: Hello World!
+2025-09-22 09:33:24.554 [main] INFO  o.a.j.oak.segment.file.FileStore - TarMK closed: repo
