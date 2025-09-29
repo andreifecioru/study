@@ -1,0 +1,119 @@
+import asyncio
+import os
+from dotenv import load_dotenv
+import questionary as qs
+
+from google import genai
+from google.genai import types
+
+from fastmcp import Client
+
+
+MODEL_ID = "gemini-2.5-flash"
+
+load_dotenv()
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+if not GEMINI_API_KEY:
+    raise ValueError('GEMINI_API_KEY is not set')
+
+async def main():
+    ai_client = genai.Client(api_key=GEMINI_API_KEY)
+    mcp_client = Client("http://127.0.0.1:8000/mcp")
+
+    chat = await create_chat(mcp_client, ai_client)
+
+    while True:
+        question = qs.text("").ask()
+        if question in ("quit", "q"):
+            print("Bye!")
+            break
+
+        if not question:
+            continue
+
+        print("🧠 Thinking...")
+        response = await chat.send_message(question)
+        if not response.text:
+            # maybe we need to do a function call...
+            if response.candidates[0].content.parts:
+                for part in response.candidates[0].content.parts:
+                    if hasattr(part, 'function_call') and part.function_call:
+                        # execute the function call
+                        function_result = await handle_function_call(mcp_client, part.function_call)
+
+                        # send the result back to the chat
+                        function_response = types.Part.from_function_response(
+                            name=part.function_call.name,
+                            response={'result': function_result}
+                        )
+
+                        final_response = await chat.send_message([function_response])
+                        print(f'🤖 {final_response.text}')
+            else:
+                print("🤖 I don't know what to say...")
+        else:
+            print(f'🤖 {response.text}')
+
+
+async def handle_function_call(mcp_client: Client, function_call: types.FunctionCall):
+    # convert the LLM function call into an MCP function call
+    tool_name = function_call.name
+    arguments = dict(function_call.args) if function_call.args else {}
+
+    # call the MCP tool
+    async with mcp_client:
+        result = await mcp_client.call_tool(tool_name, arguments)
+        return str(result.content[0].text if result.content else result)
+
+
+async def create_chat(mcp_client: Client, gemini_client: genai.Client):
+    async with mcp_client:
+        # fetch the tools
+        mcp_tools = await mcp_client.list_tools()
+
+        # covert the tools to gemini functions
+        gemini_functions = [mcp_tool_to_gemini_function(tool) for tool in mcp_tools]
+
+        # wrap function declarations in Tool objects
+        tools = [
+            # custom tools
+            types.Tool(function_declarations=gemini_functions)
+        ]
+
+        chat = gemini_client.aio.chats.create(
+            model=MODEL_ID,
+            config=types.GenerateContentConfig(tools=tools)
+        )
+
+        return chat
+
+
+def mcp_tool_to_gemini_function(tool):
+    params = {}
+    required = []
+
+    if hasattr(tool, 'inputSchema') and tool.inputSchema:
+        schema = tool.inputSchema
+        if 'properties' in schema:
+            for param_name, param_info in schema['properties'].items():
+                params[param_name] = {
+                    "type": param_info.get('type', 'string'),
+                    "description": param_info.get('description', ''),
+                }
+
+        if 'required' in schema:
+            required = schema['required']
+
+    return types.FunctionDeclaration(
+        name=tool.name,
+        description=tool.description,
+        parameters=types.Schema(
+            type=types.Type.OBJECT,
+            properties=params,
+            required=required
+        )
+    )
+
+
+if __name__ == '__main__':
+    asyncio.run(main())

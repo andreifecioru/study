@@ -8,13 +8,19 @@ mcp = FastMCP(
     """
 )
 
+def str_to_num(s: str) -> int | float:
+    try:
+        return int(s)
+    except ValueError:
+        return float(s)
+
 @mcp.tool(
     name="Addition",
     title="Add two numbers.",
     description="Add two numbers together.",
     tags={"math", "addition"}
 )
-def add(a: int | float, b: int | float) -> int | float:
+def add(a: int | float | str, b: int | float | str) -> int | float:
     """
     Add two numbers together.
 
@@ -23,7 +29,11 @@ def add(a: int | float, b: int | float) -> int | float:
 
     :return: Sum of a and b
     """
-    return a + b
+    _a = str_to_num(a)
+    _b = str_to_num(b)
+
+    print("Adding", _a, "and", _b)
+    return _a + _b
 
 
 @mcp.tool(
@@ -32,7 +42,7 @@ def add(a: int | float, b: int | float) -> int | float:
     description="Subtract one number from another.",
     tags={"math", "subtraction"}
 )
-def subtract(a: int | float, b: int | float) -> int | float:
+def subtract(a: int | float | str, b: int | float | str) -> int | float:
     """
     Subtract one number from another.
 
@@ -41,7 +51,11 @@ def subtract(a: int | float, b: int | float) -> int | float:
 
     :return: Subtraction of b from a.
     """
-    return a - b
+    _a = str_to_num(a)
+    _b = str_to_num(b)
+
+    print("Subtracting", _b, "from", _a)
+    return _a - _b
 
 
 @mcp.tool(
@@ -50,7 +64,7 @@ def subtract(a: int | float, b: int | float) -> int | float:
     description="Multiply two numbers together.",
     tags={"math", "multiplication"}
 )
-def multiply(a: int | float, b: int | float) -> int | float:
+def multiply(a: int | float | str, b: int | float | str) -> int | float:
     """
     Multiply two numbers together.
 
@@ -59,7 +73,11 @@ def multiply(a: int | float, b: int | float) -> int | float:
 
     :return: Multiplication of a and b.
     """
-    return a * b
+    _a = str_to_num(a)
+    _b = str_to_num(b)
+
+    print("Multiplying", _a, "and", _b)
+    return _a * _b
 
 
 @mcp.tool(
@@ -68,7 +86,7 @@ def multiply(a: int | float, b: int | float) -> int | float:
     description="Divide one number with another.",
     tags={"math", "division"}
 )
-def multiply(a: int | float, b: int | float) -> int | float:
+def divide(a: int | float | str, b: int | float | str) -> int | float:
     """
     Divide one number with another.
 
@@ -77,9 +95,17 @@ def multiply(a: int | float, b: int | float) -> int | float:
 
     :return: Division of a by b.
     """
-    return a / b
+    _a = str_to_num(a)
+    _b = str_to_num(b)
+
+    print("Dividing", _a, "by", _b)
+    return _a / _b
 
 
 if __name__ == '__main__':
-    mcp.run()
+    mcp.run(
+        transport="http",
+        host="127.0.0.1",
+        port=8000,
+    )
 
