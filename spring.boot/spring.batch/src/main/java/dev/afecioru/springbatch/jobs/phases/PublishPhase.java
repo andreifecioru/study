@@ -3,6 +3,7 @@ package dev.afecioru.springbatch.jobs.phases;
 import dev.afecioru.springbatch.domain.models.CodeRepo;
 import dev.afecioru.springbatch.jobs.tasks.publish.PublishArtifactsTask;
 import dev.afecioru.springbatch.jobs.tasks.publish.PublishLogsTask;
+import dev.afecioru.springbatch.tracing.TracingStepListener;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -22,10 +23,11 @@ public class PublishPhase {
   private final CodeRepo codeRepo;
   private final JobRepository jobRepository;
   private final PlatformTransactionManager transactionManager;
+  private final TracingStepListener tracingStepListener;
 
   public Flow flow() {
-    val publishArtifactsStep = new PublishArtifactsTask(codeRepo, jobRepository, transactionManager).step();
-    val publishLogsStep = new PublishLogsTask(codeRepo, jobRepository, transactionManager).step();
+    val publishArtifactsStep = new PublishArtifactsTask(codeRepo, jobRepository, transactionManager, tracingStepListener).step();
+    val publishLogsStep = new PublishLogsTask(codeRepo, jobRepository, transactionManager, tracingStepListener).step();
 
     return new FlowBuilder<SimpleFlow>(PHASE_NAME)
       .start(publishArtifactsStep)

@@ -2,6 +2,7 @@ package dev.afecioru.springbatch.jobs.tasks.sonar;
 
 import dev.afecioru.springbatch.domain.Task;
 import dev.afecioru.springbatch.domain.models.CodeRepo;
+import dev.afecioru.springbatch.tracing.TracingStepListener;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,6 +27,8 @@ public class SonarScanTask extends Task {
   private final JobRepository jobRepository;
   @Getter
   private final PlatformTransactionManager transactionManager;
+  @Getter
+  private final TracingStepListener tracingStepListener;
 
   @Override
   public String getTaskName() { return TASKLET_NAME; }

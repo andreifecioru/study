@@ -2,6 +2,7 @@ package dev.afecioru.springbatch.jobs.phases;
 
 import dev.afecioru.springbatch.domain.models.CodeRepo;
 import dev.afecioru.springbatch.jobs.tasks.git.GitCloneTask;
+import dev.afecioru.springbatch.tracing.TracingStepListener;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -21,9 +22,10 @@ public class PreparePhase {
   private final CodeRepo codeRepo;
   private final JobRepository jobRepository;
   private final PlatformTransactionManager transactionManager;
+  private final TracingStepListener tracingStepListener;
 
   public Flow flow() {
-    val gitCloneStep = new GitCloneTask(codeRepo, jobRepository, transactionManager).step();
+    val gitCloneStep = new GitCloneTask(codeRepo, jobRepository, transactionManager, tracingStepListener).step();
 
     return new FlowBuilder<SimpleFlow>(PHASE_NAME)
       .start(gitCloneStep)

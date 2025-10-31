@@ -2,6 +2,7 @@ package dev.afecioru.springbatch.jobs.phases;
 
 import dev.afecioru.springbatch.domain.models.CodeRepo;
 import dev.afecioru.springbatch.jobs.tasks.oak.OakScanTask;
+import dev.afecioru.springbatch.tracing.TracingStepListener;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -21,9 +22,10 @@ public class OakScanPhase {
   private final CodeRepo codeRepo;
   private final JobRepository jobRepository;
   private final PlatformTransactionManager transactionManager;
+  private final TracingStepListener tracingStepListener;
 
   public Flow flow() {
-    val oakScanStep = new OakScanTask(codeRepo, jobRepository, transactionManager).step();
+    val oakScanStep = new OakScanTask(codeRepo, jobRepository, transactionManager, tracingStepListener).step();
 
     return new FlowBuilder<SimpleFlow>(PHASE_NAME)
       .start(oakScanStep)

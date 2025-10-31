@@ -27,6 +27,11 @@ repositories {
 dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-batch'
   implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+  // Jaeger tracing dependencies
+  implementation 'io.opentracing.contrib:opentracing-spring-jaeger-web-starter:3.3.1'
+  implementation 'io.jaegertracing:jaeger-client:1.8.1'
+
   compileOnly 'org.projectlombok:lombok'
   developmentOnly 'org.springframework.boot:spring-boot-devtools'
   runtimeOnly 'com.h2database:h2'
