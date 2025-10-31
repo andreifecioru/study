@@ -2,6 +2,7 @@ package dev.afecioru.springbatch.jobs.tasks.oak;
 
 import dev.afecioru.springbatch.domain.Task;
 import dev.afecioru.springbatch.domain.models.CodeRepo;
+import dev.afecioru.springbatch.tracing.TracingStepListener;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,6 +27,8 @@ public class OakScanTask extends Task {
   private final JobRepository jobRepository;
   @Getter
   private final PlatformTransactionManager transactionManager;
+  @Getter
+  private final TracingStepListener tracingStepListener;
 
   @Override
   public String getTaskName() { return TASKLET_NAME; }
@@ -33,7 +36,7 @@ public class OakScanTask extends Task {
   @Override
   public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 
-    log.info("[{}] Running Sonar scan for repo {}", TASKLET_NAME, codeRepo.name());
+    log.info("[{}] Running Oak scan for repo {}", TASKLET_NAME, codeRepo.name());
     Thread.sleep(SLEEP_SECONDS.toMillis());
     log.info("[{}] Done.", TASKLET_NAME);
 

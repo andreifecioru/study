@@ -16,6 +16,8 @@ public class BuildJobConfig {
     executor.setMaxPoolSize(5);
     executor.setQueueCapacity(10);
     executor.setThreadNamePrefix("build-job-");
+    executor.setWaitForTasksToCompleteOnShutdown(true);
+    executor.setAwaitTerminationSeconds(30);
     executor.initialize();
 
     return executor;

@@ -27,9 +27,13 @@ public class Application implements ApplicationRunner {
   @Override
   public void run(ApplicationArguments args) throws Exception {
     val codeRepo = new CodeRepo(
-      "spring.batch",
-      "https://github.com/afecioru/spring.batch.git");
+      "https://github.com/afecioru/spring.batch.git",
+      "spring.batch"
+    );
 
-    jobLauncher.run(buildJob.build(codeRepo), new JobParameters());
+    jobLauncher.run(buildJob.buildSequential(codeRepo), new JobParameters());
+
+    // Exit the application after job completion
+    System.exit(0);
   }
 }
