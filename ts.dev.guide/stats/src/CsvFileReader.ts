@@ -1,7 +1,8 @@
 import { readFileSync } from 'node:fs';
+import { DataReader } from './Domain';
 
-abstract class CsvFileReader<T> {
-  data: T[] = [];
+class CsvFileReader implements DataReader {
+  data: string[][] = [];
 
   constructor(readonly fileName: string) {}
 
@@ -9,10 +10,7 @@ abstract class CsvFileReader<T> {
     this.data = readFileSync(this.fileName, 'utf-8')
       .split('\n')
       .map(row => row.split(','))
-      .map(this.parseRow);
   }
-
-  abstract parseRow(row: string[]): T;
 }
 
 export { CsvFileReader };

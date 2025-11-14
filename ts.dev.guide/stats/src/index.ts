@@ -1,19 +1,31 @@
-import { MatchData, MatchResult } from './Domain';
-import { MatchDataReader } from './MatchDataReader';
+import { DataLoader, MatchData, MatchDataAnalyzer, ReportPublisher } from './Domain';
+import { MatchDataLoader } from './Loaders';
+import { CsvFileReader } from './CsvFileReader';
+import { WinsAnalyzer } from './Analyzers';
+import { ConsolePublisher } from './Publishers';
 
+const teamName = 'Man United';
 
-const matchDataReader = new MatchDataReader('./data/football.csv');
-matchDataReader.read();
+class Summary {
+  constructor(
+    readonly analyzer: MatchDataAnalyzer,
+    readonly publisher: ReportPublisher
+  ) {}
 
-const records = matchDataReader.data;
-console.log(records[0]);
+  run(matches: MatchData[]): void {
+    this.publisher.publish(
+      this.analyzer.buildReport(matches)
+    );
+  }
+}
 
-const manUnitedWins = records.filter((record: MatchData): boolean => {
-  const isHomeWin = record[1] === 'Man United' && record[5] === MatchResult.HomeWin;
-  const isAwayWin = record[2] === 'Man United' && record[5] === MatchResult.AwayWin;
+const matches = MatchDataLoader.fromCsvFile('./data/input/football.csv').load();
 
-  return isHomeWin || isAwayWin;
-}).length;
+const summary = new Summary(
+  new WinsAnalyzer(teamName),
+  new ConsolePublisher()
+);
 
-console.log(`Man United wins: ${manUnitedWins}`);
+summary.run(matches);
+
 
