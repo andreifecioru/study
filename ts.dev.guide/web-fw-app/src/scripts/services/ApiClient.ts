@@ -17,7 +17,7 @@ class ApiClient<T extends BaseProps> {
     const { id } = props;
 
     if (id) {
-      return axios.put(this.endpointUrl, props);
+      return axios.put(`${this.endpointUrl}/${id}`, props);
     } else {
       return axios.post(this.endpointUrl, props);
     }
