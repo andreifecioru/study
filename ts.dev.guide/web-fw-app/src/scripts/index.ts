@@ -1,9 +1,9 @@
 import { Users } from './models/User';
 import { UserEdit } from './views/UserEdit';
-import { UserForm } from './views/UserForm';
-import { UserShow } from './views/UserShow';
+import { UserListView } from './views/UserListView';
 
-const rootElement = document.querySelector('#root');
+const userEditElement = document.querySelector('#user-edit');
+const userListElement = document.querySelector('#user-list');
 
 
 const users = new Users();
@@ -14,21 +14,12 @@ users.on('change', () => {
 
   const firstUser = users.entries[0]
   if (firstUser) {
-    if (rootElement) {
-      const userEditView = new UserEdit(rootElement, firstUser)
-      userEditView.render();
+    if (userEditElement) {
+      new UserEdit(userEditElement, firstUser).render();
     }
 
-    const userShowElement = document.querySelector(".user-show");
-    if (userShowElement) {
-      const userShowView = new UserShow(userShowElement, firstUser);
-      userShowView.render();
-    }
-
-    const userFormElement = document.querySelector(".user-form");
-    if (userFormElement) {
-      const userFromView = new UserForm(userFormElement, firstUser);
-      userFromView.render();
+    if (userListElement) {
+      new UserListView(userListElement, users.entries).render();
     }
   }
 });

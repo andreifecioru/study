@@ -25,22 +25,15 @@ abstract class View<Props extends BaseProps> {
         return {};
     }
 
-    protected regions(): { [key: string]: Element | null } {
-        const regionMap = this.regionMap();
-
-        const regions: { [key: string]: Element | null } = {};
-        for (let regionKey in regionMap) {
-            const element = this.parent.querySelector(regionMap[regionKey]);
-            regions[regionKey] = element;
-        }
-
-        return regions;
-    }
+    protected regions: { [key: string]: Element } = {};
 
     protected eventsMap(): { [key: string]: () => void } {
         return {};
     }
+
     protected abstract template(): string
+
+    protected onRender(): void {}
 
     render(): void {
         this.parent.innerHTML = '';
@@ -48,7 +41,21 @@ abstract class View<Props extends BaseProps> {
         const template = document.createElement('template');
         template.innerHTML = this.template();
         this.bindEvents(template.content);
+        this.mapRegions(template.content);
+
+        this.onRender();
+
         this.parent.appendChild(template.content);
+    }
+
+    private mapRegions(fragment: DocumentFragment): void {
+        const regionMap = this.regionMap();
+        for (let regionKey in regionMap) {
+            const element = fragment.querySelector(regionMap[regionKey]);
+            if (element) {
+                this.regions[regionKey] = element;
+            }
+        }
     }
 }
 
