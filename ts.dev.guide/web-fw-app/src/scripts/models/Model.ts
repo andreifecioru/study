@@ -111,7 +111,7 @@ class BaseModels<P extends BaseProps, M extends BaseModel<P>> {
   private state: M[] = [];
 
   constructor(readonly endpointUrl: string,
-    readonly modelCtor: new (props: P) => M
+    readonly modelCtor: new (props: P) => M // constructor type
   ) {
     this.apiClient = new ApiClient<P>(endpointUrl);
   }

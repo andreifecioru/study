@@ -19,7 +19,7 @@ users.on('change', () => {
     }
 
     if (userListElement) {
-      new UserListView(userListElement, users.entries).render();
+      new UserListView(userListElement, users).render();
     }
   }
 });

@@ -1,29 +1,40 @@
-import { BaseModel, BaseProps } from "../models/Model";
+import { BaseModel, BaseModels, BaseProps } from "../models/Model";
 
 
 abstract class ListView<T extends BaseModel<K>, K extends BaseProps>  {
-    constructor(readonly parent: Element, readonly items: T[]) {}
+    constructor(readonly parent: Element, readonly items: BaseModels<K, T>) {}
 
-    abstract renderItem(item: T): string
-
-    private template(): string {
-        let result = '<h1>User list</h1><ul>';
-        for (let item of this.items) {
-            result += this.renderItem(item);
-        }
-
-        result += '</ul>';
-        return result;
-    }
+    abstract renderItem(item: T): Element
 
     render(): void {
         this.parent.innerHTML = '';
 
-        const template = document.createElement('template');
-        template.innerHTML = this.template();
+        this.parent.appendChild(this.createHeader());
+        this.parent.appendChild(this.createItemList());
+    }
 
-        this.parent.appendChild(template.content);
+    private createHeader(): DocumentFragment {
+        const fragment = document.createDocumentFragment();
 
+        const header = document.createElement('h1');
+        header.textContent = 'User List';
+        fragment.appendChild(header);
+
+
+        return fragment;
+    }
+
+    private createItemList(): DocumentFragment {
+        const fragment = document.createDocumentFragment();
+
+        const itemList = document.createElement('ul');
+        for (let item of this.items.entries) {
+            itemList.appendChild(this.renderItem(item));
+        }
+
+        fragment.appendChild(itemList);
+
+        return fragment;
     }
 }
 
