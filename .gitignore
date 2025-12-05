@@ -5,9 +5,11 @@
 .vscode/
 .settings/
 .metals/
+.env
 tools/hadoop/deploy/work/
 target/
 node_modules/
 build/
+*.egg-info/
 __pycache__/
 .DS_Store

@@ -1,9 +1,22 @@
 import { Router } from "express";
-import type { Request, Response } from "express";
+import type { NextFunction, Request, Response } from "express";
 
 // improve Request type defintion with better type checking
 interface RequestWithBody extends Request {
   body: { [key: string]: string | undefined }
+}
+
+// create an authentication middleware
+function requireAuth(req: Request, res: Response, next: NextFunction): void {
+  if (req.session?.loggedIn) {
+    next();
+
+    return;
+  }
+
+  res.status(403);
+  res.send('Access denied');
+
 }
 
 const router = Router();
@@ -64,6 +77,14 @@ router.post('/login', (req: RequestWithBody, res: Response) => {
 router.post('/logout', (req: Request, res: Response) => {
   req.session = { loggedIn: false };
   res.redirect('/');
+});
+
+router.get('/protected', requireAuth, (req: Request, res: Response) => {
+  res.send(
+    `<div>
+      <p>This is protected content</p>
+    </div>`
+  )
 });
 
 export { router };
