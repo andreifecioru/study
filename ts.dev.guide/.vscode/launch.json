@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Express Server",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/express-server/src/index.ts",
+            "preLaunchTask": "server:build",
+            "cwd": "${workspaceFolder}/express-server",
+            "outFiles": [
+                "${workspaceFolder}/express-server/build/**/*.js"
+            ]
+        },
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Current TS File (ts-node)",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}/features",
+            "runtimeExecutable": "node",
+            "runtimeArgs": ["-r", "ts-node/register"],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "env": {
+                "TS_NODE_PROJECT": "${workspaceFolder}/features/tsconfig.json"
+            }
+        }
+        
+    ]
+}

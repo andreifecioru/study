@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "server:build",      // the label your launch.json should reference
+      "type": "shell",
+      "command": "npm run server:build",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}/express-server"
+      },
+      "presentation": {
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared"
+      }
+    }
+  ]
+}
