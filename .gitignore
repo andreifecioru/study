@@ -2,7 +2,6 @@
 .gradle/
 .vagrant/
 .idea/
-.vscode/
 .settings/
 .metals/
 .env
