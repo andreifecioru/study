@@ -1,0 +1,5 @@
+[project]
+name = "adj-crash-course"
+version = "0.0.0"
+description = "ADK Crash Course"
+authors = [{ name = "Andrei Fecioru" }]

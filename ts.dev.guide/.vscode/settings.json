@@ -1,0 +1,8 @@
+{
+    "code-runner.executorMap": {
+        "typescript": "ts-node"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "cursor.cpp.enablePartialAccepts": true
+} 
