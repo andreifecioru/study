@@ -3,3 +3,7 @@ name = "adj-crash-course"
 version = "0.0.0"
 description = "ADK Crash Course"
 authors = [{ name = "Andrei Fecioru" }]
+dependencies = [
+    "google-adk",
+    "pydantic>=2.0.0",
+]
