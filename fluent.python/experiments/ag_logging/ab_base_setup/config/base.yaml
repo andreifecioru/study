@@ -1,0 +1,60 @@
+version: 1
+disable_existing_loggers: no
+formatters:
+  simple:
+    format: "%(levelname)s: %(message)s"
+  detailed:
+    format: "[%(levelname)s|%(module)s|L%(lineno)d] %(asctime)s: %(message)s"
+    datefmt: "%Y-%m-%dT%H:%M:%S%z"
+  json:
+    (): logtools.JsonLogFormatter 
+    fmt_keys:
+      level: levelname
+      message: message
+      timestamp: timestamp
+      logger: name
+      module: module
+      function: funcName
+      line: lineno
+      thread_name: threadName
+filters:
+  non_error:
+    (): logtools.NonErrorFilter
+handlers:
+  # errors to std-err; rest to std-out
+  stdout:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: simple
+    stream: "ext://sys.stdout"
+    filters: 
+      - non_error
+  stderr:
+    class: logging.StreamHandler
+    level: WARNING
+    formatter: detailed
+    stream: "ext://sys.stderr"
+
+  # log-rotate config
+  file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: json
+    filename: logs/my_app.log
+    maxBytes: 10000
+    backupCount: 3
+
+  # confgure off-thread logging
+  queue_handler:
+    class: logging.handlers.QueueHandler
+    handlers:
+      - stdout
+      - stderr
+      - file
+    respect_handler_level: yes
+
+loggers:
+  root:
+    level: DEBUG
+    handlers:
+      - queue_handler
