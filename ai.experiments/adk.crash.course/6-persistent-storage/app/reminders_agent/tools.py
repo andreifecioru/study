@@ -5,6 +5,7 @@ from rich.theme import Theme
 tool_theme = Theme({"tool": "green bold"})
 console = Console(theme=tool_theme)
 
+# NOTE: the last parameter to your tools **must** be tool_context: ToolContext (that name exactly)
 
 def add_reminder(reminder: str, tool_context: ToolContext) -> dict[str, str]:
   """

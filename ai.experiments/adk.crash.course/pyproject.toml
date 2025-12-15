@@ -8,8 +8,10 @@ dependencies = [
     "aiosqlite>=0.22.0",
     "google-adk",
     "pydantic>=2.0.0",
+    "pyyaml>=6.0.3",
     "questionary>=2.1.1",
     "rich>=14.2.0",
+    "yfinance>=0.2.66",
 ]
 
 [mypy]
@@ -19,3 +21,16 @@ ignore_missing_imports = true
 dev = [
     "ipython>=9.8.0",
 ]
+
+[tool.ruff]
+target-version = "py313"
+indent-width = 2
+
+[tool.ruff.lint]
+ignore = [
+    "BLE001",
+    "TID252",
+]
+
+[tool.ruff.format]
+indent-style = "space"
