@@ -13,6 +13,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "aiosqlite" },
     { name = "google-adk" },
+    { name = "greenlet" },
     { name = "pydantic" },
     { name = "pyyaml" },
     { name = "questionary" },
@@ -29,6 +30,7 @@ dev = [
 requires-dist = [
     { name = "aiosqlite", specifier = ">=0.22.0" },
     { name = "google-adk" },
+    { name = "greenlet", specifier = ">=3.3.0" },
     { name = "pydantic", specifier = ">=2.0.0" },
     { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "questionary", specifier = ">=2.1.1" },

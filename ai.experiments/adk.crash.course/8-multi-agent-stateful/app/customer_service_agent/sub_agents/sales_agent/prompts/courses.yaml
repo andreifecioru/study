@@ -1,0 +1,13 @@
+available_courses:
+  - id: python_basics
+    title: "The basics of Python programming language"
+    description: "This course covers the basics of the Python programming language, basic data-structures and control-flows."
+  - id: python_advanced
+    title: "Pro techniques in Python"
+    description: "This course covers the more advances features of the Python programming language"
+  - id: typescript_intro
+    title: "TypeScript: JavaScript with types"
+    description: "This course starts with plain JS and gently works to fully types TS code"
+  - id: scala_fundamentals
+    title: "Functional programming in Scala"
+    description: "This course exemplifies the functional programming paradigm through the use of the Scala programming language"

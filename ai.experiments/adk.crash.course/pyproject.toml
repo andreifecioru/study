@@ -12,6 +12,8 @@ dependencies = [
     "questionary>=2.1.1",
     "rich>=14.2.0",
     "yfinance>=0.2.66",
+    "greenlet>=3.3.0",
+
 ]
 
 [mypy]
