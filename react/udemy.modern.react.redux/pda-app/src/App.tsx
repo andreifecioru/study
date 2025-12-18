@@ -1,26 +1,31 @@
+import './App.sass';
+
 import PdaCard, {type PdaCardProps} from './components/PdaCard.tsx';
 import Banner from './components/Banner.tsx';
-import './App.sass'
+
+import AlexaImage from '../public/images/alexa.png'
+import CortanaImage from '../public/images/cortana.png';
+import SiriImage from '../public/images/siri.png';
 
 function App() {
   const alexaProps: PdaCardProps = {
     text: 'A helpful assistant from Amazon',
-    imgSource: '/images/alexa.png'
+    imgSource: AlexaImage
   };
 
   const cortanaProps: PdaCardProps = {
     text: 'A helpful assistant from Microsoft',
-    imgSource: '/images/cortana.png'
+    imgSource: CortanaImage
   };
 
   const siriProps: PdaCardProps = {
     text: 'A helpful assistant from Apple',
-    imgSource: '/images/siri.png'
+    imgSource: SiriImage
   };
 
   return (
       <div>
-        <Banner title="A selection of digital assistants" />
+        <Banner title="A selection of digital assistants"/>
         <div className="pda-grid-container">
           <div className="pda-grid">
             <PdaCard {...alexaProps}/>
