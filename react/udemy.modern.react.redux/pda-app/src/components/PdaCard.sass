@@ -1,0 +1,27 @@
+.pda-card
+  display: flex
+  flex-direction: column
+  border: 1px solid #ddd
+  border-radius: 8px
+  overflow: hidden
+  background-color: #fff
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  width: 100% // parent container controls the actual width
+  max-width: 200px // but within limits...
+
+  &__image
+    height: 150px // fixed height for a uniform look
+    width: auto
+    margin: 20px auto 0 // centered, with some space at the top
+    display: block
+    object-fit: contain // fit w/o cropping (good for logos)
+
+  &__content
+    padding: 1rem
+    text-align: center
+
+    p
+      margin: 0
+      font-size: 1rem
+      font-family: sans-serif
+      color: #333

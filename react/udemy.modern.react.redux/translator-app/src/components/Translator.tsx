@@ -19,7 +19,7 @@ function Translator({ language, text }: TranslatorProps) {
     Rules for JSX attrs:
       1. use camelCase for prop names
       2. use {} for numbers
-      3. true is implied just by prop name being present; use {flase} for false
+      3. true is implied just by prop name being present; use {false} for false
       4. use className={...} to set the class attr
       5. inline styles are objects; dashes in prop-names are replaced by camelCase
           (padding-top becomes paddingTop)
