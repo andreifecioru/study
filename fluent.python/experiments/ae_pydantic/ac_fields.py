@@ -1,6 +1,6 @@
 from datetime import UTC, datetime
 from functools import partial
-from typing import Annotated, Literal
+from typing import Annotated, Literal, cast, Any
 from uuid import UUID, uuid4
 
 from pydantic import BaseModel, EmailStr, Field, PositiveInt, SecretStr
@@ -47,7 +47,7 @@ def main() -> None:
     title="Sample blog-post",
     content="Sample content",
     author="John Doe",
-    author_email="john.doe@email.com",
+    author_email=cast(Any, "john.doe@email.com"),  # cast to Any to silence the type checker...
     secret_key=SecretStr(
       "my-secret",
     ),  # technically we could have passed 'my-secret' directly, but the type checker complains

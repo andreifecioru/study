@@ -1,4 +1,6 @@
-from typing import Self, cast
+from __future__ import annotations
+
+from typing import Self, cast, Any
 
 from pydantic import (
   BaseModel,
@@ -16,7 +18,7 @@ class User(BaseModel):
   website: HttpUrl
 
   # this is the default 'after' validation
-  # executed _after_ pydantic applied it's own validation rules
+  # executed _after_ pydantic applied its own validation rules
   @field_validator("username")
   @classmethod
   def validate_username(cls, value: str) -> str:
@@ -54,7 +56,7 @@ def main() -> None:
     user = User(
       username="A_FECIORU",
       # NOTE: if this validation fails, the custom validator for username will not be executed at all
-      website=cast("HttpUrl", "example.com"),  # casting in action
+      website=cast(Any, "example.com"),  # casting in action (use Any here to silence the type checker)
     )
   except ValidationError as err:
     print(f"ERROR: {err}")
@@ -63,9 +65,9 @@ def main() -> None:
 
   try:
     registration = UserRegistration(
-      email="john.doe@email.com",
-      password=cast("SecretStr", "1121"),
-      password_confirmation=cast("SecretStr", "1122"),
+      email=cast(Any, "john.doe@email.com"),
+      password=cast(Any, "1121"),
+      password_confirmation=cast(Any, "1122"),
     )
   except ValidationError as err:
     print(f"ERROR: {err}")

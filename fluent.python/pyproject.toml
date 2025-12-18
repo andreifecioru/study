@@ -6,8 +6,9 @@ authors = [{ name = "Andrei Fecioru" }]
 requires-python = ">=3.12"
 dependencies = [
   "anyio==4.12.0",
+  "pydantic>=2.12.5",
   "pyyaml>=6.0.3",
   "rich>=14.2.0",
-  "textual>=6.8.0",
+  "textual>=6.9.0",
   "types-pyyaml>=6.0.12.20250915",
 ]
