@@ -1,5 +1,3 @@
-import './App.sass';
-
 import PdaCard, {type PdaCardProps} from './components/PdaCard.tsx';
 import Banner from './components/Banner.tsx';
 

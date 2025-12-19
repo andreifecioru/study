@@ -1,0 +1,24 @@
+{
+  "animals": [
+    {
+      "id": 0,
+      "kind": "Dog",
+      "image": "/images/dog.avif"
+    },
+    {
+      "id": 1,
+      "kind": "Cat",
+      "image": "/images/cat.jpeg"
+    },
+    {
+      "id": 2,
+      "kind": "Cow",
+      "image": "/images/cow.jpeg"
+    },
+    {
+      "id": 3,
+      "kind": "Horse",
+      "image": "/images/horse.webp"
+    }
+  ]
+}
