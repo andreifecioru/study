@@ -1,24 +1,19 @@
 {
   "books": [
     {
+      "id": "1",
       "title": "Harry Potter",
-      "image": "https://picsum.photos/seed/9099575b-a6e2-4e04-b0e6-6cc347dece1c/300/200",
-      "id": 1
+      "image": "https://picsum.photos/seed/9099575b-a6e2-4e04-b0e6-6cc347dece1c/300/200"
     },
     {
+      "id": "2",
       "title": "Lord Of The Rings",
-      "image": "https://picsum.photos/seed/c8c3624d-1707-457e-adb3-9e709b825045/300/200",
-      "id": 2
+      "image": "https://picsum.photos/seed/c8c3624d-1707-457e-adb3-9e709b825045/300/200"
     },
     {
+      "id": "6093",
       "title": "Art Of Impossible",
-      "image": "https://picsum.photos/seed/38a98c0f-0876-4d52-97b0-6f40002218a4/300/200",
-      "id": 3
-    },
-    {
-      "title": "Outlive",
-      "image": "https://picsum.photos/seed/7cb78769-1b1a-4077-90ba-3b8cf60fa5d4/300/200",
-      "id": 4
+      "image": "https://picsum.photos/seed/b2d17860-5aa4-467e-990d-507cab1d9f89/300/200"
     }
   ]
 }

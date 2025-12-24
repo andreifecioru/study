@@ -1,48 +1,61 @@
 import './BookCard.sass';
 
-import {type FormEvent, useState} from "react";
+import {type FormEvent, type MouseEvent, useEffect, useState} from "react";
 
+import {useContext} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPencil, faTrash} from '@fortawesome/free-solid-svg-icons';
+import {BooksContext} from '@/contexts/BooksContext.tsx';
 
 type BookCardProps = {
   id: number,
   title: string,
   image: string,
-  onBookTitleChanged: (id: number, title: string) => void
-  onBookDeleted: (id: number) => void
 }
 
 function BookCard(props: BookCardProps) {
+  const {updateBook, deleteBook} = useContext(BooksContext);
   const [editMode, setEditMode] = useState(false);
   const [bookTitle, setBookTitle] = useState(props.title);
 
-  const handleEditClick = () => {
+  useEffect(() => {
+    const handleBodyClick = async () => {
+      if (editMode) {
+        void await updateBook(props.id, bookTitle);
+        setEditMode(false);
+      }
+    }
+    document.body.addEventListener('click', handleBodyClick);
+
+    return () => {
+      document.body.removeEventListener('click', handleBodyClick);
+    }
+
+  }, [editMode, bookTitle, props.id, updateBook]);
+
+  const handleEditClick = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
     console.log(`Editing card: ${props.title}`);
-    setEditMode(true)
+    setEditMode(!editMode);
   };
 
-  const handleDeleteClick = () => {
+  const handleDeleteClick = async () => {
     console.log(`Deleting card: ${props.title}`);
-    props.onBookDeleted(props.id);
+    void await deleteBook(props.id);
   }
 
-  const handleTitleFormSubmit = (event: FormEvent) => {
+  const handleTitleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();
     setEditMode(false);
-    props.onBookTitleChanged(props.id, bookTitle)
-  }
-
-  const handleTitleFormBlur = () => {
-    setEditMode(false);
+    void await updateBook(props.id, bookTitle);
   }
 
   const renderTitleEditForm = () => (
     <form className="book-card__form-title" onSubmit={handleTitleFormSubmit}>
       <input
         value={bookTitle}
+        onClick={(ev) => ev.stopPropagation()}
         onChange={(ev) => setBookTitle(ev.target.value)}
-        onBlur={handleTitleFormBlur}
       />
     </form>
   );

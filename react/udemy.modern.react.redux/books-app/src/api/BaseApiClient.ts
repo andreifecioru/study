@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 interface BaseModel {
-  id?: number
+  id?: string|number
 }
 
 abstract class BaseApiClient<T extends BaseModel> {

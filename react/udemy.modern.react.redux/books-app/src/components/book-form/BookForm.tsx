@@ -1,16 +1,14 @@
 import './BookForm.sass';
-import {type FormEvent, useState} from "react";
+import {type FormEvent, useState, useContext} from "react";
+import {BooksContext} from '@/contexts/BooksContext.tsx';
 
-type BookFormProps = {
-  onBookAdded: (title: string) => void
-}
-
-function BookForm(props: BookFormProps) {
+function BookForm() {
+  const booksCtx = useContext(BooksContext)
   const [bookTitle, setBookTitle] = useState('');
-  const handleFormSubmit = (event: FormEvent) => {
+  const handleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();
     console.log('Form was submitted.');
-    props.onBookAdded(bookTitle);
+    void await booksCtx.createBook(bookTitle);
     setBookTitle('');
   }
 
@@ -35,4 +33,3 @@ function BookForm(props: BookFormProps) {
 }
 
 export default BookForm;
-export {type BookFormProps};
