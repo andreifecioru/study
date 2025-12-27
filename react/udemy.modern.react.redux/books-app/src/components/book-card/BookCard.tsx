@@ -19,18 +19,19 @@ function BookCard(props: BookCardProps) {
   const [bookTitle, setBookTitle] = useState(props.title);
 
   useEffect(() => {
+    const ctrl = new AbortController();
+
     const handleBodyClick = async () => {
       if (editMode) {
         void await updateBook(props.id, bookTitle);
         setEditMode(false);
       }
     }
-    document.body.addEventListener('click', handleBodyClick);
+    document.body.addEventListener('click', handleBodyClick, {
+      signal: ctrl.signal
+    });
 
-    return () => {
-      document.body.removeEventListener('click', handleBodyClick);
-    }
-
+    return () => ctrl.abort();
   }, [editMode, bookTitle, props.id, updateBook]);
 
   const handleEditClick = (event: MouseEvent<HTMLButtonElement>) => {
