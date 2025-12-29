@@ -1,0 +1,20 @@
+.header__text {
+  text-align: center;
+}
+
+.hobbies, .fav-langs {
+  background-color: green;
+  color: white;
+}
+
+.fav-bands__list li:first-child, .hobbies__list li:first-child {
+  color: cyan;
+}
+
+.fav-bands__list li:last-child {
+  text-decoration: line-through;
+}
+
+.hobbies__title, .fav-bands__title, .fav-langs__title {
+  font-family: Arial, sans-serif;
+}
