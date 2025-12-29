@@ -1,14 +1,13 @@
 import './App.sass'
-// import ButtonsPage from '@/pages/buttons-page/ButtonsPage.tsx';
-// import AccordionPage from '@/pages/accordion-page/AccordionPage.tsx';
-import DropdownPage from '@/pages/dropdown-page/DropdownPage.tsx';
+import MainPage from '@/pages/navbar-page/MainPage.tsx';
+import NavigationProvider from '@/contexts/NavigationProvider.tsx';
 
 function App() {
   return (
-    <div>
-      {/*<ButtonsPage />*/}
-      {/*<AccordionPage />*/}
-      <DropdownPage />
+    <div className="h-full p-4">
+      <NavigationProvider>
+        <MainPage />
+      </NavigationProvider>
     </div>
   )
 }
