@@ -10,7 +10,7 @@ function Panel({
   }: PanelProps) {
   const classes = twMerge(
     classNames(
-      'border border-gray-300 rounded p-3 shadow-md shadow-gray-300 bg-white w-full',
+      'border border-gray-300 rounded p-3 shadow-md shadow-gray-300 bg-white w-full h-full',
       rest.className,
     )
   );

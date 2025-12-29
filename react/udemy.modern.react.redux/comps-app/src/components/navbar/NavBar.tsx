@@ -21,7 +21,7 @@ function NavBar({options}: NavBarProps) {
       {options.map(option => {
         const classes = twMerge(
           'p-1 m-2 text-2xl border-l-3 border-white ',
-          option.link === path && 'border-gray-500');
+          option.link === path && 'border-gray-500 bg-gray-100 pl-2');
 
         return <div key={option.label}
                     className={classes}>
