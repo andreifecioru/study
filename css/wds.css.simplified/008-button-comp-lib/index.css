@@ -1,0 +1,63 @@
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 2.4rem;
+}
+
+.wrapper > div {
+  margin-bottom: .8rem;
+}
+
+button {
+  font: inherit;
+  /* use em's here to scale with the font size */
+  padding: .4em .8em;
+  border-radius: .3em;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  outline: none;
+}
+
+/* NOTE: usually you want to treat the hover and focus at the same time */
+button:hover, button:focus-visible {
+  box-shadow: 0 0 4px 0 #aaa;
+}
+
+button.primary {
+  background-color: purple;
+  color: white;
+}
+
+button.accent {
+  background-color: dodgerblue;
+  color: white;
+}
+
+button.danger {
+  background-color: #eb5757;
+  color: white;
+}
+
+button.large {
+  font-size: 2.4rem;
+}
+
+button.small{
+  font-size: 1.2rem;
+}
+
+button.pill {
+  border-radius: 9999px; /* caps the radius at half the height */
+}

@@ -1,0 +1,40 @@
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 200px;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.item {
+  height: 20px;
+  margin: 10px 0;
+  background-color: lightcoral;
+  font-size: 1em; /* em units are based on the font-size of the parent */
+}
+
+/*
+  NOTE: you should almost exclusively use rem units for font-sizes.
+  Use case for using em's: scale padding with the size of the font (good for styling buttons)
+    padding: .25em;
+*/
+
+.item.half-width {
+  width: 50%; /* relative to the parent */
+}
+
+.item.half-screen-width {
+  width: 50vw;  /* percentages relative to the screen (same for vh) */
+}

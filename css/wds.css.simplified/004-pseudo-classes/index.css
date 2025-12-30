@@ -1,0 +1,34 @@
+body {
+  font-family: "Adobe Clean", Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+input, button {
+  font: inherit;
+}
+
+button:hover {
+  background-color: red;
+  color: white;
+}
+
+/* applies _only_ when focus is visible to the user */
+input:focus-visible {
+  background-color: red;
+  color: white;
+}
+
+input:disabled {
+  background-color: lightgray;
+}
+
+/*
+  Other common pseudo-classes:
+    - checked - for checkboxes
+    - required - for form fields marked as required
+*/
+
+/* select the first child of a _parent_ element*/
+form div:first-child {
+  color: blue;
+}

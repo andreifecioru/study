@@ -1,0 +1,69 @@
+:root {
+  --gray-color: #aaa;
+  --focus-color: #0af;
+  --success-color: #27ae60;
+  --error-color: #eb5757;
+
+}
+
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 2.4rem;
+}
+
+.wrapper input {
+  font: inherit;
+  font-size: 2rem;
+  display: block;
+  border: 2px solid var(--gray-color);
+  border-radius: .2em;
+  margin: 1rem 0;
+  padding: .25em .5em; /* padding relative to font-size */
+  outline: none; /* we want to have our own outline style */
+}
+
+.wrapper input:focus-visible {
+  /* Offset-x | Offset-y | Blur-radius | Spread-radius | Color */
+  box-shadow: 0 0 5px 0 var(--focus-color);
+}
+
+.wrapper input.success {
+  border-color: var(--success-color);
+}
+.wrapper input.success:focus-visible {
+  box-shadow: 0 0 5px var(--success-color);
+}
+
+.wrapper input.error {
+  border-color: var(--error-color);
+}
+
+.wrapper input.error:focus-visible {
+  box-shadow: 0 0 5px var(--error-color);
+}
+
+.wrapper input.large {
+  font-size: 2.4rem;
+}
+
+.wrapper input.small {
+  font-size: 1.6rem;
+}
+
+.wrapper input:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}

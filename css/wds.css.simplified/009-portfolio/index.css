@@ -1,0 +1,140 @@
+:root {
+  --color-violet: #069;
+  --color-violet-light: #17a;
+}
+
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+  margin: 0;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+  line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, textarea, button {
+  font: inherit;
+  line-height: inherit;
+}
+
+.header {
+  background-color: var(--color-violet);
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+}
+
+.about-me {
+  padding: 2rem;
+}
+
+.about-me__content {
+  padding: 2rem 1rem;
+}
+
+.skills {
+  background-color: var(--color-violet);
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.skills .skills__list {
+  list-style-type: none;
+  font-style: italic;
+  padding: 2rem 1rem;
+  margin: 0;
+}
+
+.projects {
+  padding: 4rem 2rem;
+}
+
+.projects .projects__title {
+  margin-bottom: 2rem;
+}
+
+.projects .projects__project-container {
+  padding: 2rem 2rem;
+}
+
+.projects .projects__project-container .projects_project-text {
+  color: gray;
+}
+
+.contact-me {
+  padding: 4rem 2rem;
+}
+
+.contact-me .contact-me__title {
+  margin-bottom: 2rem;
+}
+
+.contact-me .contact-me__form {
+  padding: 0 1rem;
+}
+
+.contact-me .contact-me__form > div {
+  margin-bottom: 1rem;
+}
+
+.contact-me .contact-me__form label {
+  display: block;
+}
+
+.contact-me .contact-me__form input {
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: .4rem;
+  padding: .5em;
+}
+
+.contact-me .contact-me__form input:hover,
+.contact-me .contact-me__form input:focus-visible {
+  box-shadow: 0 0 5px 0 darkgray;
+}
+
+.contact-me .contact-me__form textarea {
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: .4em;
+  resize: none;
+  padding: .5em;
+}
+
+.contact-me .contact-me__form textarea:hover,
+.contact-me .contact-me__form textarea:focus-visible {
+  box-shadow: 0 0 5px 0 darkgray;
+}
+
+.contact-me .contact-me__form button {
+  background-color: var(--color-violet);
+  color: white;
+  border: 1px solid #aaa;
+  border-radius: .4em;
+  padding: .25em .5em;
+  font-size: 2rem;
+}
+
+.contact-me .contact-me__form button:hover {
+  background-color: var(--color-violet-light);
+}
+
+.footer {
+  background-color: var(--color-violet);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
