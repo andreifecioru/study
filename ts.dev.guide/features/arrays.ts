@@ -33,3 +33,11 @@ carMakers
 // Arrays with more than one type (use union types)
 const importantDates: (string | Date)[] = [new Date(), '2023-10-10'];
 
+// sorting
+const data = [10, 1, 5, 3];
+data.sort((a, b) => {
+  console.log(`Comparing ${a} and ${b}`);
+  return a - b;
+});
+console.log(`Sorted data: ${data}`);
+
