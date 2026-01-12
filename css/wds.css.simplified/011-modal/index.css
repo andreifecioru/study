@@ -1,0 +1,96 @@
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+  line-height: 1.5;
+
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, textarea, button {
+  font: inherit;
+  line-height: inherit;
+}
+
+.modal {
+  background-color: white;
+  width: 40rem;
+  max-height: 50rem;
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid #aaa;
+}
+
+.title h2 {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.btn-close {
+  border: none;
+  background-color: white;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding-right: .5rem;
+}
+
+.content {
+  padding: 1rem 2rem;
+  overflow-y: auto;
+}
+
+.actions {
+  border-top: 1px solid #aaa;
+  display: flex;
+  padding: 1rem 1.5rem;
+  justify-content: flex-end;
+  gap: .5rem;
+}
+
+.actions button {
+  border: 1px solid #aaa;
+  background-color: #eee;
+  border-radius: .25em;
+  font-size: 2rem;
+  padding: .25em .5em;
+}
+
+.actions button.primary {
+  background-color: #069;
+  color: white;
+}
+.actions button.primary:hover,
+.actions button.primary:focus-visible
+{
+  background-color: #17a;
+  color: white;
+}
+
+.actions button.secondary:hover,
+.actions button.secondary:focus-visible
+{
+  background-color: #ddd;
+}

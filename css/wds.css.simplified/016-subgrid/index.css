@@ -1,0 +1,49 @@
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+  line-height: 1.5;
+
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 50px 80px 120px;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.item {
+  background-color: #8e7c71;
+  font-size: 2rem;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grouped {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: subgrid; /* inherit the grid measurements from the parent element */
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+}
+
+.grouped:hover {
+  color: white;
+}

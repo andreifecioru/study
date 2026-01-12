@@ -1,0 +1,117 @@
+:root {
+  --blue-color: #06a;
+  --blue-color-light: #28c;
+  --blue-color-dark: #048;
+}
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+  line-height: 1.5;
+
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10fr minmax(auto, 25rem);
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "navbar sidebar"
+    "main sidebar"
+    "footer footer";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, textarea, button {
+  font: inherit;
+  line-height: inherit;
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--blue-color);
+  border-bottom: 1px solid var(--blue-color-dark);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 2rem;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: var(--blue-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 6rem;
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+  width: 40rem;
+  justify-content: space-between;
+  align-content: center;
+  align-items: stretch;
+  font-size: 2rem;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.navbar-item:hover,
+.navbar-item:focus-visible {
+  background-color: var(--blue-color-light);
+  cursor: pointer;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--blue-color-dark);
+  color: white;
+  padding: 2rem;
+}
+
+.main {
+  grid-area: main;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--blue-color-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+
+
+

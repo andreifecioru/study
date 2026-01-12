@@ -1,0 +1,105 @@
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+  margin: 0;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+  line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, textarea, button {
+  font: inherit;
+  line-height: inherit;
+}
+
+.container-one {
+  margin: 8rem;
+  border: 2px solid red;
+  background-color: cyan;
+
+
+  display: flex;
+  /* display: inline-flex; */
+  /* flex-direction: column; */
+
+  /* layout children on the "main-axis" */
+  justify-content: space-around;
+  /* layout children on the "cross-axis" */
+  align-items: flex-end;
+
+  flex-wrap: wrap;
+  /* used to space-out the wrapped rows (for the "cross-axis) */
+  align-content: space-between;
+}
+
+.container-two {
+  margin: 8rem;
+  border: 2px solid red;
+  background-color: cyan;
+
+  gap: 1rem;
+  /*column-gap: 1rem;*/
+  /*row-gap: 1rem;*/
+
+  display: flex;
+}
+
+.item {
+  border: 1px solid blue;
+  width: 100px;
+  background-color: #00aaff;
+  font-size: 2rem;
+  color: white;
+  /* inside flexbox, margins no longer collapse*/
+  /* margin: 1rem; */
+  /* but we don't use margins anymore: use gap instead */
+}
+
+.item-one {
+  min-height: 100px;
+  order: 2;
+}
+.item-two {
+  min-height: 150px;
+  /* you can control the alignment of individual elements */
+  align-self: center;
+  order: 1;
+}
+.item-three {
+  min-height: 200px;
+  /* default order is 0 */
+}
+.item-four {
+  height: 250px;
+  order: -1;
+}
+
+.item-five {
+  min-height: 100px;
+  /* this decides the speed with which the element shrinks relative to the others */
+  /* when set to 0, wew don't shrink this element at all */
+  flex-shrink: 0;
+
+  /*One liner: grow | shrink | basis*/
+  /*flex: 1 2 auto*/
+}
+.item-six {
+  min-height: 150px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.item-seven {
+  min-height: 200px;
+  flex-grow: 2;
+  /* assume a 0-width box before we start growing */
+  flex-basis: 0;
+}

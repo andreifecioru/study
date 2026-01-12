@@ -1,0 +1,66 @@
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, textarea, button {
+  font: inherit;
+  line-height: inherit;
+}
+
+.navbar {
+  background-color: #5a4333;
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-item {
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.navbar-item.brand {
+  cursor: default;
+}
+
+.navbar-item.menu-item:hover {
+  background-color: #8e7c71;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.content {
+  font-size: 2rem;
+}

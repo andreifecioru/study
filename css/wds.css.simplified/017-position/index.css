@@ -1,0 +1,83 @@
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+  line-height: 1.5;
+
+  min-height: 200vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  /* create a "position-context" */
+  position: relative;
+
+  /* also create a "stacking-context */
+  z-index: 0;
+
+  /* NOTE: flex-boxes and grids also create their own stacking contexts */
+
+  padding: 1rem;
+  background-color: #00aaff;
+  margin: 4rem;
+
+}
+
+
+.child-0 {
+  padding: 1rem;
+  background-color: #0b196e;
+  color: white;
+
+  /* good for headers */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+}
+.child-1 {
+  padding: 1rem;
+  background-color: #8e7c71;
+
+  /* offset the element in any direction relative to the normal flow */
+  position: relative;
+  left: 20px;
+}
+
+.child-2 {
+  padding: 1rem;
+  background-color: #27ae60;
+
+  /*
+    remove the element from the document flow
+    positioning is relative to the closest ancestor with `position: relative`
+  */
+  position: absolute;
+  top: 200px;
+}
+
+.child-3 {
+  padding: 1rem;
+  background-color: #eb5757;
+}
+
+.child-4 {
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+
+  /* stick to the bottom of the screen (always based on the screen) even when you scroll */
+  position: fixed;
+  bottom: 0;
+}

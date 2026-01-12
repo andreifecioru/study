@@ -1,0 +1,56 @@
+:root {
+  --blue-color: #06a;
+  --blue-color-light: #28c;
+  --blue-color-dark: #048;
+}
+html {
+  /* rem units are based of the "root" font size */
+  font-size: 62.5%; /* define 1rem = 10px (easier math) */
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+  font-size: 1.6rem; /* Default size is back to 16px */
+  line-height: 1.5;
+
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  min-height: 100vh;
+  background-color: #333;
+
+  display: grid;
+
+  /* generate as many 200px columns as possible */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+
+  align-items: stretch;
+
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.grid-container img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px gray solid;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.tall {
+  grid-row: span 2;
+}
