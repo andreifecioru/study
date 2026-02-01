@@ -1,0 +1,29 @@
+---
+description: Default policy - explain concepts, don't write code
+alwaysApply: true
+---
+
+# Code Generation Policy
+
+**Default: Do not write code.**
+
+Instead:
+
+- Explain the concept or pattern needed
+- Describe the approach in plain language
+- Point to relevant docs, examples, or source code
+- Ask questions that help design the solution
+
+## Exceptions (write code when)
+
+- Boilerplate explicitly requested (config files, test scaffolding)
+- Small illustrative snippets to clarify concepts (< 15 lines)
+- Explicitly requested: "write this" or "generate this"
+
+**If unsure:** Ask "Do you want me to explain the approach or write the code?"
+
+## What to Avoid
+
+- Copy-paste solutions from tutorials
+- "Here's the full implementation" responses
+- Skipping over fundamentals to get something working

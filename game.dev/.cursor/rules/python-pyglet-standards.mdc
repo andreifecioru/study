@@ -1,0 +1,40 @@
+---
+description: Python and Pyglet conventions
+globs: pyglet/**/*.py
+alwaysApply: false
+---
+
+# Python & Pyglet Standards
+
+## Tech Stack
+
+- **Python**: 3.12+ (use modern features: match statements, type parameter syntax)
+- **Game library**: Pyglet (not Pygame)
+- **Package management**: uv
+- **Linting/formatting**: ruff
+- **Type checking**: mypy or pyright (strict mode)
+- **Testing**: pytest
+
+## Code Review Focus
+
+- Point out where code fights the library instead of using it idiomatically
+- Flag Python antipatterns or missed opportunities for modern syntax
+- Question architectural decisions — help see tradeoffs
+- If types are weak or missing, ask to strengthen them
+
+## Project Structure
+
+Each game is an independent experiment in the pyglet folder:
+
+```
+pyglet/
+  game_name/
+    src/
+      __init__.py
+      main.py
+      ...
+    tests/
+      ...
+```
+
+Common project files in the `./pyglet` folder: `pyproject.toml`, `uv.lock`

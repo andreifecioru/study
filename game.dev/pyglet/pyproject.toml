@@ -1,0 +1,45 @@
+[project]
+name = "game-dev"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pyglet>=2.0,<3.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9",
+    "mypy>=1.14",
+]
+
+[tool.ruff]
+src = ["."]
+
+[tool.mypy]
+# Start with strict mode - enables many checks at once
+strict = true
+
+# Additional strictness beyond --strict
+warn_unreachable = true
+warn_unused_ignores = true
+
+# Require explicit types for all functions
+disallow_untyped_defs = true
+disallow_untyped_calls = true
+disallow_incomplete_defs = true
+
+# No implicit Optional
+no_implicit_optional = true
+
+# Strict equality checks
+strict_equality = true
+
+# Warn about unused "type: ignore" comments
+warn_unused_configs = true
+
+# Per-module overrides (for third-party libs without types)
+[[tool.mypy.overrides]]
+module = "pyglet.*"
+ignore_missing_imports = true
