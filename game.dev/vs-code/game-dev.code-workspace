@@ -1,0 +1,31 @@
+{
+  "folders": [
+    {
+      "name": "VS Code",
+      "path": "."
+
+    },
+    {
+      "name": "Phaser.js Games",
+      "path": "../phaser.js"
+    },
+    {
+      "name": "Pyglet Games",
+      "path": "../pyglet"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/__pycache__": true,
+      "**/.pytest_cache": true,
+      "**/dist": true,
+      "**/.venv": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.venv": true
+    }
+  }
+}

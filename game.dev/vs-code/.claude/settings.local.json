@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pyglet.readthedocs.io)",
+      "Bash(tree:*)",
+      "Bash(npx tsc:*)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}

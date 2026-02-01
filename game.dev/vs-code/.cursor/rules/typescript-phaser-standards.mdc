@@ -1,0 +1,45 @@
+---
+description: TypeScript and Phaser conventions
+globs: phaser.js/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# TypeScript & Phaser Standards
+
+## Tech Stack
+
+- **TypeScript**: Strict mode enabled - types are important
+- **Game library**: Phaser
+- **Package management**: npm/pnpm
+- **Build tool**: Vite (or similar)
+
+## TypeScript Standards
+
+- Work in strict mode always
+- Use types to model domain concepts
+- Leverage TypeScript's type system for compile-time safety
+- Avoid `any` - use `unknown` when type is truly unknown
+
+## Code Review Focus
+
+- Point out where code fights Phaser instead of using it idiomatically
+- Flag TypeScript antipatterns or weak type usage
+- Question architectural decisions — help see tradeoffs
+- Push for stronger, more precise types
+
+## Project Structure
+
+Each game is an independent experiment in the phaser.js folder:
+
+```
+phaser.js/
+  game_name/
+    src/
+      main.ts
+      scenes/
+      ...
+    public/
+      assets/
+    package.json
+    tsconfig.json
+```
