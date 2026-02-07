@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "01-books",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/01-books",
+      "preLaunchTask": "Start 01-books dev server",
+      "sourceMapPathOverrides": {
+        "webpack:///./~/*": "${webRoot}/node_modules/*",
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///*": "*",
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    }
+  ]
+}
