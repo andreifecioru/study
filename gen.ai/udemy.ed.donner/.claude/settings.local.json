@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv pip install:*)",
+      "Bash(uv run nbqa mypy:*)",
+      "Bash(uv run nbqa ruff:*)"
+    ]
+  }
+}

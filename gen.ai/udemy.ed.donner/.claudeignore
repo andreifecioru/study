@@ -1,0 +1,38 @@
+# Environment and secrets
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+
+# Credentials and keys
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+**/*credentials*
+**/*secrets*
+
+# API keys and tokens
+**/api-keys.*
+**/tokens.*
+*.token
+
+# SSH and certificates
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.crt
+*.cer
+
+# Cloud provider credentials
+.aws/credentials
+.gcp/credentials.json
+.azure/credentials
+
+# Database
+*.db-journal
+*.sqlite-wal
