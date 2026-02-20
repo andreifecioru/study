@@ -1,0 +1,33 @@
+[project]
+name = "blog-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.129.0",
+    "sqlalchemy>=2.0.46",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+]
+
+[tool.ruff]
+indent-width = 4
+
+[tool.ruff.format]
+indent-style = "space"
+
+[tool.mypy]
+strict = true
+mypy_path = "src"
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = [
+    "fastapi.*",
+    "starlette.*",
+]
+ignore_missing_imports = true
