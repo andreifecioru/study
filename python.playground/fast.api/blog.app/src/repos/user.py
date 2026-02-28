@@ -14,16 +14,22 @@ class UsersRepository:
     def __init__(self, db: DbDeps) -> None:
         self.db = db
 
-    def get_all(self) -> list[User]:
-        return list(self.db.scalars(select(User)).all())
+    async def get_all(self) -> list[User]:
+        result = await self.db.execute(select(User))
+        return list(result.scalars().all())
 
-    def get_by_id(self, user_id: int) -> User | None:
-        return self.db.get(User, user_id)
+    async def get_by_id(self, user_id: int) -> User | None:
+        return await self.db.get(User, user_id)
 
-    def get_by_username(self, username: str) -> User | None:
-        return self.db.scalars(select(User).where(User.username == username)).first()
+    async def get_by_username(self, username: str) -> User | None:
+        result = await self.db.execute(select(User).where(User.username == username))
+        return result.scalars().first()
 
-    def create(self, new_user: UserCreateSchema) -> User:
+    async def get_by_email(self, email: str) -> User | None:
+        result = await self.db.execute(select(User).where(User.email == email))
+        return result.scalars().first()
+
+    async def create(self, new_user: UserCreateSchema) -> User:
         saved_user = User(
             username=new_user.username,
             first_name=new_user.first_name,
@@ -32,14 +38,20 @@ class UsersRepository:
         )
 
         self.db.add(saved_user)
-        self.db.commit()
-        self.db.refresh(saved_user)
+        await self.db.commit()
+        await self.db.refresh(saved_user)
 
         return saved_user
 
-    def delete(self, user: User) -> None:
-        self.db.delete(user)
-        self.db.commit()
+    async def update(self, user: User) -> User:
+        await self.db.commit()
+        await self.db.refresh(user)
+
+        return user
+
+    async def delete(self, user: User) -> None:
+        await self.db.delete(user)
+        await self.db.commit()
 
 
 UsersRepoDep = Annotated[UsersRepository, Depends(UsersRepository)]

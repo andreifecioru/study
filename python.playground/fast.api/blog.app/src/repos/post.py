@@ -2,6 +2,7 @@ from typing import TYPE_CHECKING, Annotated
 
 from fastapi import Depends
 from sqlalchemy import select
+from sqlalchemy.orm import selectinload
 
 from src.db import DbDeps  # noqa: TC001 — required at runtime for FastAPI DI
 from src.models.post import Post
@@ -14,16 +15,22 @@ class PostsRepository:
     def __init__(self, db: DbDeps) -> None:
         self.db = db
 
-    def get_all(self) -> list[Post]:
-        return list(self.db.scalars(select(Post)).all())
+    async def get_all(self) -> list[Post]:
+        result = await self.db.execute(select(Post).options(selectinload(Post.author)))
+        return list(result.scalars().all())
 
-    def get_by_id(self, post_id: int) -> Post | None:
-        return self.db.get(Post, post_id)
+    async def get_by_id(self, post_id: int) -> Post | None:
+        return await self.db.get(Post, post_id, options=[selectinload(Post.author)])
 
-    def get_by_user_id(self, user_id: int) -> list[Post]:
-        return list(self.db.scalars(select(Post).where(Post.user_id == user_id)).all())
+    async def get_by_user_id(self, user_id: int) -> list[Post]:
+        result = await self.db.execute(
+            select(Post)
+            .options(selectinload(Post.author))
+            .where(Post.user_id == user_id)
+        )
+        return list(result.scalars().all())
 
-    def create(self, new_post: PostCreateSchema) -> Post:
+    async def create(self, new_post: PostCreateSchema) -> Post:
         saved_post = Post(
             title=new_post.title,
             user_id=new_post.user_id,
@@ -31,19 +38,21 @@ class PostsRepository:
         )
 
         self.db.add(saved_post)
-        self.db.commit()
-        self.db.refresh(saved_post)
+        await self.db.commit()
+        # refresh() reloads scalar columns but not relationships; attribute_names forces
+        # the author relationship to be loaded before the session closes
+        await self.db.refresh(saved_post, attribute_names=["author"])
 
         return saved_post
 
-    def update(self, post: Post) -> Post:
-        self.db.commit()
-        self.db.refresh(post)
+    async def update(self, post: Post) -> Post:
+        await self.db.commit()
+        await self.db.refresh(post, attribute_names=["author"])
         return post
 
-    def delete(self, post: Post) -> None:
-        self.db.delete(post)
-        self.db.commit()
+    async def delete(self, post: Post) -> None:
+        await self.db.delete(post)
+        await self.db.commit()
 
 
 PostsRepoDep = Annotated[PostsRepository, Depends(PostsRepository)]

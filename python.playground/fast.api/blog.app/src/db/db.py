@@ -1,13 +1,14 @@
-from collections.abc import Generator
+from collections.abc import AsyncGenerator
 from typing import Annotated, Any
 
 from fastapi import Depends
-from sqlalchemy import create_engine, event
-from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
+from sqlalchemy import event
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+from sqlalchemy.orm import DeclarativeBase
 
-DB_URL = "sqlite:///./blog_app.db"
+DB_URL = "sqlite+aiosqlite:///./blog_app.db"
 
-db_engine = create_engine(DB_URL, connect_args={"check_same_thread": False})
+db_engine = create_async_engine(DB_URL, connect_args={"check_same_thread": False})
 
 
 @event.listens_for(db_engine, "connect")
@@ -17,20 +18,25 @@ def enable_fk(connection: Any, _: Any) -> None:  # noqa: ANN401 — SQLite disab
     cursor.close()
 
 
-SessionFactory = sessionmaker(autocommit=False, autoflush=False, bind=db_engine)
+AsyncSessionFactory = async_sessionmaker(
+    bind=db_engine,
+    class_=AsyncSession,
+    expire_on_commit=False,
+)
 
 
 class ModelBase(DeclarativeBase):
     pass
 
 
-def get_db() -> Generator[Session]:
-    with SessionFactory() as db:
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
+    async with AsyncSessionFactory() as db:
         yield db
 
 
-def create_tables() -> None:
-    ModelBase.metadata.create_all(bind=db_engine)
+async def create_tables() -> None:
+    async with db_engine.begin() as conn:
+        await conn.run_sync(ModelBase.metadata.create_all)
 
 
-DbDeps = Annotated[Session, Depends(get_db)]
+DbDeps = Annotated[AsyncSession, Depends(get_db)]
