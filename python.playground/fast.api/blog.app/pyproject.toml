@@ -18,6 +18,9 @@ dev = [
 [tool.ruff]
 indent-width = 4
 
+[tool.ruff.lint]
+select = ["TC"]
+
 [tool.ruff.format]
 indent-style = "space"
 

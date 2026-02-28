@@ -9,11 +9,11 @@
       alt="{{ post.author.full_name }}'s profile picture" width="64" height="64" loading="lazy">
     <div class="flex-grow-1">
       <div class="article-metadata mb-2">
-        <a class="me-2" href="{{ url_for('user_posts', user_id=post.author.id) }}">{{ post.author.full_name }}</a>
+        <a class="me-2" href="{{ url_for('page:users:posts:list', user_id=post.author.id) }}">{{ post.author.full_name }}</a>
         <small class="text-body-secondary">{{ post.date_posted.strftime("%B %d, %Y") }}</small>
       </div>
       <h2>
-        <a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a>
+        <a class="article-title" href="{{ url_for('page:posts:detail', post_id=post.id) }}">{{ post.title }}</a>
       </h2>
       <p class="article-content">{{ post.content }}</p>
     </div>
