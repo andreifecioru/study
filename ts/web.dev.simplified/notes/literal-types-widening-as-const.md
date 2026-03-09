@@ -13,6 +13,13 @@ const frozen = { x: 4 } as const  // type: { readonly x: 4 } (literal preserved)
 type Direction = "north" | "south" | "east" | "west"
 ```
 
+```ts
+// Tuple with literal element types — push only accepts values in the union 1 | 2 | 3
+let arr: [1, 2, 3] = [1, 2, 3]
+arr.push(3)  // ok — 3 is in 1 | 2 | 3
+arr.push(4)  // error — 4 is not assignable to 1 | 2 | 3
+```
+
 **Caveats:**
 - `as const` adds `readonly` to every property recursively — it's deep, unlike a shallow freeze.
 - It's purely compile-time. Unlike `Object.freeze()`, `as const` does not prevent mutation at runtime — it just makes TypeScript treat the values as immutable.
