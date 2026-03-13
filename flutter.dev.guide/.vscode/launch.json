@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CLI: search",
+      "type": "dart",
+      "request": "launch",
+      "program": "dart/dartpedia/cli/bin/cli.dart",
+      "args": ["search", "dart programming language"]
+    }
+  ]
+}

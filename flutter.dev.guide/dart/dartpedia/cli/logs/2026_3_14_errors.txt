@@ -1,0 +1,3 @@
+[2026-03-14 07:29:00.165954 - errors] WARNING: ArgumentException: You are allowed to pass in exactly one command 
+[2026-03-14 07:29:08.566469 - errors] WARNING: ArgumentException: You are allowed to pass in exactly one command 
+[2026-03-14 07:31:55.781424 - errors] WARNING: ArgumentException: Commands can only have up to one argument. 

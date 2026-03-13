@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm /home/andrei/Work/personal/study/flutter.dev.guide/dart/cli/.vscode/launch.json)",
+      "Bash(rmdir /home/andrei/Work/personal/study/flutter.dev.guide/dart/cli/.vscode)",
+      "WebFetch(domain:dart.dev)",
+      "WebFetch(domain:github.com)",
+      "mcp__context7__resolve-library-id",
+      "WebFetch(domain:api.dart.dev)"
+    ]
+  }
+}
