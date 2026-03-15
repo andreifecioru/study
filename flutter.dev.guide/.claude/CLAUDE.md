@@ -68,3 +68,5 @@ know from these languages; focus on what's *different* or *surprising*.
 - Understanding over velocity
 - Tradeoffs made explicit
 - Being told when I'm wrong or going down a rabbit hole
+- Industry best practices, not just making things work — always default to the
+  idiomatic, production-appropriate approach even in a learning context
