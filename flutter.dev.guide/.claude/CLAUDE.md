@@ -63,6 +63,11 @@ know from these languages; focus on what's *different* or *surprising*.
 - Explain the render pipeline at a conceptual level when it becomes relevant
 - Mobile-first focus: layout, gestures, navigation, state management
 
+## Interaction Rules
+
+- Do not ask questions about facts that can be determined by reading project files.
+  Read the relevant files first, then respond with that context already in hand.
+
 ## What I Value
 
 - Understanding over velocity
