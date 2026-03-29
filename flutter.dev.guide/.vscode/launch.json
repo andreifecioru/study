@@ -2,6 +2,30 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Flutter: rolodex (linux)",
+      "type": "dart",
+      "request": "launch",
+      "program": "flutter/rolodex/lib/main.dart",
+      "args": ["-d", "linux"]
+    },
+    {
+      "name": "Flutter: spotify (chrome)",
+      "type": "dart",
+      "request": "launch",
+      "program": "flutter/spotify/lib/main.dart",
+      "args": [
+        "-d", "chrome",
+        "--web-port=9090"
+      ]
+    },
+    {
+      "name": "Flutter: spotify (android)",
+      "type": "dart",
+      "request": "launch",
+      "program": "flutter/spotify/lib/main.dart",
+      "args": ["-d", "R5CY11JCWZE"]
+    },
+    {
       "name": "CLI: search",
       "type": "dart",
       "request": "launch",

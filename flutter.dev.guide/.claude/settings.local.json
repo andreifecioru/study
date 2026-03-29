@@ -12,7 +12,13 @@
       "Bash(clang++ --version)",
       "Bash(ld --version)",
       "Read(//usr/include/c++/**)",
-      "Bash(clang++ -v -x c++ /dev/null -fsyntax-only)"
+      "Bash(clang++ -v -x c++ /dev/null -fsyntax-only)",
+      "Bash(c++ --version)",
+      "Bash(dpkg -l)",
+      "Read(//home/andrei/Work/personal/study/flutter.dev.guide/**)",
+      "Skill(keybindings-help)",
+      "Skill(keybindings-help:*)",
+      "WebSearch"
     ]
   }
 }
