@@ -1,0 +1,42 @@
+[project]
+name = "py-for-data-analysis"
+version = "0.1.0"
+description = "Study repository for Python for Data Analysis and ML"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "ipykernel",
+    "ipympl",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP"]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+reportUnknownMemberType = "none"
+reportUnknownArgumentType = "none"
+reportUnknownVariableType = "none"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+exclude = [".ipynb_checkpoints"]
+
+[[tool.mypy.overrides]]
+module = [
+    "matplotlib.*",
+    "numpy.*",
+    "pandas.*",
+    "ipympl.*",
+    "ipywidgets.*"
+]
+ignore_errors = true
