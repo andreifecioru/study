@@ -9,8 +9,10 @@ dependencies = [
     "pandas",
     "matplotlib",
     "seaborn",
+    "scipy",
     "ipykernel",
     "ipympl",
+    "statsmodels>=0.14.6",
 ]
 
 [tool.ruff]
