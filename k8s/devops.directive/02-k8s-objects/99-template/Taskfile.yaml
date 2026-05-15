@@ -1,0 +1,17 @@
+version: 3
+
+env:
+  NAMESPACE: app-group-099
+
+tasks:
+  01-create-namespace:
+    desc: Create the K8S namespace
+    cmds:
+      - kubectl apply -f ./namespace.yaml
+      - kubens ${NAMESPACE}
+
+  04-cleanup:
+    desc: Cleanup all resources
+    cmds:
+      - kubectl delete -f ./namespace.yaml
+      

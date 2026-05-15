@@ -1,0 +1,22 @@
+version: "3"
+
+tasks:
+  kind:01-generate-config:
+    desc: Generate KinD cluster resource config file
+    cmds:
+      - REPLACE_ABSOLUTE_PATH=${PWD} envsubst < kind-cluster.yaml.tmpl > kind-cluster.yaml
+
+  kind:02-create-cluster:
+    desc: Create K8S cluster using KinD
+    cmds:
+      - kind create cluster --config ./kind-cluster.yaml
+
+  kind:03-run-cloud-provider-kind:
+    desc: "Run sigs.k8s.io/cloud-provider-kind@latest to enable load balancer services with KinD"
+    cmds:
+      - sudo cloud-provider-kind
+
+  kind:04-delete-cluster:
+    desc: Delete and existing a KinD Kubernetes cluster
+    cmds:
+      - kind delete cluster

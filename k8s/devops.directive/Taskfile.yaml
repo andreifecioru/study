@@ -1,0 +1,6 @@
+version: "3"
+
+includes:
+  setup:
+    taskfile: ./01-cluster-setup/Taskfile.yaml
+    dir: ./01-cluster-setup

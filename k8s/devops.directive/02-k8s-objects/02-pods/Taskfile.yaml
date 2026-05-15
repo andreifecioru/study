@@ -1,0 +1,27 @@
+version: 3
+
+env:
+  NAMESPACE: app-group-002
+
+tasks:
+  01-create-namespace:
+    desc: Create the K8S namespace
+    cmds:
+      - kubectl apply -f ./namespace.yaml
+      - kubens ${NAMESPACE}
+
+  02-create-nginx-pod:
+    desc: Create the pod hosting nginx
+    cmds:
+      - kubectl apply -f ./pod.yaml
+
+  03-enable-port-fwd:
+    desc: Configure port-forwarding
+    cmds:
+      - kubectl port-forward -n ${NAMESPACE} nginx 8080:8080
+
+  04-cleanup:
+    desc: Cleanup all resources
+    cmds:
+      - kubectl delete -f ./namespace.yaml
+      

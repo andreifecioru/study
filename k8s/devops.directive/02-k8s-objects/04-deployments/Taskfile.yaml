@@ -1,0 +1,28 @@
+version: 3
+
+env:
+  NAMESPACE: app-group-004
+
+tasks:
+  01-create-namespace:
+    desc: Create the K8S namespace
+    cmds:
+      - kubectl apply -f ./namespace.yaml
+      - kubens ${NAMESPACE}
+
+  02-create-deployment:
+    desc: Create the deployment for the nginx service
+    cmds:
+      - kubectl apply -f ./deployment.yaml
+
+  03-rollout-restart:
+    desc: "Roll the pods in the deployment"
+    cmds:
+      - kubectl rollout restart deployment nginx
+      - kubectl get pods --watch
+
+  04-cleanup:
+    desc: Cleanup all resources
+    cmds:
+      - kubectl delete -f ./namespace.yaml
+      
