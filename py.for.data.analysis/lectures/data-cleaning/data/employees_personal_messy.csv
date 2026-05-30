@@ -1,0 +1,210 @@
+employee_id,name,email,city,country
+EMP0013,Tina Martin,tina.martin@company.com,berlin,germany
+EMP0081,YaRa GARCiA,yara.garcia@company.com,berlin,germany
+EMP0034,OlivIA() MArTiN,olivia.martin@company.com,PARIS,france
+EMP0006,WENdy GarCIA,wendy.garcia@company.com,rome,italy
+EMP0188,Jack Thompson,jack.thompson@company.com,london,uk
+EMP0084,Victor Taylor,victor.taylor@company.com,brussels,belgium
+EMP0117,AliCe HArRIs,alice.harris@company.com,vienna,austria
+EMP0123,Rachel// Jackson,rachel.jackson@company.com,paris,france
+EMP0091,Leo Thompson,leo.thompson@company.com,lisbon,portugal
+EMP0155,LEO SCoTt,leo.scott@company.com,lisbon,portugal
+EMP0046,ZOE JOHNSon,zoe.johnson@company.com,ZURICH,switzerland
+EMP0157,DavID BRown,david.brown@company.com,brussels,belgium
+EMP0053,Jack Brown,jack.brown@company.com,madrid,spain
+EMP0190,Hank Brown,hank.brown@company.com,vienna,austria
+EMP0097,GRACe ThoMpSON,grace.thompson@company.com,PARIS,france
+EMP0087,Carol Brown,carol.brown@company.com,amsterdam,netherlands
+EMP0145,Zoe King,zoe.king@company.com,lisbon,portugal
+EMP0038,Victor Wilson,victor.wilson@company.com,lisbon,portugal
+EMP0067,XANDER Wilson,xander.wilson@company.com,paris,france
+EMP0019,Victor Wilson,victor.wilson@company.com,berlin,germany
+EMP0171,Carol Miller,carol.miller@company.com,lisbon,portugal
+EMP0016,Uma Garcia,uma.garcia@company.com,zurich,switzerland
+EMP0008,Steve Scott,steve.scott@company.com,paris,france
+EMP0056,Bob Williams,bob.williams@company.com,rome,italy
+EMP0093,ViCToR ScoTt,victor.scott@company.com,brussels,belgium
+EMP0135,UMA TAYLOr,uma.taylor@company.com,rome,italy
+EMP0126,Olivia Jones,olivia.jones@company.com,amsterdam,netherlands
+EMP0125,WEndY SCOTT,wendy.scott@company.com,AMSTERDAM,netherlands
+EMP0159,Nate Johnson,nate.johnson@company.com,brussels,belgium
+EMP0185,Mona Smith,mona.smith@company.com,madrid,spain
+EMP0076,Mona Taylor,mona.taylor@company.com,brussels,belgium
+EMP0150,Bob Brown,bob.brown@company.com,zurich,switzerland
+EMP0139,Jack Jones,jack.jones@company.com,rome,italy
+EMP0072,Eva Smith,eva.smith@company.com,vienna   ,austria
+EMP0187,Eva Johnson,eva.johnson@company.com,zurich,switzerland
+EMP0146,Wendy Garcia,wendy.garcia@company.com,london,uk
+EMP0177,Steve Harris,steve.harris@company.com,lisbon,portugal
+EMP0119,Grace King,grace.king@company.com,madrid,spain
+EMP0017,Nate Johnson,nate.johnson@company.com,lisbon,portugal
+EMP0136,Hank Thompson,hank.thompson@company.com,paris,france
+EMP0191,Rachel Harris,rachel.harris@company.com,vienna,austria
+EMP0023,Eva Harris,eva.harris@company.com,brussels,belgium
+EMP0105,Uma. Anderson,uma.anderson@company.com,berlin,germany
+EMP0142,Frank Garcia,frank.garcia@company.com,london,uk
+EMP0005,LEO TAYLOr,leo.taylor@company.com,MADRID,spain
+EMP0075,Rachel Wilson,rachel.wilson@company.com,zurich,switzerland
+EMP0137,Paul Scott,paul.scott@company.com,madrid,spain
+EMP0045,BOB JacksOn,bob.jackson@company.com,rome,italy
+EMP0064,Zoe King,zoe.king@company.com,madrid,spain
+EMP0109,Mona MiLleR,mona.miller@company.com,berlin,germany
+EMP0027,Karen() Thompson,karen.thompson@company.com,vienna,austria
+EMP0102,Frank Thompson,frank.thompson@company.com,zurich,switzerland
+EMP0167,IreNE TaYLOR,irene.taylor@company.com,berlin,germany
+EMP0198,David Brown,david.brown@company.com,brussels,belgium
+EMP0009,Frank Garcia,frank.garcia@company.com,lisbon,portugal
+EMP0041,EVa?? WilliAMs,eva.williams@company.com,lisbon,portugal
+EMP0110,Steve Williams,steve.williams@company.com,berlin,germany
+EMP0127,Carol Jones,carol.jones@company.com,  lisbon,portugal
+EMP0130,QuiNn THomAs,quinn.thomas@company.com,LISBON,portugal
+EMP0111,Hank! White,hank.white@company.com,lisbon,portugal
+EMP0192,Quinn Brown,quinn.brown@company.com,lisbon,portugal
+EMP0108,RaChEL* THOmAS,rachel.thomas@company.com,BERLIN,germany
+EMP0077,Irene Taylor,irene.taylor@company.com,vienna,austria
+EMP0062,Tina Brown,tina.brown@company.com,  paris,france
+EMP0025,UMA HArRIS,uma.harris@company.com,madrid,spain
+EMP0031,LEO TaYlOR,leo.taylor@company.com,london,uk
+EMP0061,XanDeR MArTiN,xander.martin@company.com,brussels,belgium
+EMP0057,Olivia White,olivia.white@company.com,paris,france
+EMP0154,Hank Wilson,hank.wilson@company.com,amsterdam,netherlands
+EMP0090,Victor Taylor,victor.taylor@company.com,zurich,switzerland
+EMP0020,Leo KING,leo.king@company.com,  rome,italy
+EMP0158,OlivIa YOunG,olivia.young@company.com,VIENNA   ,austria
+EMP0131,Olivia Anderson,olivia.anderson@company.com,rome,italy
+EMP0055,Mona White,mona.white@company.com,rome,italy
+EMP0169,IReNE SmitH,irene.smith@company.com,ZURICH,switzerland
+EMP0052,FrAnK TAYlor,frank.taylor@company.com,LISBON,portugal
+EMP0182,David King,david.king@company.com,vienna,austria
+EMP0144,Karen! Anderson,karen.anderson@company.com,paris,france
+EMP0107,UMa MILlEr,uma.miller@company.com,ROME,italy
+EMP0140,LEO. ScoTt,leo.scott@company.com,LONDON,uk
+EMP0112,Uma White,uma.white@company.com,brussels,belgium
+EMP0183,Mona King,mona.king@company.com,  paris,france
+EMP0098,RaChel WilSOn,rachel.wilson@company.com,amsterdam,netherlands
+EMP0151,Wendy Anderson,wendy.anderson@company.com,vienna,austria
+EMP0015,Steve Harris,steve.harris@company.com,london,uk
+EMP0028,Victor Thomas,victor.thomas@company.com,vienna,austria
+EMP0113,Olivia Williams,olivia.williams@company.com,vienna,austria
+EMP0189,Grace Young,grace.young@company.com,vienna,austria
+EMP0021,Nate WiLliaMS,nate.williams@company.com,lisbon,portugal
+EMP0047,Leo Martin,leo.martin@company.com,amsterdam,netherlands
+EMP0174,StEVe DAViS,steve.davis@company.com,LONDON,uk
+EMP0068,Jack Miller,jack.miller@company.com,rome,italy
+EMP0145,Zoe King,zoe.king@company.com,vienna,austria
+EMP0063,Jack Garcia,jack.garcia@company.com,brussels,belgium
+EMP0003,Rachel Taylor,rachel.taylor@company.com,amsterdam,netherlands
+EMP0060,Rachel Thomas,rachel.thomas@company.com,paris   ,france
+EMP0025,UMA HArRIS,uma.harris@company.com,madrid,spain
+EMP0195,Yara Harris,yara.harris@company.com,  amsterdam,netherlands
+EMP0044,Jack Jackson,jack.jackson@company.com,  madrid,spain
+EMP0011,Nate Garcia,nate.garcia@company.com,paris,france
+EMP0165,Karen Williams,karen.williams@company.com,vienna,austria
+EMP0074,David Scott,david.scott@company.com,madrid   ,spain
+EMP0118,DAVId HArRIS,david.harris@company.com,LONDON,uk
+EMP0179,Xander Davis,xander.davis@company.com,vienna,austria
+EMP0186,LeO WIlLiams,leo.williams@company.com,LISBON,portugal
+EMP0153,XaNdER GARciA,xander.garcia@company.com,VIENNA,austria
+EMP0099,Quinn Garcia,quinn.garcia@company.com,lisbon,portugal
+EMP0004,Leo White,leo.white@company.com,lisbon,portugal
+EMP0094,Karen Miller,karen.miller@company.com,zurich,switzerland
+EMP0124,Mona King,mona.king@company.com,vienna,austria
+EMP0163,KaRen JONes,karen.jones@company.com,MADRID,spain
+EMP0200,Zoe Miller,zoe.miller@company.com,zurich,switzerland
+EMP0051,Tina Brown,tina.brown@company.com,lisbon,portugal
+EMP0114,Leo. Garcia,leo.garcia@company.com,vienna,austria
+EMP0001,CARol. DaVIS,carol.davis@company.com,lisbon,portugal
+EMP0095,Xander Anderson,xander.anderson@company.com,berlin   ,germany
+EMP0138,Alice Miller,alice.miller@company.com,paris,france
+EMP0096,Hank Anderson,hank.anderson@company.com,madrid,spain
+EMP0065,Karen Scott,karen.scott@company.com,london,uk
+EMP0147,ALiCE Scott,alice.scott@company.com,MADRID,spain
+EMP0042,Tina Thomas,tina.thomas@company.com,amsterdam,netherlands
+EMP0070,MOna ThOMAS,mona.thomas@company.com,LISBON,portugal
+EMP0050,Uma Smith,uma.smith@company.com,berlin,germany
+EMP0049,RAcheL MArtin,rachel.martin@company.com,ROME,italy
+EMP0086,SteVe KiNg,steve.king@company.com,berlin   ,germany
+EMP0029,Olivia Anderson,olivia.anderson@company.com,vienna,austria
+EMP0014,Tina Wilson,tina.wilson@company.com,paris,france
+EMP0156,Rachel Scott,rachel.scott@company.com,rome,italy
+EMP0024,Yara Jones,yara.jones@company.com,rome,italy
+EMP0079,Olivia// Johnson,olivia.johnson@company.com,zurich,switzerland
+EMP0101,Victor Davis,victor.davis@company.com,paris,france
+EMP0132,OLivia DaviS,olivia.davis@company.com,PARIS   ,france
+EMP0170,Alice Martin,alice.martin@company.com,rome,italy
+EMP0131,Olivia Anderson,olivia.anderson@company.com,madrid,spain
+EMP0007,Carol* Martin,carol.martin@company.com,madrid,spain
+EMP0069,Bob Jackson,bob.jackson@company.com,paris,france
+EMP0085,Quinn Wilson,quinn.wilson@company.com,madrid,spain
+EMP0122,Rachel Williams,rachel.williams@company.com,paris,france
+EMP0160,UMA HArris,uma.harris@company.com,  vienna,austria
+EMP0178,EvA HarRis,eva.harris@company.com,rome,italy
+EMP0161,Zoe Thompson,zoe.thompson@company.com,rome,italy
+EMP0092,Uma Garcia,uma.garcia@company.com,vienna,austria
+EMP0179,Xander Davis,xander.davis@company.com,vienna,austria
+EMP0012,ZOe HARRIs,zoe.harris@company.com,BERLIN,germany
+EMP0120,Carol Martin,carol.martin@company.com,rome,italy
+EMP0103,UmA SMIth,uma.smith@company.com,LISBON,portugal
+EMP0036,Bob Harris,bob.harris@company.com,paris,france
+EMP0058,EvA WiLlIaMS,eva.williams@company.com,ZURICH,switzerland
+EMP0066,Irene ThOMas,irene.thomas@company.com,LISBON,portugal
+EMP0002,UMa KiNg,uma.king@company.com,brussels   ,belgium
+EMP0121,LEo MIlLER,leo.miller@company.com,AMSTERDAM,netherlands
+EMP0160,UMA HArris,uma.harris@company.com,rome,italy
+EMP0043,Steve?? Johnson,steve.johnson@company.com,paris,france
+EMP0106,UMa WiLliams,uma.williams@company.com,MADRID,spain
+EMP0133,Carol Miller,carol.miller@company.com,paris,france
+EMP0181,Yara Smith,yara.smith@company.com,london,uk
+EMP0018,DAviD?? JoHNsoN,david.johnson@company.com,paris,france
+EMP0039,Hank Miller,hank.miller@company.com,  london,uk
+EMP0134,Olivia Thompson,olivia.thompson@company.com,berlin,germany
+EMP0054,Mona Miller,mona.miller@company.com,london,uk
+EMP0162,Rachel Young,rachel.young@company.com,london,uk
+EMP0129,Olivia Williams,olivia.williams@company.com,lisbon,portugal
+EMP0035,XANDeR TAYlor,xander.taylor@company.com,madrid,spain
+EMP0029,Olivia Anderson,olivia.anderson@company.com,london,uk
+EMP0115,Nate Jones,nate.jones@company.com,lisbon,portugal
+EMP0164,Karen Young,karen.young@company.com,paris,france
+EMP0152,Hank Smith,hank.smith@company.com,amsterdam,netherlands
+EMP0032,Frank Young,frank.young@company.com,brussels,belgium
+EMP0172,Carol White,carol.white@company.com,madrid,spain
+EMP0128,Tina Smith,tina.smith@company.com,paris,france
+EMP0184,SteVe JOnEs,steve.jones@company.com,LONDON   ,uk
+EMP0033,Carol Smith,carol.smith@company.com,vienna,austria
+EMP0168,Eva Miller,eva.miller@company.com,berlin,germany
+EMP0143,Hank Jackson,hank.jackson@company.com,paris,france
+EMP0180,Nate Garcia,nate.garcia@company.com,paris,france
+EMP0148,Grace King,grace.king@company.com,rome,italy
+EMP0030,LeO BRowN,leo.brown@company.com,brussels,belgium
+EMP0100,David Smith,david.smith@company.com,madrid   ,spain
+EMP0083,EvA() WHITe,eva.white@company.com,BERLIN,germany
+EMP0176,Mona Johnson,mona.johnson@company.com,  amsterdam,netherlands
+EMP0080,Rachel Johnson,rachel.johnson@company.com,paris,france
+EMP0116,Olivia White,olivia.white@company.com,paris   ,france
+EMP0149,Victor() Brown,victor.brown@company.com,rome,italy
+EMP0110,Steve Williams,steve.williams@company.com,berlin,germany
+EMP0073,Mona Brown,mona.brown@company.com,madrid,spain
+EMP0078,Frank Martin,frank.martin@company.com,london,uk
+EMP0026,Quinn Miller,quinn.miller@company.com,paris,france
+EMP0166,Victor Anderson,victor.anderson@company.com,berlin,germany
+EMP0082,Leo Taylor,leo.taylor@company.com,vienna,austria
+EMP0197,IREne SMITh,irene.smith@company.com,rome   ,italy
+EMP0175,Steve Young,steve.young@company.com,london,uk
+EMP0199,IRENe GarcIa,irene.garcia@company.com,zurich,switzerland
+EMP0040,Quinn Jackson,quinn.jackson@company.com,amsterdam,netherlands
+EMP0194,Jack Thomas,jack.thomas@company.com,lisbon,portugal
+EMP0059,Tina Brown,tina.brown@company.com,vienna   ,austria
+EMP0141,Zoe@ Jackson,zoe.jackson@company.com,brussels,belgium
+EMP0089,Tina Anderson,tina.anderson@company.com,brussels   ,belgium
+EMP0071,UMa// GArciA,uma.garcia@company.com,brussels,belgium
+EMP0088,Irene Thomas,irene.thomas@company.com,rome,italy
+EMP0037,Wendy White,wendy.white@company.com,rome,italy
+EMP0022,Jack Taylor,jack.taylor@company.com,zurich,switzerland
+EMP0010,Carol Martin,carol.martin@company.com,london,uk
+EMP0104,ALIce YouNG,alice.young@company.com,vienna,austria
+EMP0196,Carol. Young,carol.young@company.com,vienna,austria
+EMP0068,Jack Miller,jack.miller@company.com,rome,italy
+EMP0193,Paul Davis,paul.davis@company.com,berlin,germany
+EMP0118,DAVId HArRIS,david.harris@company.com,LONDON,uk
+EMP0048,XaNder WIlSOn,xander.wilson@company.com,LISBON   ,portugal
+EMP0173,Uma Wilson,uma.wilson@company.com,berlin   ,germany
